@@ -80,6 +80,7 @@ analytics:
   google:
     tracking_id          :
 
+search: true
 
 # Site Author
 author:
