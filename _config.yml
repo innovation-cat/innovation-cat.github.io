@@ -80,7 +80,9 @@ analytics:
   google:
     tracking_id          :
 
-search: true
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : google # lunr (default), algolia, google
 
 # Site Author
 author:
