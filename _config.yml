@@ -8,6 +8,7 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Anbu Huang / Innovation-Cat"
+minimal_mistakes_skin    : "aqua"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
