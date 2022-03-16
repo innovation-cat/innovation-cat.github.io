@@ -27,7 +27,7 @@
     {% endif %}
 
     <h3 class="archive__item-title" itemprop="headline">
-        <a href="{{ post.permalink }}" style="font-family:Times New Roman;">&bull;	{{ title }}</a>
+        <a href="{{ post.permalink }}" style="font-family:Times New Roman;">&bull;&nbsp;&nbsp;&nbsp;&nbsp;{{ title }}</a>
     </h3>
     
     {% if post.read_time %}
@@ -35,8 +35,8 @@
     {% endif %}
 
 
-	<p style="font-family:Times New Roman;">	Authors: {{ post.Authors }}<br>	Published in <a href="{{ post.permalink }}" rel="permalink">{{ post.venue }}</a>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-	<a href=" {{ post.paperurl }} " style="font-family:Times New Roman;">	[Paper]</a>
+	<p style="font-family:Times New Roman;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: {{ post.Authors }}<br>&nbsp;&nbsp;&nbsp;&nbsp;	Published in <a href="{{ post.permalink }}" rel="permalink">{{ post.venue }}</a>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+	<a href=" {{ post.paperurl }} " style="font-family:Times New Roman;">&nbsp;&nbsp;&nbsp;&nbsp;[Paper]</a>
 
   </article>
 </div>
