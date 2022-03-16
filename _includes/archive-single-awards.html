@@ -17,10 +17,23 @@
 </div>
 
 
-<figure class="half">
-    <img src="/images/honor1.png">
-    <p >NASA Robotic Algorithm Winner</p>
-</figure>
+<div class="{{ include.type | default: "list" }}__item">
+  <table  >
 
-
+    <tr>
+        <td>Bugatti Veyron Super Sport</td>
+                <!-- considering it is on the same folder that .html file -->
+        <td><img id="nasa_img" src="/images/honor1.png" onclick="openImg()"></td>
+    </tr>
+	
+	<script type="text/javascript">
+		function openImg(){
+			var image = document.getElementById('nasa_img');
+			var source = image.src;
+			window.open(source);
+		}
+	</script>
+    
+</table>
+</div>
 
