@@ -12,29 +12,10 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item" style="margin:10px 0px 10px 0px;">
+<div class="{{ include.type | default: "list" }}__item" ">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-
     <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;{{ title }}</b></p>
-    
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
-
 
 	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: {{ post.Authors }}<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ post.permalink }}" rel="permalink">{{ post.venue }}</a>, {{ post.date | default: "1900-01-01" | date: "%Y" }}<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href=" {{ post.paperurl }} " >[Paper]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=" {{ post.BibTeX }} " >[BibTeX]</a></p>
-	
-
   </article>
 </div>
