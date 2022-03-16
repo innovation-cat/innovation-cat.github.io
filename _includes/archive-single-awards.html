@@ -1,0 +1,32 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>Selected Honors and Awards</b></p>
+</div>
+
+
+<div class="{{ include.type | default: "list" }}__item">
+  <table  >
+
+    <tr>
+        <td>Bugatti Veyron Super Sport</td>
+        <td>Molsheim, Alsace, France</td>
+                <!-- considering it is on the same folder that .html file -->
+        <td><img src="/_portfolio/Honor1.png" alt="" border=3 height=100 width=300></img></td>
+    </tr>
+    
+</table>
+</div>
+
