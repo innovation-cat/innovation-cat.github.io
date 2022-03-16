@@ -16,24 +16,15 @@
 	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>Selected Honors and Awards</b></p>
 </div>
 
-<div >
-  <table  border="0" width="50%" frame="void">
-	<col width="50%" >
-	<col width="50%" >
-    <tr>
-        <td><p style="font-family:Times New Roman;font-size:110%;"><b>&bull;&nbsp;&nbsp;&nbsp;NASA Robots Algorithmic Challenge outstanding award</b><br>&nbsp;&nbsp;&nbsp;&nbsp;Sponsored by NASA JPL, Harvard University, Topcoder</p></td>
-                <!-- considering it is on the same folder that .html file -->
-        <td align="center"><img id="nasa_img" src="/images/honor1.png" height="100" width="100"  onclick="openImg()"></td>
-    </tr>
-	
-	<script type="text/javascript">
-		function openImg(){
-			var image = document.getElementById('nasa_img');
-			var source = image.src;
-			window.open(source);
-		}
-	</script>
-    
-</table>
-</div>
+<figure>
 
+  <picture>
+
+    <!-- Fallback to the original file -->
+    <img  src="/images/honor1.png" data-zoomable />
+
+  </picture>
+
+  <figcaption class="caption">NASA Awards</figcaption>
+
+</figure>
