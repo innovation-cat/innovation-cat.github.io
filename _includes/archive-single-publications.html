@@ -26,14 +26,14 @@
       </div>
     {% endif %}
 
-    <p style="font-family:Times New Roman;font-size:120%;"><b>&bull;&nbsp;&nbsp;&nbsp;{{ title }}</b></p>
+    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;{{ title }}</b></p>
     
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
 
-	<p style="font-family:Times New Roman;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: {{ post.Authors }}<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="{{ post.permalink }}" rel="permalink">{{ post.venue }}</a>, {{ post.date | default: "1900-01-01" | date: "%Y" }}<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href=" {{ post.paperurl }} " style="font-family:Times New Roman;">[Paper]</a></p>
+	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: {{ post.Authors }}<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="{{ post.permalink }}" rel="permalink">{{ post.venue }}</a>, {{ post.date | default: "1900-01-01" | date: "%Y" }}<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href=" {{ post.paperurl }} " style="font-family:Times New Roman;">[Paper]</a></p>
 	
 
   </article>
