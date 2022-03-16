@@ -87,6 +87,8 @@ for row, item in publications.iterrows():
         md += "\npaperurl: '" + item.paper_url + "'"
     
     md += "\nAuthors: '" + html_escape(item.authors) + "'"
+
+    md += "\nBibTeX: '" + html_escape(item.BibTeX) + "'"
     
     md += "\n---"
     
