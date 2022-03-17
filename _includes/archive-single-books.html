@@ -1,0 +1,33 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+
+
+<style>
+  .left {
+	float: left;
+	width: 300px;
+	height: 300px;
+	background-color: red;
+  }
+  .right {
+	background-color: orange;
+	margin-left: 310px;
+	height: 300px;
+  }
+</style>
+
+
+<div class="left"></div>
+<div class="right"></div>

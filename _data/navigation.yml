@@ -7,17 +7,6 @@ main:
   - title: "Awards"
     url: /awards/    
 
-  - title: "Teaching"
-    url: /teaching/    
+  - title: "Books"
+    url: /books/    
     
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
-  - title: "CV"
-    url: /cv/
-    
-  - title: "Guide"
-    url: /markdown/
