@@ -2,10 +2,10 @@
 main:
   - title: "Publications"
     url: /publications/
-    description: "research papers"
     
   - title: "Awards"
     url: /awards/    
 
-  
+  - title: "Books"
+    url: /books/  
     
