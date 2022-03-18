@@ -8,7 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+Data Privacy and security is the 
+
+<p><img align="right" src="/images/qqmusic.png" alt="Photo" style="width: 150px; border-radius: 10px; padding: 10px 10px 10px 10px"> I lead a technical team at Tencent, and build the world's largest online music recommender system, where serving more than 100 million users around the world. We try to leverage different AI techniques to analyze our customers' listening history, our ultimate goal is to better understand our customer, and help to predict favorite songs for them.</p>
+
+
+<p><img align="right" src="/images/qqmusic.png" alt="Photo" style="width: 150px; border-radius: 10px; padding: 10px 10px 10px 10px"> All tradition AI approaches are rely heavily on the availability of large-scale and high-quality data but do not provide a mechanism for securely obtaining and using these data. </p>
 
 A data-driven personal website
 ======
