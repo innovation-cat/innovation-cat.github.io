@@ -10,11 +10,12 @@ redirect_from:
 
 <p><img src="../images/about.png" alt="" width="100%"></p>
 
-A lifelong learner with a strong passion and interest in scientific research, engineering, production, R&D team management, and entrepreneurship. achieving business impact by combining effective leadership with deep technical knowledge and skills. continuing to expand the boundaries of knowledge and innovation, from scientific research to business results. 
+A lifelong learner, practitioner, with a strong passion and interest in scientific research and production, achieving business impact by combining effective leadership with deep technical knowledge and skills, continuing to expand the boundaries of knowledge and innovation.
 
-<p><img align="right" src="../images/qqmusic.png" alt="Photo" style="width: 130px; border-radius: 10px; padding: 10px 10px 10px 10px"> I lead a technical team at Tencent, and build the world's largest online music recommender system, where serving more than 100 million users around the world. We try to leverage different AI techniques to analyze our customers' listening history, our ultimate goal is to better understand our customer, and help to predict favorite songs for them.</p>
+<p><img align="right" src="../images/trust.png" alt="Photo" style="width: 150px; border-radius: 10px; padding: 10px 10px 10px 10px">In recent years, I work on the mathematical foundations of Deep Learning, where the ultimate goal is to build trustworthy and safety AI. Tradition AI approaches are rely heavily on the availability of large-scale and high-quality data but do not provide a mechanism for securely obtaining and using these data. This motivate us to seek for a new training paradigm, which enables multiple devices collaboratively to train a shared model without compromising data privacy and security. For more research results can be found in <a href="https://innovation-cat.github.io/publications/">Publications</a></p>
 
-<br>
+<p><img align="right" src="../images/qqmusic.png" alt="Photo" style="width: 130px; border-radius: 10px; padding: 10px 10px 10px 10px">In my past life, I also worked on the applied AI, I led a technical team at Tencent, and built the world's largest online music recommender system, serving more than 100 million users around the world. We tried to leverage different AI approaches to analyze our customers' listening history and predict their favorite songs, including but not limited to natural language processing, music information retrieval, deep neural network. This work is challenging and requires us to build statistical model for human emotions and interests.</p>
 
-<p><img align="left" src="../images/trust.png" alt="Photo" style="width: 150px; border-radius: 10px; padding: 10px 10px 10px 10px"> All tradition AI approaches are rely heavily on the availability of large-scale and high-quality data but do not provide a mechanism for securely obtaining and using these data. This motivate us to seek for a new training paradigm, which enables multiple devices collaboratively to train a shared model without compromising data privacy and security.</p>
+
+
 
