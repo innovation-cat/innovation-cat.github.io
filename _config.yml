@@ -191,6 +191,9 @@ collections:
   books:
     output: true
     permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/  
 
 
 # Defaults
