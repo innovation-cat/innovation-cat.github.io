@@ -89,7 +89,7 @@ search_provider          : google # lunr (default), algolia, google
 author:
   name             : "Anbu Huang"
   avatar           : "profile4.png"
-  bio              : "A lifelong learner and practitioner, with a strong passion and interest in scientific research and product"
+  bio              : ""
   location         : "ShenZhen, China"
   employer         :
   pubmed           : 
