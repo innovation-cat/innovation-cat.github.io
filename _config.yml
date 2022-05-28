@@ -89,7 +89,7 @@ search_provider          : google # lunr (default), algolia, google
 author:
   name             : "Anbu Huang"
   avatar           : "profile2.png"
-  bio              : "Research Scientist, Author, AI Enthusiast, THU"
+  bio              : "Research Scientist, Author, AI Enthusiast, Tsinghua"
   location         : "ShenZhen, China"
   employer         :
   pubmed           : 
