@@ -1,0 +1,53 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+
+
+
+
+<div>
+	<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" color="red" size="2">
+</div>
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>Conferences Organizer:</b></p>
+    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;<a href="https://federated-learning.bitbucket.io/ibm2020/">FL-IBM'20</a>, New York, NY, USA</b></p>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;<a href="https://federated-learning.org/fl-ijcai-2019/">FL-IJCAI'19</a>, Macau</b></p>
+  </article>
+</div>
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>Papers Reviewer:</b></p>
+    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Journal </b></p>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;IEEE Transactions on Medical Imaging (IEEE TMI) </b></p>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;IEEE Intelligent Systems  </b></p>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;ACM Transactions on Intelligent Systems and Technology (ACM TIST)</b></p>
+	<p></p>
+	
+	
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Workshop </b></p>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;FL-NeurIPS'22 </b></p>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;FL-NeurIPS'21  </b></p>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;FL-IJCAI'19</b></p>
+	
+	<p></p>
+	
+	
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Conferences </b></p>
+	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;AAAI 2021 </b></p>
+  </article>
+</div>
+
