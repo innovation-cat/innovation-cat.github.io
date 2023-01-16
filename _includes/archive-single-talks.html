@@ -7,12 +7,11 @@
 {% endif %}
 
 {% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign title = "Invited talks" | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
-  {% assign title = post.title %}
+  {% assign title = "Invited talks" %}
 {% endif %}
 
-<br>
 
 
 <div class="{{ include.type | default: "list" }}__item">
