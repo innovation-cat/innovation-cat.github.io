@@ -199,7 +199,10 @@ collections:
     permalink: /:collection/:path/     
   patents:
     output: true
-    permalink: /:collection/:path/       
+    permalink: /:collection/:path/   
+  talks:
+    output: true
+    permalink: /:collection/:path/      
 
 
 # Defaults

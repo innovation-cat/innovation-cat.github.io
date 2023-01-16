@@ -17,3 +17,6 @@ main:
     
   - title: "Services"
     url: /services/  
+    
+  - title: "Talks"
+    url: /talks/      

@@ -1,0 +1,32 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<br>
+
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Invited talk at PBC School of Finance, Tsinghua University. 2020.09</b></p>
+
+	<p ><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/talks/PBC.png" alt="" height="260"></p>
+  </article>
+</div>
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Invited talk at PBC School of Finance, Tsinghua University. 2020.09</b></p>
+
+	<p ><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/talks/PBC.png" alt="" height="260"></p>
+  </article>
+</div>
