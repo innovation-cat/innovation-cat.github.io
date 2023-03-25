@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Anbu Huang's HomePage"
+title: "Welcome to Anbu Huang's HomePage"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -9,6 +9,12 @@ redirect_from:
 ---
 
 <p><img src="../images/about.png" alt="" width="100%"></p>
+
+<p>
+<font color="red">*News: </font> Writing a new book about federated learning, which is very comprehensive and covers all areas of machine learning (2023). <br>
+<font color="red">*News: </font> Two papers are prepared to be submitted. <br>
+<font color="red">*News: </font> One paper are invited to be reviewed (IEEE TMI, 2023.3). <br>
+</p>
 
 A lifelong learner and practitioner, with a strong passion and interest in scientific research and product, achieving business impact by combining effective leadership with deep technical knowledge and skills, continuing to expand the boundaries of knowledge and innovation.
 
