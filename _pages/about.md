@@ -16,6 +16,12 @@ redirect_from:
 <font color="red">*News: </font> One paper are invited to be reviewed (IEEE TMI, 2023.3). <br>
 </p>
 
+<p><font size=20 color="red">About me:</font></p>
+
+<div>
+	<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" size="2">
+</div>
+
 A lifelong learner and practitioner, with a strong passion and interest in scientific research and product, achieving business impact by combining effective leadership with deep technical knowledge and skills, continuing to expand the boundaries of knowledge and innovation.
 
 <p><img align="right" src="../images/trust.png" alt="Photo" style="width: 130px; border-radius: 10px; padding: 10px 10px 10px 10px">In recent years, I work on the mathematical foundations of Deep Learning, where the ultimate goal is to build trustworthy and safe AI. Tradition AI approaches are rely heavily on the availability of large-scale and high-quality data but do not provide a mechanism for securely obtaining and using these data. This motivate us to seek for a new training paradigm, which enables multiple devices collaboratively to train a shared model without compromising data privacy and security. More research results can be found in <a href="https://innovation-cat.github.io/publications/">Publications</a>.</p>
