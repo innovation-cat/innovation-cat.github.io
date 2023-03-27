@@ -16,7 +16,7 @@ redirect_from:
 <font color="red">*News: </font> One paper are invited to be reviewed (IEEE TMI, 2023.3). <br>
 </p>
 
-<p style="font-family: Times New Roman"><font size=5 color="red"><b>About me:</b></font></p>
+<font size=5 family="Times New Roman"><b>About me:</b></font>
 
 A lifelong learner and practitioner, with a strong passion and interest in scientific research and product, achieving business impact by combining effective leadership with deep technical knowledge and skills, continuing to expand the boundaries of knowledge and innovation.
 
