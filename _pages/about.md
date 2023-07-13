@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-<p><img src="../images/style_transfer.png" alt="" width="100%"></p>
+<p><img src="../images/curve.png" alt="" width="100%"></p>
 
 <p>
 <font color="red">*News: </font> Writing a new book: Trustworthy federated learning (2023). <br>
