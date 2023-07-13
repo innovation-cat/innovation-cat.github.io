@@ -11,9 +11,8 @@ redirect_from:
 <p><img src="../images/about.png" alt="" width="100%"></p>
 
 <p>
-<font color="red">*News: </font> Writing a new book about federated learning, which is very comprehensive and covers all areas of machine learning (2023). <br>
+<font color="red">*News: </font> Writing a new book: Trustworthy federated learning(2023). <br>
 <font color="red">*News: </font> Two papers are prepared to be submitted. <br>
-<font color="red">*News: </font> One paper are invited to be reviewed (IEEE TMI, 2023.3). <br>
 </p>
 
 <p style="font-family=times"><font size=5><b>About me:</b></font></p>
