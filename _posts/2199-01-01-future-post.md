@@ -1,7 +1,7 @@
 ---
-title: 'Future Blog Post'
-date: 2199-01-01
-permalink: /posts/2012/08/blog-post-4/
+title: 'Controlled Generation with Diffusion Models'
+date: 2025-07-05
+permalink: /posts/2025/07/diffusion-model-4/
 tags:
   - cool posts
   - category1

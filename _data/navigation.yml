@@ -1,5 +1,8 @@
 # main links links
 main:
+  - title: "Blog Posts"
+    url: /year-archive/  
+    
   - title: "Publications"
     url: /publications/
     
@@ -8,15 +11,9 @@ main:
     
   - title: "Books"
     url: /books/  
-
-  - title: "Blog Posts"
-    url: /year-archive/  
     
   - title: "Patents"
     url: /patents/      
-    
-  - title: "Projects"
-    url: /projects/  
     
   - title: "Services"
     url: /services/  
