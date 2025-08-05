@@ -39,3 +39,17 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ====== your overrides ====== */
+/* 归档页每条文章标题 */
+.archive__item-title { font-size: 1.25rem; line-height: 1.3; }
+/* 鼠标悬停下划线（可选） */
+/* .archive__item-title a { text-decoration-thickness: .08em; } */
+
+/* 响应式在大屏再放大（可选） */
+@media (min-width: 992px) {
+  .archive__item-title { font-size: 1.5rem; }
+}
