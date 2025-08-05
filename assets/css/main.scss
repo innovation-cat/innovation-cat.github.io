@@ -40,8 +40,7 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-@import "minimal-mistakes";
+
 
 /* ====== your overrides ====== */
 /* 归档页每条文章标题 */
