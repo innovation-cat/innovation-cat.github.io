@@ -53,13 +53,60 @@
   .archive__item-title { font-size: 1.5rem; }
 }
 
-.archive .archive__item {
-  margin: 0 0 1.25rem 0;
-  padding-bottom: .75rem;                 /* 让分隔线不贴文字 */
-  border-bottom: 1px solid rgba(0,0,0,.08);
-}
 
-/* 最后一条不画线（可选） */
-.archive .archive__item:last-child {
-  border-bottom: none;
+
+
+
+.year-archive {
+
+  /* 列表布局（entries_layout: list）卡片 */
+  .archive .archive__item {
+    list-style: none;
+    margin: 0 0 1rem 0;         /* 卡片间距 */
+    padding: 1rem 1.25rem;      /* 卡片内边距 */
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+  }
+  .archive .archive__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    border-color: rgba(0,0,0,.10);
+  }
+
+  /* 标题与摘要（按需调大小） */
+  .archive__item-title { margin: 0 0 .4rem 0; font-size: 1.1rem; line-height: 1.35; }
+  @media (min-width: 992px) { .archive__item-title { font-size: 1.35rem; } }
+  .archive__item-excerpt { margin: 0; line-height: 1.6; color: rgba(0,0,0,.72); }
+
+  /* 确保去掉列表圆点与左缩进 */
+  .archive ul, .archive ol, .entries, .entries > li { list-style: none; margin-left: 0; padding-left: 0; }
+
+  /* 网格布局（entries_layout: grid） */
+  .entries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 1rem;
+  }
+  .entries-grid .archive__item { margin: 0; } /* 间距交给 grid-gap */
+
+  /* 可选：摘要最多显示 2 行（旧浏览器可能不支持） */
+  .archive__item-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 可选：暗色模式适配 */
+  @media (prefers-color-scheme: dark) {
+    .archive .archive__item {
+      background: #111416;
+      border-color: rgba(255,255,255,.06);
+      box-shadow: 0 2px 8px rgba(0,0,0,.6);
+    }
+    .archive__item-excerpt { color: rgba(255,255,255,.8); }
+  }
 }
