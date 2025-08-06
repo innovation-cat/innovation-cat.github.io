@@ -52,3 +52,22 @@
 @media (min-width: 992px) {
   .archive__item-title { font-size: 1.5rem; }
 }
+
+.year-archive .archive .archive__item {
+  list-style: none;
+  margin: 0 0 1rem 0;       /* 卡片之间外边距 */
+  padding: 1rem 1.25rem;    /* 卡片内边距 */
+  background: #fff;         /* 暗色主题可换为变量或半透明 */
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+/* 标题与摘要的内部间距（可选） */
+.year-archive .archive__item-title { margin: 0 0 .35rem 0; }
+.year-archive .archive__item-excerpt { margin: 0; line-height: 1.55; }
+
+/* 大屏加大留白（可选） */
+@media (min-width: 992px) {
+  .year-archive .archive .archive__item { margin-bottom: 1.25rem; padding: 1.1rem 1.4rem; }
+}
