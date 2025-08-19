@@ -14,16 +14,19 @@ redirect_from:
 
 <p style="font-family=times"><font size=5><b>About me:</b></font></p>
 
-A lifelong learner and practitioner, with a strong passion and interest in scientific research and product, achieving business impact by combining effective leadership with deep technical knowledge and skills, continuing to expand the boundaries of knowledge and innovation.
 
-<p><img align="right" src="../images/webank.png" alt="Photo" style="width: 150px; border-radius: 10px; padding: 10px 10px 10px 10px">In recent years <font color="#FF0000">(2019 - present)</font>, I work on the field of AI security and privacy-preserving machine learning, with the goal of building trustworthy artificial intelligence.
-
-<li>Federated Learning and Privacy computing: I am engaged in theoretical and practical aspects of trustworthy machine learning, I participated in the design of the <a href="https://github.com/FederatedAI/FATE"  target="_blank">FATE framework</a>, developed a <a href="https://github.com/FederatedAI/FedVision"  target="_blank">federated vision system</a>, and published several important research papers on federated learning (<a href="https://innovation-cat.github.io/publications/"  target="_blank">Publications</a>).</li>
-
-<li>Anti-spoofing: The development of AIGC has greatly facilitated our creativity and brought us tremendous convenience. However, it can also lead to significant losses if exploited by malicious attackers, such as Deepfake. I participated in the design of facial verification work, including liveness detection and facial recognition.</li>
-</p>
-
-<p><img align="right" src="../images/tencent.png" alt="Photo" style="width: 150px; border-radius: 10px; padding: 10px 10px 10px 10px">In my past life <font color="#FF0000">(2014 - 2018)</font>, I also worked on the applied AI, I led a technical team at Tencent, and built the world's largest online music recommender system, serving more than 100 million users around the world. We tried to leverage different AI approaches to analyze our customers' listening history and predict their favorite songs, including but not limited to natural language processing, music information retrieval, deep neural network. This work is challenging and requires us to build statistical models for human emotions and interests.</p>
+Over the past few years, I have dedicated my career to advancing the field of **generative AI**, particularly through the development and application of **diffusion models** and **LLM**. These technologies have been at the core of my work, I aim to develop scalable, efficient systems that leverage these technologies for innovative content generation, knowledge transfer, and multimodal applications, while ensuring practical deployment and ethical considerations.
 
 
+- Diffusion Models: I have developed multimodal generation systems operating in both RGB and Bayer spaces, enabling high-fidelity synthesis of images, videos, and other visual data. These systems support applications in creative tools, sensor data processing, and augmented reality, with an emphasis on controllability and cross-modal integration.
+
+- Large Language Models: Based on distributed architectures, I have built knowledge distillation systems for collaborative large-small model frameworks. This involves using server-side large models to provide knowledge transfer—such as data augmentation through synthetic data generation, feature alignment, and chain-of-thought migration—to enhance domain-specific small models, improving their performance, efficiency, and adaptability in real-world scenarios.
+
+---
+
+In my past work (2014 - 2023), I focused on applied AI, including recommendation systems, federated learning, and AI safety, building scalable solutions that prioritized privacy, security, and user impact.
+
+- Recommendation Systems: At Tencent, I led a technical team to develop the world's largest online music recommender system, serving over 100 million users globally. We utilized AI techniques like natural language processing, music information retrieval, and deep neural networks to analyze listening histories and predict user preferences, modeling human emotions and interests.
+- Federated Learning and Privacy Computing: I engaged in theoretical and practical aspects of trustworthy machine learning, participating in the design of the FATE framework, developing a federated vision system, and publishing several important research papers on federated learning .
+- AI Safety and Anti-Spoofing: To address risks from technologies like Deepfakes, I contributed to facial verification systems, including liveness detection and recognition, while developing frameworks to detect biases, adversarial attacks, and ensure ethical AI deployment.
 
