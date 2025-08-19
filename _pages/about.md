@@ -15,7 +15,7 @@ redirect_from:
 <p style="font-family=times"><font size=5><b>About me:</b></font></p>
 
 
-Over the past few years, I have dedicated my career to advancing the field of **generative AI**, particularly through the development and application of **diffusion models** and **LLM**. These technologies have been at the core of my work, I aim to develop scalable, efficient systems that leverage these technologies for innovative content generation, knowledge transfer, and multimodal applications, while ensuring practical deployment and ethical considerations.
+Over the past few years, I have dedicated my career to advancing the field of **Generative AI**, particularly through the development and application of **Diffusion models** and **LLM**. These technologies have been at the core of my work, I aim to develop scalable, efficient systems that leverage these technologies for innovative content generation, knowledge transfer, and multimodal applications, while ensuring practical deployment and ethical considerations.
 
 
 - Diffusion Models: I have developed multimodal generation systems operating in both RGB and Bayer spaces, enabling high-fidelity synthesis of images, videos, and other visual data. These systems support applications in creative tools, sensor data processing, and augmented reality, with an emphasis on controllability and cross-modal integration.
