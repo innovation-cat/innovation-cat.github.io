@@ -45,7 +45,7 @@ sns.histplot(samples_log_uniform, bins=100, stat='density', alpha=0.6, label='�
 # 关键步骤：将X轴设置为对数尺度！
 # 这样才能清晰地看到在小sigma值区域的分布情况
 ax.set_xscale('log')
-ax.set_yscale('log')
+
 # 添加标题和标签
 ax.set_title('三种不同 σ 采样策略的分布对比', fontsize=18, pad=20)
 ax.set_xlabel('σ (噪声水平) [对数坐标轴]', fontsize=14)
