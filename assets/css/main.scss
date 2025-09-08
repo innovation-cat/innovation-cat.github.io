@@ -53,14 +53,3 @@
   .archive__item-title { font-size: 1.5rem; }
 }
 
-
-
-@import "minimal-mistakes";  // 保留原始主题样式
-
-// 覆盖正文字体
-body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-               "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
-  font-size: 18px; // 改正文大小
-  line-height: 1.7;
-}
