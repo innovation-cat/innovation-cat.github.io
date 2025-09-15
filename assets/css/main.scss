@@ -54,18 +54,3 @@
 }
 
 
-pre.highlight, .highlighter-rouge pre {
-  font-size: 15px !important;
-  line-height: 1.55 !important;
-  font-family: 'JetBrains Mono','Fira Code','Consolas',monospace;
-  border-radius: 8px;
-  padding: 16px 20px;
-  background: #f8f9fa;   /* 亮色模式 */
-}
-
-@media (prefers-color-scheme: dark) {
-  pre.highlight, .highlighter-rouge pre {
-    background: #1e1e1e;
-    color: #dcdcdc;
-  }
-}
