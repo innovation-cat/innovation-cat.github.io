@@ -107,3 +107,122 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+.flash-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.flash-table th {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 16px 12px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+}
+
+.flash-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.flash-table tr:hover {
+  background-color: #f8f9ff;
+  transition: background 0.2s ease;
+}
+
+.flash-table .category {
+  font-weight: 600;
+  color: #2c3e50;
+  background: #f0f4ff;
+  border-right: 3px solid #a777e3;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.flash-table .symbol {
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  color: #d35400;
+  white-space: nowrap;
+}
+
+.flash-table .definition {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.flash-table .hardware {
+  background: #e8f4f8 !important;
+  border-right-color: #3498db !important;
+}
+.flash-table .precision {
+  background: #fef5e7 !important;
+  border-right-color: #e67e22 !important;
+}
+.flash-table .complexity {
+  background: #e8f8f5 !important;
+  border-right-color: #1abc9c !important;
+}
+.flash-table .streaming {
+  background: #f5eef8 !important;
+  border-right-color: #8e44ad !important;
+}
+.flash-table .backprop {
+  background: #fdebd0 !important;
+  border-right-color: #d35400 !important;
+}
+.flash-table .core {
+  background: #eaf7ea !important;
+  border-right-color: #27ae60 !important;
+}
+
+.flash-table .highlight {
+  background: #fff9db;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.flash-table .icon {
+  margin-right: 6px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/* LaTeX 美化 */
+.flash-table .math {
+  font-family: 'Cambria Math', serif;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+
