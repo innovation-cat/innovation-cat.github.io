@@ -73,14 +73,22 @@ contour_fg = ax.contourf(X, Y, p_x_given_c, levels=levels_fg, cmap=cmap_fg, alph
 fg_contours = ax.contour(X, Y, p_x_given_c, levels=levels_fg[::5], colors='darkred', linewidths=0.7, alpha=0.6)
 
 # Add labels and title
-ax.set_xlabel('Feature Dimension 1', fontsize=16, fontweight='bold')
-ax.set_ylabel('Feature Dimension 2', fontsize=16, fontweight='bold')
+#ax.set_xlabel('Feature Dimension 1', fontsize=16, fontweight='bold')
+#ax.set_ylabel('Feature Dimension 2', fontsize=16, fontweight='bold')
 ax.set_title('Manifold Relationship: p(x) is a Superset of p(x|c)\n' + 
              'p(x) has 5 High-Density Regions, p(x|c) has 4 High-Density Regions', 
              fontsize=18, fontweight='bold', pad=25)
 
 # Add grid
 ax.grid(True, alpha=0.15, linestyle='--')
+
+ax.set_xticks([])
+ax.set_yticks([])
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
+ax.spines['left'].set_visible(False)
+
 
 # Mark p(x) high-density regions (5 regions)
 #p_x_high_density_points = [(-3, -2), (3, 2), (-2, 3), (2, -3), (0, 0)]
