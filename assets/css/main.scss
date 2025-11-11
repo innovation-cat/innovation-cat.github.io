@@ -228,3 +228,17 @@ figure figcaption {
 }
 
 
+.highlight {
+  width: 100%; /* 设置宽度， 100% 表示充满容器 */
+  max-width: 800px; /* 或者设置一个最大宽度 */
+  height: auto; /* 高度通常设为自动，根据内容扩展 */
+  /* 其他样式 */
+  border-radius: 6px; /* 可选：添加圆角 */
+  margin: 1em 0; /* 可选：添加上下外边距 */
+}
+
+/* 或者针对行内代码 */
+code {
+  font-size: 0.9em; /* 调整行内代码字体大小 */
+  padding: 0.2em 0.4em; /* 调整内边距 */
+}
