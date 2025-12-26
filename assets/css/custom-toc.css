@@ -1,0 +1,153 @@
+    
+/* 容器：强化对比度与阴影 */
+.custom-toc {
+  background: #ffffff;
+  border: 1px solid #d1d5db; /* 加深边框 */
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* 标题栏：使用渐变背景增加质感 */
+.toc-summary {
+  list-style: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1.1rem 1.4rem;
+  background: linear-gradient(to right, #f8fafc, #eff6ff); /* 轻微蓝色渐变 */
+  border-bottom: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toc-summary:hover {
+  background: linear-gradient(to right, #f1f5f9, #dbeafe);
+}
+
+/* 标题文字：加粗加深 */
+.toc-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 800; /* 更粗的字重 */
+  color: #1e3a8a; /* 深蓝色 */
+}
+
+/* 箭头图标 */
+.toc-arrow {
+  width: 20px;
+  height: 20px;
+  color: #3b82f6;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+details[open] .toc-arrow {
+  transform: rotate(180deg);
+}
+
+/* 内容展开动画 */
+.toc-content {
+  padding: 1.5rem;
+  background-color: #fff;
+  max-height: 800px; /* 限制高度防止过长 */
+  overflow-y: auto;
+}
+
+details[open] .toc-content {
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+
+
+/* 列表根样式 */
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 一级分类 (Part) */
+.toc-item-main {
+  margin-bottom: 1.2rem;
+}
+
+.toc-link-main {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827; /* 极深灰，接近纯黑 */
+  text-decoration: none;
+  padding: 6px 12px;
+  border-left: 4px solid #2563eb; /* 明显的侧边条 */
+  background: #f3f4f6;
+  border-radius: 0 6px 6px 0;
+  transition: all 0.2s;
+}
+
+.toc-link-main:hover {
+  background: #2563eb;
+  color: white;
+  padding-left: 18px;
+}
+
+/* 二级分类 */
+.toc-sublist {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin-top: 0.6rem;
+}
+
+.toc-sublist li {
+  position: relative;
+  padding: 4px 0;
+}
+
+.toc-sublist a {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.toc-sublist a:hover {
+  color: #2563eb;
+  transform: translateX(5px); /* 悬停右移 */
+  font-weight: 500;
+}
+
+/* 三级小标题：点缀式样式 */
+.toc-sublist ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  border-left: 1px solid #e5e7eb;
+  margin: 4px 0 8px 4px;
+}
+
+.toc-sublist ul a {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.toc-sublist ul a::before {
+  content: "•";
+  margin-right: 8px;
+  color: #d1d5db;
+}
+
+.toc-sublist ul a:hover {
+  color: #3b82f6;
+}
+
+/* 隐藏默认箭头 */
+.toc-summary::-webkit-details-marker { display: none; }
+
+  @keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
