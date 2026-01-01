@@ -6,15 +6,10 @@ main:
   - title: "Publications"
     url: /publications/
     
-  - title: "Awards"
-    url: /awards/    
-    
   - title: "Books"
     url: /books/  
     
   - title: "Patents"
     url: /patents/      
-    
-  - title: "Services"
-    url: /services/  
+
         
