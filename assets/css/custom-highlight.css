@@ -1,0 +1,60 @@
+.modern-deep-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.05), 0 4px 10px rgba(0, 0, 0, 0.02);
+  margin: 30px 0;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #94bfff; /* 从 1px 增加到 3px，颜色稍微加深一点点以匹配厚度 */ 
+  box-sizing: border-box; /* 确保厚边框不会撑大容器体积 */
+}
+
+
+/* 顶部小标签：增强专业感 */
+.card-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #0056d2; /* 更深的蓝色 */
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.card-tag .icon { width: 14px; height: 14px; }
+
+/* 正文内容 */
+.card-content {
+  line-height: 1.9 !important; /* 这里应用了你需要的行间距 */
+  color: #1e293b; /* 深灰蓝色，非常清晰 */
+  margin: 0 !important;
+  font-size: 16px;
+}
+
+/* "Takeaway:" 重点标签 */
+.label-text {
+  color: #0056b3;
+  font-weight: 800;
+  margin-right: 4px;
+}
+
+/* 文中关键词高亮 */
+.hl-blue {
+  background-color: rgba(0, 123, 255, 0.1); /* 淡淡的底色 */
+  color: #004ab3;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* 数学符号优化 */
+.math {
+  font-family: "Cambria", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #0f172a;
+}
