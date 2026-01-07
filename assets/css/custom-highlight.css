@@ -51,6 +51,15 @@
   font-weight: 700;
 }
 
+/* 文中关键词高亮 */
+.hl-red {
+  background-color: rgba(255, 0, 102, 0.1); /* 淡淡的底色 */
+  color: #b32400ff;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
 /* 数学符号优化 */
 .math {
   font-family: "Cambria", "Times New Roman", serif;
