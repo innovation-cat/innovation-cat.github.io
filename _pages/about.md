@@ -14,13 +14,12 @@ redirect_from:
 
 <p style="font-family=times"><font size=5><b>About me:</b></font></p>
 
+I study diffusion/flow-matching models and multimodal foundation models, for which you can find more in a [blog post](https://innovation-cat.github.io/year-archive/).
 
-Over the past few years, I have dedicated my career to advancing the field of **Generative AI**, particularly through the development and application of **Diffusion models** and **LLM**. These technologies have been at the core of my work, I aim to develop scalable, efficient systems that leverage these technologies for innovative content generation, knowledge transfer, and multimodal applications, while ensuring practical deployment and ethical considerations.
+- **On the generative side**: I study the “impossible triangle” of high fidelity, fast sampling, and strong controllability—designing training and inference methods (distillation, guidance, solver-aware sampling) that expand the Pareto frontier.
 
+- **On the multimodal side**: I study to build native multimodal architectures that achieve a true unification of understanding and generation, enabling AI to perceive, reason, and create within a single, cohesive framework.
 
-- Diffusion Models: I have developed multimodal generation systems operating in both RGB and Bayer spaces, enabling high-fidelity synthesis of images, videos, and other visual data. These systems support applications in creative tools, sensor data processing, and augmented reality, with an emphasis on controllability and cross-modal integration.
-
-- Large Language Models: Based on distributed architectures, I have built knowledge distillation systems for collaborative large-small model frameworks. This involves using server-side large models to provide knowledge transfer—such as data augmentation through synthetic data generation, feature alignment, and chain-of-thought migration—to enhance domain-specific small models, improving their performance, efficiency, and adaptability in real-world scenarios.
 
 ---
 
