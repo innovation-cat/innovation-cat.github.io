@@ -20,6 +20,7 @@ I study diffusion/flow-matching models and multimodal foundation models, for whi
 
 - **On the Multimodal side**: I study to build native multimodal architectures that achieve a true unification of understanding and generation, enabling AI to perceive, reason, and create within a single, cohesive framework.
 
+**Contact Me:** <strong style="color: #1D4ED8; font-weight: bold; text-decoration: underline;">huanganbu@gmail.com</strong>
 
 ---
 ---
