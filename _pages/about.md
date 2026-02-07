@@ -14,7 +14,7 @@ redirect_from:
 
 <p style="font-family=times"><font size=5><b>About me:</b></font></p>
 
-I study diffusion/flow-matching models and multimodal foundation models, for which you can find more in my [blog post](https://innovation-cat.github.io/year-archive/).
+I study **diffusion/flow-matching models** and **multimodal foundation models**, for which you can find more in my [blog post](https://innovation-cat.github.io/year-archive/).
 
 - **On the Generative side**: I study the “impossible triangle” of high fidelity, fast sampling, and strong controllability—designing training and inference methods (distillation, guidance, solver-aware sampling) that expand the Pareto frontier.
 
