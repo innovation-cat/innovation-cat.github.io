@@ -24,7 +24,7 @@ I study **diffusion/flow-matching models** and **multimodal foundation models**,
 
 ---
 
-**Previously**: I focused on applied AI at Tencent, study recommendation systems, federated learning, and AI safety.
+**Previously**: I have also worked on areas including recommender systems, federated learning and AI safety. I have published multiple research papers at AI conferences such as ICLR and AAAI ([Publication](https://innovation-cat.github.io/publications/)). 
 
 
 ## Selected Publications
