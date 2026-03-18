@@ -14,11 +14,11 @@ redirect_from:
 
 <p style="font-family=times"><font size=5><b>About me:</b></font></p>
 
-I study **Diffusion/Flow-Matching Models** and **VLM Foundation Models**, for which you can find more in my [blog post](https://innovation-cat.github.io/year-archive/).
+I study **Generative Models (Diffusion/Flow-Matching)** and **VLM Foundation Models**, for which you can find more in my [blog post](https://innovation-cat.github.io/year-archive/).
 
 - **On the Generative side**: I study the “impossible triangle” of high fidelity, fast sampling, and strong controllability—designing training and inference methods (distillation, guidance, solver-aware sampling) that expand the Pareto frontier.
 
-- **On the Multimodal side**: I study to build native multimodal architectures that achieve a true unification of understanding and generation, enabling AI to perceive, reason, and create within a single, cohesive framework.
+- **On the Understanding side**: I study to build native VLM architectures that achieve a true unification of understanding and generation, enabling AI to perceive, reason, and create within a single, cohesive framework.
 
 **Contact Me:** <strong style="color: #1D4ED8; font-weight: bold; text-decoration: underline;">huanganbu@gmail.com</strong>
 
