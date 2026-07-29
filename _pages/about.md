@@ -27,6 +27,7 @@ I study **Generative Models (Diffusion/Flow-Matching)** and **VLM Foundation Mod
 **Previously**: I have also worked on areas including recommender systems, federated learning and AI safety. I have published multiple research papers at AI conferences such as ICLR and AAAI ([Publication](https://innovation-cat.github.io/publications/)). 
 
 
+<!--
 ## Selected Publications
 
 
@@ -165,10 +166,11 @@ I study **Generative Models (Diffusion/Flow-Matching)** and **VLM Foundation Mod
 }
 </style>
 
+-->
 
+<!--
 <div class="pub-list">
 
-  <!-- ===== Publication 1 ===== -->
   <div class="pub-item">
     <div class="pub-left">
       <img src="../assets/images/about/p1.png" alt="Paper thumbnail">
@@ -189,7 +191,6 @@ I study **Generative Models (Diffusion/Flow-Matching)** and **VLM Foundation Mod
         <strong>ICLR 2026 BlogPost Track.</strong>
       </div>
 
-      <!-- 可选：摘要（点击 ABSTRACT 跳转） -->
       <div id="abs-ctcm-2025" style="margin-bottom:0.5rem; font-size:0.95rem; color:#333;">
         <strong>Abstract.</strong>  we reframe continuous-time generative modeling from integrating trajectories to learning two-time operators (flow maps). This operator view unifies diffusion, flow matching, and consistency model. 
       </div>
@@ -204,7 +205,6 @@ I study **Generative Models (Diffusion/Flow-Matching)** and **VLM Foundation Mod
   </div>
 
 
-  <!-- ===== Publication 2 ===== -->
   <div class="pub-item">
     <div class="pub-left">
       <img src="../assets/images/about/p2.jpg" alt="Paper thumbnail">
@@ -225,7 +225,6 @@ I study **Generative Models (Diffusion/Flow-Matching)** and **VLM Foundation Mod
         <strong>ICLR 2026 BlogPost Track.</strong>
       </div>
 
-      <!-- 可选：摘要（点击 ABSTRACT 跳转） -->
       <div id="abs-ctcm-2025" style="margin-bottom:0.5rem; font-size:0.95rem; color:#333;">
         <strong>Abstract.</strong>   We show that a wide range of methods mostly instantiate two operator-splitting paradigms, i.e., posterior-guided sampling and clean-space local-MAP optimization.  
       </div>
@@ -242,3 +241,4 @@ I study **Generative Models (Diffusion/Flow-Matching)** and **VLM Foundation Mod
 </div>
 
 
+-->
