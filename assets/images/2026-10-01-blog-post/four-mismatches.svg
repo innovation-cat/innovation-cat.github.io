@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img">
+<title>Four mismatches and four routes to streaming video generation</title>
+<rect width="1500" height="900" fill="#F8FAFD"/>
+<text x="55" y="35" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#14233B">One conversion, four mismatches</text>
+<text x="55" y="93" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53657E">Align the learning problem with the state of the deployed generator.</text>
+<rect x="325" y="155" width="850" height="76" rx="18" fill="#EAF1FC" stroke="#B3C9E8" stroke-width="2"/>
+<text x="750" y="178" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#2459A6">Pretrained bidirectional video DiT</text>
+<polyline points="750,231 750,269" fill="none" stroke="#2459A6" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750,269 744.345448056554,257.2941876694152 755.654551943446,257.2941876694152" fill="#2459A6"/>
+<rect x="325" y="274" width="850" height="92" rx="18" fill="white" stroke="#D8E1EC" stroke-width="2"/>
+<text x="750" y="291" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#14233B">Causal mask + clean-history teacher forcing</text>
+<text x="750" y="333" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#53657E">A starting point for streaming adaptation</text>
+<polyline points="750,366 750,404" fill="none" stroke="#53657E" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="207.5,404 1302.5,404" fill="none" stroke="#53657E" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="207.5,404 207.5,435" fill="none" stroke="#2459A6" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="207.5,435 201.845448056554,423.2941876694152 213.154551943446,423.2941876694152" fill="#2459A6"/>
+<rect x="40" y="440" width="335" height="190" rx="18" fill="#EDF3FD" stroke="#2459A6" stroke-width="2"/>
+<text x="60" y="455" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2459A6">M1</text>
+<text x="207.5" y="492" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2459A6">Architecture /</text>
+<text x="207.5" y="525" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2459A6">information</text>
+<text x="207.5" y="576" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#53657E">Full-information targets</text>
+<text x="207.5" y="602" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#53657E">vs. causal student inputs</text>
+<polyline points="207.5,630 207.5,664" fill="none" stroke="#2459A6" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="207.5,664 201.845448056554,652.2941876694152 213.154551943446,652.2941876694152" fill="#2459A6"/>
+<rect x="40" y="670" width="335" height="132" rx="18" fill="white" stroke="#2459A6" stroke-width="2"/>
+<text x="207.5" y="688" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#2459A6">Causal adaptation</text>
+<text x="207.5" y="718" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#2459A6">&amp; distillation</text>
+<text x="207.5" y="764" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#53657E">Make targets observable</text>
+<polyline points="572.5,404 572.5,435" fill="none" stroke="#087F66" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="572.5,435 566.845448056554,423.2941876694152 578.154551943446,423.2941876694152" fill="#087F66"/>
+<rect x="405" y="440" width="335" height="190" rx="18" fill="#EBF8F2" stroke="#087F66" stroke-width="2"/>
+<text x="425" y="455" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#087F66">M2</text>
+<text x="572.5" y="492" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#087F66">State</text>
+<text x="572.5" y="525" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#087F66">distribution</text>
+<text x="572.5" y="576" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#53657E">Clean data prefixes</text>
+<text x="572.5" y="602" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#53657E">vs. model-made histories</text>
+<polyline points="572.5,630 572.5,664" fill="none" stroke="#087F66" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="572.5,664 566.845448056554,652.2941876694152 578.154551943446,652.2941876694152" fill="#087F66"/>
+<rect x="405" y="670" width="335" height="132" rx="18" fill="white" stroke="#087F66" stroke-width="2"/>
+<text x="572.5" y="688" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#087F66">Self-rollout &amp;</text>
+<text x="572.5" y="718" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#087F66">resampled history</text>
+<text x="572.5" y="764" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#53657E">Train on relevant states</text>
+<polyline points="937.5,404 937.5,435" fill="none" stroke="#A65A0C" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="937.5,435 931.845448056554,423.2941876694152 943.154551943446,423.2941876694152" fill="#A65A0C"/>
+<rect x="770" y="440" width="335" height="190" rx="18" fill="#FFF6E8" stroke="#A65A0C" stroke-width="2"/>
+<text x="790" y="455" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#A65A0C">M3</text>
+<text x="937.5" y="492" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#A65A0C">Denoising</text>
+<text x="937.5" y="525" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#A65A0C">trajectory</text>
+<text x="937.5" y="576" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#53657E">Training noise states</text>
+<text x="937.5" y="602" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#53657E">vs. deployment schedules</text>
+<polyline points="937.5,630 937.5,664" fill="none" stroke="#A65A0C" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="937.5,664 931.845448056554,652.2941876694152 943.154551943446,652.2941876694152" fill="#A65A0C"/>
+<rect x="770" y="670" width="335" height="132" rx="18" fill="white" stroke="#A65A0C" stroke-width="2"/>
+<text x="937.5" y="688" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#A65A0C">Rolling &amp; flexible</text>
+<text x="937.5" y="718" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#A65A0C">denoising</text>
+<text x="937.5" y="764" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#53657E">Align uncertainty paths</text>
+<polyline points="1302.5,404 1302.5,435" fill="none" stroke="#7950B5" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1302.5,435 1296.845448056554,423.2941876694152 1308.154551943446,423.2941876694152" fill="#7950B5"/>
+<rect x="1135" y="440" width="335" height="190" rx="18" fill="#F3EEFC" stroke="#7950B5" stroke-width="2"/>
+<text x="1155" y="455" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#7950B5">M4</text>
+<text x="1302.5" y="492" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#7950B5">Horizon /</text>
+<text x="1302.5" y="525" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#7950B5">context</text>
+<text x="1302.5" y="576" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#53657E">Short visible context</text>
+<text x="1302.5" y="602" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#53657E">vs. persistent dependencies</text>
+<polyline points="1302.5,630 1302.5,664" fill="none" stroke="#7950B5" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1302.5,664 1296.845448056554,652.2941876694152 1308.154551943446,652.2941876694152" fill="#7950B5"/>
+<rect x="1135" y="670" width="335" height="132" rx="18" fill="white" stroke="#7950B5" stroke-width="2"/>
+<text x="1302.5" y="688" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#7950B5">Long supervision</text>
+<text x="1302.5" y="718" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#7950B5">&amp; useful memory</text>
+<text x="1302.5" y="764" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#53657E">Preserve predictive evidence</text>
+<text x="750" y="838" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#53657E">Routes interact: memory and scheduling change the states that the model visits.</text>
+</svg>

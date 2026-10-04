@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img">
+<title>Memory functions in a persistent streaming video generator</title>
+<rect width="1500" height="900" fill="#F8FAFD"/>
+<text x="55" y="35" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#14233B">Remember invariants; update dynamics</text>
+<text x="55" y="93" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#53657E">A functional decomposition of bounded memory, not one paper&#x27;s architecture.</text>
+<text x="55" y="160" dominant-baseline="hanging" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#14233B">Committed history</text>
+<rect x="55" y="207" width="83" height="57" rx="9" fill="#EAF1FC" stroke="#2459A6" stroke-width="1"/>
+<text x="96.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#2459A6">1</text>
+<rect x="155" y="207" width="83" height="57" rx="9" fill="#EAF1FC" stroke="#2459A6" stroke-width="1"/>
+<text x="196.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#2459A6">2</text>
+<rect x="255" y="207" width="83" height="57" rx="9" fill="#ECF0F6" stroke="#53657E" stroke-width="1"/>
+<text x="296.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#53657E">3</text>
+<rect x="355" y="207" width="83" height="57" rx="9" fill="#ECF0F6" stroke="#53657E" stroke-width="1"/>
+<text x="396.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#53657E">4</text>
+<rect x="455" y="207" width="83" height="57" rx="9" fill="#E9F5F0" stroke="#087F66" stroke-width="1"/>
+<text x="496.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#087F66">5</text>
+<rect x="555" y="207" width="83" height="57" rx="9" fill="#ECF0F6" stroke="#53657E" stroke-width="1"/>
+<text x="596.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#53657E">6</text>
+<rect x="655" y="207" width="83" height="57" rx="9" fill="#ECF0F6" stroke="#53657E" stroke-width="1"/>
+<text x="696.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#53657E">7</text>
+<rect x="755" y="207" width="83" height="57" rx="9" fill="#E9F5F0" stroke="#087F66" stroke-width="1"/>
+<text x="796.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#087F66">8</text>
+<rect x="855" y="207" width="83" height="57" rx="9" fill="#ECF0F6" stroke="#53657E" stroke-width="1"/>
+<text x="896.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#53657E">9</text>
+<rect x="955" y="207" width="83" height="57" rx="9" fill="#E9F5F0" stroke="#087F66" stroke-width="1"/>
+<text x="996.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#087F66">10</text>
+<rect x="1055" y="207" width="83" height="57" rx="9" fill="#ECF0F6" stroke="#53657E" stroke-width="1"/>
+<text x="1096.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#53657E">11</text>
+<rect x="1155" y="207" width="83" height="57" rx="9" fill="#FFF4DF" stroke="#A65A0C" stroke-width="1"/>
+<text x="1196.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#A65A0C">12</text>
+<rect x="1255" y="207" width="83" height="57" rx="9" fill="#FFF4DF" stroke="#A65A0C" stroke-width="1"/>
+<text x="1296.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#A65A0C">13</text>
+<rect x="1355" y="207" width="83" height="57" rx="9" fill="#FFF4DF" stroke="#A65A0C" stroke-width="1"/>
+<text x="1396.5" y="226" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#A65A0C">14</text>
+<polyline points="55,288 1440,288" fill="none" stroke="#53657E" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1440,288 1428.2941876694151,293.654551943446 1428.2941876694151,282.345448056554" fill="#53657E"/>
+<text x="1440" y="305" dominant-baseline="hanging" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#53657E">Video time</text>
+<polyline points="150,264 150,342 280,342 280,375" fill="none" stroke="#2459A6" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="280,375 274.345448056554,363.2941876694152 285.654551943446,363.2941876694152" fill="#2459A6"/>
+<polyline points="797,264 797,349 750,349 750,375" fill="none" stroke="#087F66" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750,375 744.345448056554,363.2941876694152 755.654551943446,363.2941876694152" fill="#087F66"/>
+<polyline points="1300,264 1300,342 1220,342 1220,375" fill="none" stroke="#A65A0C" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1220,375 1214.345448056554,363.2941876694152 1225.654551943446,363.2941876694152" fill="#A65A0C"/>
+<rect x="55" y="382" width="450" height="162" rx="18" fill="#EAF1FC" stroke="#2459A6" stroke-width="2"/>
+<text x="280" y="401" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2459A6">Stable anchors</text>
+<text x="280" y="449" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#53657E">Identity and broad layout</text>
+<text x="280" y="477" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#53657E">High-confidence references</text>
+<text x="280" y="515" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#2459A6">Preserve what remains true</text>
+<polyline points="280,544 280,582" fill="none" stroke="#2459A6" stroke-width="3" stroke-linejoin="round"/>
+<rect x="525" y="382" width="450" height="162" rx="18" fill="#E9F5F0" stroke="#087F66" stroke-width="2"/>
+<text x="750" y="401" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#087F66">Selected / episodic history</text>
+<text x="750" y="449" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#53657E">Objects, places, past events</text>
+<text x="750" y="477" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#53657E">Retrieve when needed</text>
+<text x="750" y="515" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#087F66">Recover relevant distant facts</text>
+<polyline points="750,544 750,582" fill="none" stroke="#087F66" stroke-width="3" stroke-linejoin="round"/>
+<rect x="995" y="382" width="450" height="162" rx="18" fill="#FFF4DF" stroke="#A65A0C" stroke-width="2"/>
+<text x="1220" y="401" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#A65A0C">Recent context</text>
+<text x="1220" y="449" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#53657E">Motion and immediate interaction</text>
+<text x="1220" y="477" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#53657E">Refresh after each commitment</text>
+<text x="1220" y="515" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#A65A0C">Track what is changing</text>
+<polyline points="1220,544 1220,582" fill="none" stroke="#A65A0C" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="280,582 1220,582" fill="none" stroke="#53657E" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="750,582 750,615" fill="none" stroke="#53657E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750,615 744.345448056554,603.2941876694152 755.654551943446,603.2941876694152" fill="#53657E"/>
+<rect x="400" y="621" width="700" height="103" rx="18" fill="white" stroke="#D8E1EC" stroke-width="2"/>
+<text x="750" y="641" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#14233B">Next active region</text>
+<text x="750" y="684" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#53657E">Memory + uncertainty + available controls</text>
+<rect x="55" y="632" width="280" height="82" rx="18" fill="#F3EEFC" stroke="#7950B5" stroke-width="2"/>
+<text x="195" y="648" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#7950B5">Current prompt</text>
+<text x="195" y="676" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#7950B5">and new actions</text>
+<polyline points="335,673 395,673" fill="none" stroke="#7950B5" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="395,673 383.2941876694152,678.654551943446 383.2941876694152,667.345448056554" fill="#7950B5"/>
+<polyline points="1100,673 1345,673 1345,583 1270,583" fill="none" stroke="#53657E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1270,583 1281.7058123305849,577.345448056554 1281.7058123305849,588.654551943446" fill="#53657E"/>
+<text x="1285" y="728" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#53657E">Commit output;</text>
+<text x="1285" y="754" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#53657E">select, refresh, or evict memory</text>
+<text x="750" y="833" dominant-baseline="hanging" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#53657E">A K/V entry also carries assumptions about prompt, position, and noise stage.</text>
+</svg>
