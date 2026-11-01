@@ -58,7 +58,7 @@ body:has(#about-home) .page__footer { display: none; }
 #about-home .ah-section-top a { font-size: 12px; white-space: nowrap; }
 #about-home .ah-research { padding: 27px 0 35px; border-top: 1px solid var(--ah-line); }
 #about-home h2 { color: var(--ah-ink); font: 400 33px/1.25 Georgia, "Times New Roman", serif; letter-spacing: -.8px; }
-#about-home .ah-research-lead { max-width: 850px; font-size: 16px; line-height: 1.85; color: var(--ah-body); }
+#about-home .ah-research-lead { max-width: none; font-size: 16px; line-height: 1.85; color: var(--ah-body); }
 #about-home .ah-research-lead strong { font-weight: 600; color: #304e3d; }
 #about-home .ah-research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; margin-top: 24px; }
 #about-home .ah-research-item { padding-left: 18px; border-left: 2px solid #bacbb6; }
@@ -231,7 +231,7 @@ body:has(#about-home) .page__footer { display: none; }
 
   <section class="ah-section ah-research" id="research" aria-labelledby="ah-research-title">
     <div class="ah-section-top"><h2 id="ah-research-title">Research focus</h2><a href="/year-archive/">Read my writing <span aria-hidden="true">↗</span></a></div>
-    <p class="ah-research-lead">I study <strong>Generative Models (Diffusion/Flow-Matching)</strong> and <strong>VLM Foundation Models</strong>, you can find more in my <a href="/year-archive/">blog post</a>.</p>
+    <p class="ah-research-lead">I study <strong>Generative Models (Diffusion/Flow-Matching)</strong> and <strong>VLM Foundation Models</strong>, for which you can find more in my <a href="/year-archive/">blog post</a>.</p>
     <div class="ah-research-grid">
       <article class="ah-research-item">
         <p class="ah-kicker">01 / The generative side</p>
