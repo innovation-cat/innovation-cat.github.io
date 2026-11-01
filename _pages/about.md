@@ -52,7 +52,7 @@ body:has(#about-home) .page__footer { display: none; }
 #about-home .ah-profile-cover img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 60% center; opacity: .9; }
 #about-home .ah-avatar { position: relative; display: block; width: 113px; height: 113px; object-fit: cover; margin: -56px auto 0; border: 5px solid #fff; border-radius: 50%; background: #f0f1ed; }
 #about-home .ah-profile figcaption { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 15px 10px 19px; color: #59715f; font-size: 11px; }
-#about-home .ah-location-dot { width: 5px; height: 5px; border-radius: 50%; background: #759977; }
+#about-home .ah-location-icon { display: block; flex: 0 0 auto; width: 14px; height: 16px; color: #65876b; }
 #about-home .ah-section { scroll-margin-top: 25px; }
 #about-home .ah-section-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 17px; }
 #about-home .ah-section-top a { font-size: 12px; white-space: nowrap; }
@@ -212,7 +212,7 @@ body:has(#about-home) .page__footer { display: none; }
     <div class="ah-hero-copy">
       <p class="ah-kicker">Research · Build · Share</p>
       <h1 id="ah-name">Anbu Huang</h1>
-      <p class="ah-tagline">Researching generative intelligence.<br>Building creative systems.</p>
+      <p class="ah-tagline">Researching generative intelligence. Building creative systems.</p>
       <p class="ah-role">Research Scientist, Author, AI Enthusiast · THU</p>
       <nav class="ah-socials" aria-label="Contact and academic profiles">
         <a href="mailto:huanganbu@gmail.com">Email <span aria-hidden="true">↗</span></a>
@@ -225,7 +225,7 @@ body:has(#about-home) .page__footer { display: none; }
     <figure class="ah-profile">
       <div class="ah-profile-cover"><img src="/images/bay.png" alt="Shenzhen skyline beside the bay" width="226" height="115"></div>
       <img class="ah-avatar" src="/images/profile.png" alt="Anbu Huang" width="113" height="113">
-      <figcaption><span class="ah-location-dot" aria-hidden="true"></span>Shenzhen, China</figcaption>
+      <figcaption><svg class="ah-location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.75"/></svg>Shenzhen, China</figcaption>
     </figure>
   </header>
 
