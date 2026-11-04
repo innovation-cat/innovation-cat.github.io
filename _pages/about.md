@@ -153,6 +153,9 @@ body:has(#about-home) .page__footer { display: none; }
   #about-home .ah-tagline { font-size: 21px; }
   #about-home .gx-features { display: flex; flex-wrap: wrap; gap: 5px 22px; }
 }
+@media (max-width: 760px) {
+  #about-home .ah-research-grid { grid-template-columns: 1fr; gap: 23px; }
+}
 @media (max-width: 600px) {
   body:has(#about-home) .masthead__inner-wrap { padding: 14px 20px; }
   body:has(#about-home) .greedy-nav .visible-links li:first-child a { margin-right: 0; font-size: 14px; }
@@ -175,7 +178,7 @@ body:has(#about-home) .page__footer { display: none; }
   #about-home .ah-section-top { align-items: baseline; gap: 12px; }
   #about-home .ah-section-top a { font-size: 13px; }
   #about-home .ah-research-lead { font-size: 15px; }
-  #about-home .ah-research-grid { grid-template-columns: 1fr; gap: 23px; margin-top: 22px; }
+  #about-home .ah-research-grid { margin-top: 22px; }
   #about-home .ah-research-item p { font-size: 15px; }
   #about-home .ah-previous { font-size: 14px; }
   #about-home #genesis-project { padding-top: 27px; }
@@ -232,14 +235,14 @@ body:has(#about-home) .page__footer { display: none; }
     <p class="ah-research-lead">I study <strong>Generative Models (Diffusion/Flow-Matching)</strong> and <strong>VLM Foundation Models</strong>, for which you can find more in my <a href="/year-archive/">blog post</a>.</p>
     <div class="ah-research-grid">
       <article class="ah-research-item">
-        <p class="ah-kicker">01 / The generative side</p>
-        <h3>Fidelity. Speed. Control.</h3>
-        <p>I study the “impossible triangle” of high fidelity, fast sampling, and strong controllability—designing training and inference methods (distillation, guidance, solver-aware sampling) that expand the Pareto frontier.</p>
+        <p class="ah-kicker">01 / Generative modeling</p>
+        <h3>Efficient and controllable generation</h3>
+        <p>I study diffusion and flow-matching models, focusing on generation quality, sampling efficiency, and controllability. My work explores distillation, guidance, and solver-aware sampling to improve training and inference, with the goal of producing high-quality results with less computation and more precise control.</p>
       </article>
       <article class="ah-research-item">
-        <p class="ah-kicker">02 / The understanding side</p>
-        <h3>Understanding and creation, together.</h3>
-        <p>I study to build native VLM architectures that achieve a true unification of understanding and generation, enabling AI to perceive, reason, and create within a single, cohesive framework.</p>
+        <p class="ah-kicker">02 / Vision–language modeling</p>
+        <h3>Unified understanding and generation</h3>
+        <p>I explore native vision–language architectures that bring understanding and generation into a shared model. My goal is to connect visual perception, reasoning, and content creation, so that models can interpret what they see and use that understanding to guide what they generate.</p>
       </article>
     </div>
     <p class="ah-previous">My earlier research focused on recommender systems, federated learning, and AI safety, with <a href="/publications/">publications</a> at conferences including ICLR and AAAI.</p>
