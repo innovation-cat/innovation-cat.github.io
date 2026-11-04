@@ -69,16 +69,15 @@ body:has(#about-home) .page__footer { display: none; }
 #about-home .ah-research-item h3 { margin: 8px 0 10px; color: #2a4b38; font-size: 18px; line-height: 1.4; letter-spacing: -.3px; font-weight: 600; }
 #about-home .ah-research-item p { color: var(--ah-body); font-size: 15px; line-height: 1.75; }
 #about-home .ah-previous { margin-top: 28px; padding-top: 20px; border-top: 1px solid #e4e9e0; color: #526557; font-size: 14px; line-height: 1.75; text-wrap: pretty; }
-#about-home .ah-previous strong { font-weight: 600; color: #3d5944; }
 #about-home .ah-previous a, #about-home .ah-research-lead a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #b5c8b1; }
 #about-home #genesis-project { --gx-accent: #426a4c; padding-top: 32px; border-top: 1px solid var(--ah-line); scroll-margin-top: 25px; }
-#about-home .gx-project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; margin-top: 15px; }
+#about-home .gx-project-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; column-gap: 28px; margin-top: 15px; }
 #about-home .gx-name { display: flex; align-items: center; gap: 12px; }
 #about-home .gx-mark { width: 30px; height: 30px; color: #a07b46; }
 #about-home .gx-name h2 { font-size: 43px; letter-spacing: -1.4px; }
 #about-home .gx-tagline { margin-top: 6px; font-size: 21px; color: #45664b; letter-spacing: -.5px; line-height: 1.4; }
-#about-home .gx-description { max-width: 700px; margin-top: 12px; font-size: 15px; line-height: 1.75; color: var(--ah-body); }
-#about-home .gx-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 11px; padding-top: 8px; }
+#about-home .gx-description { grid-column: 1 / -1; grid-row: 2; max-width: none; margin-top: 12px; font-size: 15px; line-height: 1.75; color: var(--ah-body); }
+#about-home .gx-actions { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; align-items: flex-end; gap: 11px; padding-top: 8px; }
 #about-home .gx-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 46px; padding: 10px 18px; background: #385e45; border: 1px solid #385e45; border-radius: 7px; color: #fff; font-size: 13px; font-weight: 600; white-space: nowrap; transition: background .2s, transform .2s; }
 #about-home .gx-cta:hover { color: #fff; background: #244b33; transform: translateY(-2px); }
 #about-home .gx-text-link { color: #526a56; font-size: 12px; border-bottom: 1px solid #bfcdbb; padding-bottom: 2px; }
@@ -180,11 +179,11 @@ body:has(#about-home) .page__footer { display: none; }
   #about-home .ah-research-item p { font-size: 15px; }
   #about-home .ah-previous { font-size: 14px; }
   #about-home #genesis-project { padding-top: 27px; }
-  #about-home .gx-project-header { flex-direction: column; gap: 18px; margin-top: 12px; }
+  #about-home .gx-project-header { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 12px; }
   #about-home .gx-name h2 { font-size: 39px; }
   #about-home .gx-tagline { font-size: 20px; }
   #about-home .gx-description { font-size: 14px; }
-  #about-home .gx-actions { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 17px; padding: 0; }
+  #about-home .gx-actions { grid-column: 1; grid-row: 3; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 17px; margin-top: 18px; padding: 0; }
   #about-home .gx-tabs { gap: 6px; margin-top: 22px; }
   #about-home .gx-tab { display: flex; flex-direction: column; gap: 3px; padding: 11px 8px; }
   #about-home .gx-tab-number { font-size: 10px; }
@@ -243,7 +242,7 @@ body:has(#about-home) .page__footer { display: none; }
         <p>I study to build native VLM architectures that achieve a true unification of understanding and generation, enabling AI to perceive, reason, and create within a single, cohesive framework.</p>
       </article>
     </div>
-    <p class="ah-previous"><strong>Previously:</strong> I have also worked on areas including recommender systems, federated learning and AI safety. I have published multiple research papers at AI conferences such as ICLR and AAAI (<a href="/publications/">Publication</a>).</p>
+    <p class="ah-previous">My earlier research focused on recommender systems, federated learning, and AI safety, with <a href="/publications/">publications</a> at conferences including ICLR and AAAI.</p>
   </section>
 
   <section class="ah-section" id="genesis-project" aria-labelledby="gx-title">
@@ -252,8 +251,8 @@ body:has(#about-home) .page__footer { display: none; }
       <div>
         <div class="gx-name"><svg class="gx-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M25 11a11 11 0 1 0 1 10H16" stroke="currentColor" stroke-width="1.5"/><path d="m24 2 1.8 5.2L31 9l-5.2 1.8L24 16l-1.8-5.2L17 9l5.2-1.8Z" fill="currentColor"/></svg><h2 id="gx-title">Genesis</h2></div>
         <p class="gx-tagline">One idea. Three ways to create.</p>
-        <p class="gx-description">A video creation studio connecting code-driven animation, model-generated storytelling, and hybrid exploration. From precise explanations to expressive visual stories.</p>
       </div>
+      <p class="gx-description">A video creation studio connecting code-driven animation, model-generated storytelling, and hybrid exploration. From precise explanations to expressive visual stories.</p>
       <div class="gx-actions"><a class="gx-cta" href="https://innovation-cat.github.io/Genesis/" target="_blank" rel="noopener noreferrer">Open the studio <span aria-hidden="true">↗</span></a></div>
     </header>
     <div aria-label="Video creation paths" class="gx-tabs" hidden="" role="tablist">
