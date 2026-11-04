@@ -44,9 +44,12 @@ body:has(#about-home) .page__footer { display: none; }
 #about-home h1 { color: var(--ah-ink); font: 400 clamp(45px, 5.2vw, 66px)/1.08 Georgia, "Times New Roman", serif; letter-spacing: -2px; margin: 12px 0 17px; }
 #about-home .ah-tagline { color: #526e58; font-size: 24px; line-height: 1.45; letter-spacing: -.6px; }
 #about-home .ah-role { margin-top: 15px; color: var(--ah-body); font-size: 14px; }
-#about-home .ah-socials { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin-top: 22px; }
-#about-home .ah-socials a { display: inline-flex; gap: 7px; align-items: center; color: #4c6755; font-size: 12px; border-bottom: 1px solid #bfcdbb; padding: 3px 0; }
-#about-home .ah-socials a:hover { border-color: #365f49; color: #203e33; }
+#about-home .ah-socials { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-top: 23px; }
+#about-home .ah-socials a { display: inline-flex; gap: 7px; align-items: center; justify-content: center; min-height: 38px; padding: 8px 13px; border: 1px solid #dce5d7; border-radius: 999px; background: #ffffffb3; color: #48634f; font-size: 12px; font-weight: 500; line-height: 1.4; white-space: nowrap; transition: background .18s, border-color .18s, box-shadow .18s, transform .18s; }
+#about-home .ah-socials a:hover { border-color: #a6ba9c; background: #edf2e7; color: #264b34; box-shadow: 0 3px 10px #2543330a; transform: translateY(-1px); }
+#about-home .ah-socials .ah-contact-link { background: #385e45; border-color: #385e45; color: #fff; }
+#about-home .ah-socials .ah-contact-link:hover { background: #254b33; border-color: #254b33; color: #fff; }
+#about-home .ah-social-icon { display: block; flex: 0 0 auto; width: 15px; height: 15px; }
 #about-home .ah-profile { display: block; overflow: hidden; width: 226px; border: 1px solid var(--ah-line); border-radius: 18px; background: #fff; text-align: center; }
 #about-home .ah-profile-cover { height: 115px; overflow: hidden; background: #e0e8dc; }
 #about-home .ah-profile-cover img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 60% center; opacity: .9; }
@@ -86,9 +89,9 @@ body:has(#about-home) .page__footer { display: none; }
 #about-home .gx-tab-number { grid-row: span 2; padding-top: 2px; font: 10px/1.8 ui-monospace, Consolas, monospace; color: #71856b; }
 #about-home .gx-tab strong { font-size: 14px; font-weight: 600; line-height: 1.5; }
 #about-home .gx-tab small { color: #6b7e69; font-size: 10px; line-height: 1.5; }
-#about-home .gx-panel { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 29px; align-items: start; padding: 25px; border: 1px solid var(--ah-line); border-radius: 12px; background: #fff; }
+#about-home .gx-panel { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 29px; align-items: stretch; padding: 25px; border: 1px solid var(--ah-line); border-radius: 12px; background: #fff; }
 #about-home .gx-panel + .gx-panel { margin-top: 15px; }
-#about-home .gx-visual { display: block; width: 100%; min-width: 0; }
+#about-home .gx-visual { display: block; align-self: start; width: 100%; min-width: 0; }
 #about-home .gx-screen { position: relative; overflow: hidden; width: 100%; aspect-ratio: 16 / 9; border: 1px solid #d6dfd2; border-radius: 7px; background: #243a32; color-scheme: dark; }
 #about-home video { display: block; width: 100%; height: 100%; object-fit: contain; margin: 0; background: #203a32; }
 #about-home .gx-play { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; width: 100%; border: 0; border-radius: 0; color: #fff; background: linear-gradient(transparent 35%, #152c2933); }
@@ -98,18 +101,25 @@ body:has(#about-home) .page__footer { display: none; }
 #about-home .gx-play-label { padding: 3px 8px; border-radius: 4px; background: #18322de8; font-size: 11px; font-weight: 500; }
 #about-home .gx-caption { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-top: 10px; color: #6a7f6c; font: 10px/1.65 ui-monospace, Consolas, monospace; }
 #about-home .gx-caption span:last-child { white-space: nowrap; }
-#about-home .gx-copy { min-width: 0; padding-top: 2px; }
-#about-home .gx-badge { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 10px; color: #527953; font: 9px/1.6 ui-monospace, Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
+#about-home .gx-copy { display: flex; flex-direction: column; min-width: 0; }
+#about-home .gx-badge { display: inline-flex; align-self: flex-start; align-items: center; gap: 6px; margin-bottom: 8px; color: #527953; font: 9px/1.6 ui-monospace, Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
 #about-home .gx-badge::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 #about-home .gx-preview-badge { color: #93753f; }
-#about-home .gx-copy h3 { margin-bottom: 12px; color: #2a4937; font-size: 25px; font-weight: 550; line-height: 1.22; letter-spacing: -.8px; }
-#about-home .gx-copy > p { color: #5b7060; font-size: 13px; line-height: 1.85; }
+#about-home .gx-copy h3 { margin-bottom: 9px; color: #2a4937; font-size: 25px; font-weight: 550; line-height: 1.22; letter-spacing: -.8px; }
+#about-home .gx-copy h3 br { display: none; }
+#about-home .gx-copy > p { color: #5b7060; font-size: 13px; line-height: 1.65; }
+#about-home .gx-steps { list-style: none; counter-reset: gx-stage; margin-top: 12px; }
+#about-home .gx-steps li { position: relative; counter-increment: gx-stage; padding: 0 0 9px 25px; color: #5b7060; font-size: 12px; line-height: 1.6; }
+#about-home .gx-steps li:last-child { padding-bottom: 0; }
+#about-home .gx-steps li::before { content: "0" counter(gx-stage); position: absolute; left: 0; top: 2px; color: #829976; font: 9px/1.75 ui-monospace, Consolas, monospace; }
+#about-home .gx-steps strong { display: block; margin-bottom: 2px; color: #3a593c; font-size: 12px; font-weight: 600; }
+#about-home .gx-copy > .gx-review-note { margin-top: 9px; color: #72856c; font-size: 10px; line-height: 1.6; }
 #about-home .gx-features { list-style: none; margin-top: 13px; }
 #about-home .gx-features li { position: relative; margin-top: 6px; padding-left: 13px; color: #405f47; font-size: 12px; line-height: 1.75; }
 #about-home .gx-features li::before { content: ""; position: absolute; top: .7em; left: 0; width: 4px; height: 4px; border-radius: 1px; background: #90a883; }
 #about-home .gx-flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 16px; padding-top: 12px; border-top: 1px solid #e1e8dd; color: #688064; font: 10px/1.7 ui-monospace, Consolas, monospace; }
 #about-home .gx-flow i { font-style: normal; color: #99ae91; }
-#about-home .gx-workflow-link { display: inline-block; margin-top: 13px; color: #446c46; font-size: 11px; border-bottom: 1px solid transparent; }
+#about-home .gx-workflow-link { display: inline-block; align-self: flex-start; margin-top: auto; padding-top: 12px; color: #446c46; font-size: 11px; border-bottom: 1px solid transparent; }
 #about-home .gx-workflow-link:hover { border-color: #8aa381; }
 #about-home .gx-copy > .gx-media-note { margin-top: 13px; color: #8a764f; font-size: 11px; line-height: 1.7; }
 #about-home .gx-hybrid-canvas { --gx-split: 52%; background: #172c37; }
@@ -125,18 +135,6 @@ body:has(#about-home) .page__footer { display: none; }
 #about-home .gx-range { display: flex; align-items: center; gap: 12px; margin-top: 11px; }
 #about-home .gx-range label { color: #647d65; font-size: 10px; font-weight: 400; }
 #about-home .gx-range input { min-width: 0; flex: 1; width: 100%; height: 26px; accent-color: #648257; cursor: ew-resize; }
-#about-home .gx-details { margin-top: 19px; border-top: 1px solid var(--ah-line); border-bottom: 1px solid var(--ah-line); scroll-margin-top: 24px; }
-#about-home .gx-details summary { position: relative; list-style: none; padding: 17px 28px 17px 0; color: #4a654d; font-size: 12px; cursor: pointer; }
-#about-home .gx-details summary::-webkit-details-marker { display: none; }
-#about-home .gx-details summary::after { content: "+"; position: absolute; right: 2px; top: 10px; color: #718a68; font-size: 19px; }
-#about-home .gx-details[open] summary::after { content: "−"; }
-#about-home .gx-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; padding: 7px 0 20px; }
-#about-home .gx-detail-grid h4 { margin-bottom: 12px; color: #426644; font-size: 13px; font-weight: 600; }
-#about-home .gx-detail-grid ol { list-style: none; counter-reset: ah-step; }
-#about-home .gx-detail-grid li { position: relative; counter-increment: ah-step; padding: 0 0 12px 27px; color: #62765f; font-size: 12px; line-height: 1.85; }
-#about-home .gx-detail-grid li::before { content: "0" counter(ah-step); position: absolute; top: 1px; left: 0; color: #829976; font: 10px/1.8 ui-monospace, Consolas, monospace; }
-#about-home .gx-detail-grid strong { display: block; color: #3a593c; font-weight: 600; }
-#about-home .gx-detail-note { padding-bottom: 22px; color: #72856c; font-size: 11px; line-height: 1.8; }
 #about-home .gx-bottom { display: flex; justify-content: space-between; align-items: baseline; gap: 25px; padding-top: 18px; }
 #about-home .gx-bottom p { max-width: 650px; color: #74816e; font-size: 11px; line-height: 1.8; }
 #about-home .gx-bottom a { white-space: nowrap; color: #526e4f; font-size: 11px; }
@@ -145,13 +143,15 @@ body:has(#about-home) .page__footer { display: none; }
 #about-home .ah-footer nav { display: flex; flex-wrap: wrap; gap: 20px; }
 #about-home .ah-footer a { color: #6e8264; }
 @keyframes ah-light { from { opacity: .4; transform: rotate(-6deg); } to { opacity: .85; transform: rotate(5deg); } }
+@media (max-width: 1150px) {
+  #about-home .gx-panel { grid-template-columns: 1fr; gap: 23px; }
+  #about-home .gx-copy { display: block; max-width: none; }
+  #about-home .gx-workflow-link { margin-top: 14px; padding-top: 0; }
+}
 @media (max-width: 900px) {
   #about-home .ah-hero { grid-template-columns: minmax(0, 1fr) 194px; gap: 35px; padding-top: 38px; }
   #about-home .ah-profile { width: 194px; }
   #about-home .ah-tagline { font-size: 21px; }
-  #about-home .gx-panel { grid-template-columns: 1fr; gap: 23px; }
-  #about-home .gx-copy { max-width: 640px; }
-  #about-home .gx-copy h3 br { display: none; }
   #about-home .gx-features { display: flex; flex-wrap: wrap; gap: 5px 22px; }
 }
 @media (max-width: 600px) {
@@ -169,7 +169,8 @@ body:has(#about-home) .page__footer { display: none; }
   #about-home h1 { font-size: 46px; letter-spacing: -1.7px; margin: 10px 0 14px; }
   #about-home .ah-tagline { font-size: 22px; }
   #about-home .ah-role { font-size: 12px; }
-  #about-home .ah-socials { gap: 8px 18px; margin-top: 18px; }
+  #about-home .ah-socials { gap: 8px; margin-top: 18px; }
+  #about-home .ah-socials a { min-height: 40px; padding: 8px 11px; }
   #about-home .ah-research { padding: 24px 0 28px; }
   #about-home h2 { font-size: 30px; }
   #about-home .ah-section-top { align-items: baseline; gap: 12px; }
@@ -194,8 +195,6 @@ body:has(#about-home) .page__footer { display: none; }
   #about-home .gx-copy h3 { font-size: 24px; line-height: 1.3; }
   #about-home .gx-copy > p { font-size: 13px; }
   #about-home .gx-features { display: block; }
-  #about-home .gx-details summary { font-size: 11px; }
-  #about-home .gx-detail-grid { grid-template-columns: 1fr; gap: 15px; }
   #about-home .gx-bottom { flex-direction: column; gap: 10px; }
   #about-home .ah-footer { flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 29px; }
 }
@@ -215,11 +214,11 @@ body:has(#about-home) .page__footer { display: none; }
       <p class="ah-tagline">Researching generative intelligence. Building creative systems.</p>
       <p class="ah-role">Research Scientist, Author, AI Enthusiast · THU</p>
       <nav class="ah-socials" aria-label="Contact and academic profiles">
-        <a href="mailto:huanganbu@gmail.com">Email <span aria-hidden="true">↗</span></a>
-        <a href="https://github.com/innovation-cat" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-        <a href="https://scholar.google.com/citations?user=Luv9JqgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
-        <a href="https://orcid.org/0000-0003-3444-7348" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
-        <a href="https://stackoverflow.com/users/1347935/innovation-cat" target="_blank" rel="noopener noreferrer">Stack Overflow <span aria-hidden="true">↗</span></a>
+        <a class="ah-contact-link" href="mailto:huanganbu@gmail.com"><svg class="ah-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>Email</a>
+        <a href="https://github.com/innovation-cat" target="_blank" rel="noopener noreferrer"><svg class="ah-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+        <a href="https://scholar.google.com/citations?user=Luv9JqgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><svg class="ah-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 11.3v5c2.9 2.2 7.1 2.2 10 0v-5M21 9v6"/></svg>Google Scholar</a>
+        <a href="https://orcid.org/0000-0003-3444-7348" target="_blank" rel="noopener noreferrer"><svg class="ah-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M8 10v7M11 7h2a5 5 0 0 1 0 10h-2V7Z"/><circle cx="8" cy="7" r=".8" fill="currentColor" stroke="none"/></svg>ORCID</a>
+        <a href="https://stackoverflow.com/users/1347935/innovation-cat" target="_blank" rel="noopener noreferrer"><svg class="ah-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 15v6h15v-6M8 17h9m-9-5 9 2m-7-6 8 4m-5-8 6 6"/></svg>Stack Overflow</a>
       </nav>
     </div>
     <figure class="ah-profile">
@@ -255,7 +254,7 @@ body:has(#about-home) .page__footer { display: none; }
         <p class="gx-tagline">One idea. Three ways to create.</p>
         <p class="gx-description">A video creation studio connecting code-driven animation, model-generated storytelling, and hybrid exploration. From precise explanations to expressive visual stories.</p>
       </div>
-      <div class="gx-actions"><a class="gx-cta" href="https://innovation-cat.github.io/Genesis/" target="_blank" rel="noopener noreferrer">Open the studio <span aria-hidden="true">↗</span></a><a class="gx-text-link" href="#gx-process">How it works <span aria-hidden="true">↓</span></a></div>
+      <div class="gx-actions"><a class="gx-cta" href="https://innovation-cat.github.io/Genesis/" target="_blank" rel="noopener noreferrer">Open the studio <span aria-hidden="true">↗</span></a></div>
     </header>
     <div aria-label="Video creation paths" class="gx-tabs" hidden="" role="tablist">
 <button aria-controls="gx-panel-code" aria-selected="false" class="gx-tab" data-mode="code" id="gx-tab-code" role="tab" tabindex="-1" type="button"><span class="gx-tab-number">01 /</span><strong>Code-driven</strong><small>Manim · Available</small></button>
@@ -273,10 +272,13 @@ body:has(#about-home) .page__footer { display: none; }
 <div class="gx-copy">
 <span class="gx-badge">Available · Programmatic video</span>
 <h3>Make the abstract<br/> visible.</h3>
-<p>Describe a concept. Genesis plans the explanation, writes executable Manim code, and renders an animation with aligned narration and subtitles.</p>
-<ul class="gx-features"><li>Geometry, equations &amp; controlled motion</li><li>Chinese or English AI narration</li><li>Download video, source code &amp; timeline</li></ul>
-<div aria-label="Code-driven workflow" class="gx-flow"><span>Idea</span><i aria-hidden="true">→</i><span>Storyboard</span><i aria-hidden="true">→</i><span>Code</span><i aria-hidden="true">→</i><span>Render</span></div>
-<a class="gx-workflow-link" href="https://innovation-cat.github.io/Genesis/#studio/program/video" rel="noopener noreferrer" target="_blank">Explore code-driven creation <span aria-hidden="true">↗</span></a>
+<p>Turn a concept into an editable, narrated Manim animation.</p>
+<ol class="gx-steps" aria-label="Code-driven creation process">
+<li><strong>Plan the explanation</strong>Build an outline and storyboard from your topic, duration and visual style, with geometry, equations and controlled motion.</li>
+<li><strong>Write, voice &amp; render</strong>Generate Manim code and Chinese or English AI narration, render each shot and repair rendering errors.</li>
+<li><strong>Align &amp; export</strong>Synchronize animation, narration and subtitles. Download MP4, WAV, SRT / VTT, editable source code and the timeline.</li>
+</ol>
+<a class="gx-workflow-link" href="https://innovation-cat.github.io/Genesis/#studio/program/video" target="_blank" rel="noopener noreferrer">Explore code-driven creation <span aria-hidden="true">↗</span></a>
 </div>
 </div>
 <div aria-labelledby="gx-tab-model" class="gx-panel" data-panel="model" id="gx-panel-model" role="tabpanel" tabindex="0">
@@ -290,10 +292,14 @@ body:has(#about-home) .page__footer { display: none; }
 <div class="gx-copy">
 <span class="gx-badge">Available · Generative video</span>
 <h3>From a brief<br/> to a visual story.</h3>
-<p>Start with a story brief. Plan a sequence, guide characters and locations with visual references, then generate and assemble the individual shots.</p>
-<ul class="gx-features"><li>Character, scene &amp; style references</li><li>Optional shot review &amp; refinement</li><li>Visual memory for continuity guidance</li></ul>
-<div aria-label="Model-generated workflow" class="gx-flow"><span>Brief</span><i aria-hidden="true">→</i><span>Shots</span><i aria-hidden="true">→</i><span>Review</span><i aria-hidden="true">→</i><span>Film</span></div>
-<a class="gx-workflow-link" href="https://innovation-cat.github.io/Genesis/#studio/generative/video" rel="noopener noreferrer" target="_blank">Explore model-generated stories <span aria-hidden="true">↗</span></a>
+<p>Shape one story across multiple generated shots.</p>
+<ol class="gx-steps" aria-label="Model-generated creation process">
+<li><strong>Define the story world</strong>Plan 2–8 shots from a brief. Attach visual references to characters, scenes and the overall style.</li>
+<li><strong>Generate &amp; review</strong>Optionally review sampled frames, refine prompts and select candidates. Continuity guidance uses visual memory and scene state.</li>
+<li><strong>Assemble the story</strong>Normalize and join the selected clips on a shared timeline, with storyboard and production records available to inspect.</li>
+</ol>
+<p class="gx-review-note">Refinement and continuity are independent options. Visual consistency depends on the selected model and references.</p>
+<a class="gx-workflow-link" href="https://innovation-cat.github.io/Genesis/#studio/generative/video" target="_blank" rel="noopener noreferrer">Explore model-generated stories <span aria-hidden="true">↗</span></a>
 </div>
 </div>
 <div aria-labelledby="gx-tab-hybrid" class="gx-panel" data-panel="hybrid" id="gx-panel-hybrid" role="tabpanel" tabindex="0">
@@ -329,20 +335,7 @@ body:has(#about-home) .page__footer { display: none; }
 <a class="gx-workflow-link" href="https://innovation-cat.github.io/Genesis/#studio/hybrid/video" rel="noopener noreferrer" target="_blank">Explore the hybrid preview <span aria-hidden="true">↗</span></a>
 </div>
 </div>
-    <details class="gx-details" id="gx-process">
-<summary>Inside the pipeline — from intent to a finished video</summary>
-<div class="gx-detail-grid">
-<div>
-<h4>01 / Code-driven animation</h4>
-<ol><li><strong>Plan the explanation</strong>Build an outline and storyboard from the topic, duration and visual style.</li><li><strong>Write, voice and render</strong>Generate shot-level narration, synthesize speech, write Manim code and repair rendering errors.</li><li><strong>Align and export</strong>Match animation to narration and subtitles. Export MP4, WAV, SRT / VTT, source code and the timeline.</li></ol>
-</div>
-<div>
-<h4>02 / Model-generated stories</h4>
-<ol><li><strong>Define the story world</strong>Plan 2–8 shots from a brief. Attach reference images to specific characters, scenes or the overall style.</li><li><strong>Generate and review shots</strong>Optionally inspect sampled frames, revise prompts and select candidates. Continuity guidance tracks visual references and scene state.</li><li><strong>Assemble the story</strong>Normalize the selected clips and join them on a shared timeline, with storyboard and production records available for inspection.</li></ol>
-</div>
-</div>
-<p class="gx-detail-note">Shot refinement and continuity guidance are independent options. Visual review uses sampled frames; consistency depends on the selected model and references.</p>
-</details>
+
     <div class="gx-bottom"><p>The web workspace connects to your own local engine and configured models for generation. Genesis is the studio interface of my Code2X project.</p><a href="https://github.com/innovation-cat/Genesis" target="_blank" rel="noopener noreferrer">Web project on GitHub <span aria-hidden="true">↗</span></a></div>
   </section>
 
@@ -420,9 +413,6 @@ body:has(#about-home) .page__footer { display: none; }
   canvas.addEventListener('pointerup', function (event) {
     if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
   });
-  var process = root.querySelector('#gx-process');
-  root.querySelector('a[href="#gx-process"]').addEventListener('click', function () { process.open = true; });
-  if (window.location.hash === '#gx-process') process.open = true;
 }());
 </script>
 
