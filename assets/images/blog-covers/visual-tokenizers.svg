@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-labelledby="cover-title cover-description">
+<title id="cover-title">Discrete Visual Tokenizers for Multimodal LLMs: Bridging Vision and Language</title>
+<desc id="cover-description">A continuous image is divided into patches, quantized through a highlighted codebook entry, and translated into discrete visual token IDs.</desc>
+<defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fffcf7"/><stop offset="1" stop-color="#f4ece2"/></linearGradient><linearGradient id="field" x2="0" y2="1"><stop stop-color="#b3937c" stop-opacity=".65"/><stop offset="1" stop-color="#b3937c" stop-opacity=".02"/></linearGradient>
+<marker id="arrow-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#654b3c" stroke-width="1.8" stroke-linejoin="round"/></marker>
+<marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#50776c" stroke-width="1.8" stroke-linejoin="round"/></marker>
+<pattern id="paper-grid" width="24" height="24" patternUnits="userSpaceOnUse" x="40" y="118"><circle cx="0" cy="0" r=".7" fill="#654b3c" opacity=".085"/></pattern></defs>
+<rect x="0" y="0" width="720" height="440" rx="0" fill="url(#paper)" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="12" y="12" width="696" height="416" rx="13" fill="none" stroke="#654b3c" stroke-width="1" opacity="0.12" />
+<rect x="32" y="112" width="656" height="272" rx="0" fill="url(#paper-grid)" stroke="none" stroke-width="1.5" opacity="1" />
+<ellipse cx="558" cy="237" rx="142" ry="116" fill="#ead9c9" stroke="none" stroke-width="1.5" opacity="0.32" />
+<text x="32" y="38" fill="#654b3c" font-family="Consolas,Menlo,monospace" font-size="12.5" text-anchor="start" opacity="1" letter-spacing="1.65">DISCRETE REPRESENTATIONS</text>
+<text x="685" y="38" fill="#654b3c" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="end" opacity="0.65">2025 / 12</text>
+<text x="32" y="85" fill="#654b3c" font-family="Georgia,Times New Roman,serif" font-size="33" text-anchor="start" opacity="1">An image, a language</text>
+<g stroke-linecap="round" stroke-linejoin="round">
+<rect x="55" y="152" width="154" height="176" rx="7" fill="#fffcf7" stroke="#b3937c" stroke-width="1.5" opacity="1" />
+<circle cx="162.8" cy="201.28" r="22.88" fill="#50776c" stroke="none" stroke-width="1.5" opacity="0.88"/>
+<path d="M62 294.56Q98.12 197.76 132.0 271.68T202 248.8L202 321H62Z" fill="#ead9c9" stroke="#b3937c" stroke-width="1" opacity="1"/>
+<path d="M62 299.84000000000003Q95.03999999999999 248.8 132.0 294.56T202 278.72" fill="none" stroke="#654b3c" stroke-width="2.5" opacity="1"/>
+<path d="M93.5 153L93.5 327" fill="none" stroke="#fffcf7" stroke-width="2.5" opacity="1"/>
+<path d="M56 196L208 196" fill="none" stroke="#fffcf7" stroke-width="2.5" opacity="1"/>
+<path d="M132 153L132 327" fill="none" stroke="#fffcf7" stroke-width="2.5" opacity="1"/>
+<path d="M56 240L208 240" fill="none" stroke="#fffcf7" stroke-width="2.5" opacity="1"/>
+<path d="M170.5 153L170.5 327" fill="none" stroke="#fffcf7" stroke-width="2.5" opacity="1"/>
+<path d="M56 284L208 284" fill="none" stroke="#fffcf7" stroke-width="2.5" opacity="1"/>
+<text x="132" y="360" fill="#654b3c" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1" letter-spacing="0.7">CONTINUOUS IMAGE</text>
+<path d="M226 239L274 239" fill="none" stroke="#50776c" stroke-width="2.5" opacity="1" marker-end="url(#arrow-accent)"/>
+<rect x="294" y="154" width="137" height="174" rx="7" fill="#fffcf7" stroke="#b3937c" stroke-width="1.5" opacity="1" />
+<rect x="307" y="170" width="23" height="23" rx="2" fill="#ead9c9" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="335" y="170" width="23" height="23" rx="2" fill="#654b3c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="363" y="170" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="391" y="170" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="307" y="198" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="335" y="198" width="23" height="23" rx="2" fill="#ead9c9" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="363" y="198" width="23" height="23" rx="2" fill="#50776c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="391" y="198" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="307" y="226" width="23" height="23" rx="2" fill="#50776c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="335" y="226" width="23" height="23" rx="2" fill="#50776c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="363" y="226" width="23" height="23" rx="2" fill="#50776c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="391" y="226" width="23" height="23" rx="2" fill="#ead9c9" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="307" y="254" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="335" y="254" width="23" height="23" rx="2" fill="#654b3c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="363" y="254" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="391" y="254" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="307" y="282" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="335" y="282" width="23" height="23" rx="2" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="363" y="282" width="23" height="23" rx="2" fill="#654b3c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="391" y="282" width="23" height="23" rx="2" fill="#654b3c" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="360" y="195" width="27" height="27" rx="4" fill="none" stroke="#50776c" stroke-width="3" opacity="1" />
+<text x="361" y="360" fill="#654b3c" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1" letter-spacing="0.7">QUANTIZATION</text>
+<path d="M436 240C466 240 461 187 491 187" fill="none" stroke="#50776c" stroke-width="2" opacity="1" marker-end="url(#arrow-accent)"/>
+<rect x="505" y="159" width="67" height="43" rx="5" fill="#654b3c" stroke="none" stroke-width="1.5" opacity="1" />
+<text x="538" y="188" fill="#fffcf7" font-family="Consolas,Menlo,monospace" font-size="20" text-anchor="middle" opacity="1">17</text>
+<rect x="584" y="166" width="72" height="7" rx="3" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="0.45" />
+<rect x="584" y="180" width="49" height="7" rx="3" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="0.25" />
+<rect x="505" y="219" width="67" height="43" rx="5" fill="#50776c" stroke="none" stroke-width="1.5" opacity="1" />
+<text x="538" y="248" fill="#fffcf7" font-family="Consolas,Menlo,monospace" font-size="20" text-anchor="middle" opacity="1">42</text>
+<rect x="584" y="226" width="72" height="7" rx="3" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="0.45" />
+<rect x="584" y="240" width="49" height="7" rx="3" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="0.25" />
+<rect x="505" y="279" width="67" height="43" rx="5" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="1" />
+<text x="538" y="308" fill="#fffcf7" font-family="Consolas,Menlo,monospace" font-size="20" text-anchor="middle" opacity="1">08</text>
+<rect x="584" y="286" width="72" height="7" rx="3" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="0.45" />
+<rect x="584" y="300" width="49" height="7" rx="3" fill="#b3937c" stroke="none" stroke-width="1.5" opacity="0.25" />
+<text x="579" y="360" fill="#654b3c" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1" letter-spacing="0.7">VISUAL LANGUAGE</text>
+</g>
+<path d="M32 398L688 398" fill="none" stroke="#654b3c" stroke-width="1" opacity="0.18"/>
+<text x="32" y="421" fill="#654b3c" font-family="Consolas,Menlo,monospace" font-size="11.5" text-anchor="start" opacity="0.8" letter-spacing="1.05">IMAGE PATCHES · CODEBOOKS · VISUAL TOKENS</text>
+<circle cx="681" cy="416" r="4" fill="#50776c" stroke="none" stroke-width="1.5" opacity="1"/>
+</svg>

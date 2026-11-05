@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-labelledby="cover-title cover-description">
+<title id="cover-title">Visual Representation Learning</title>
+<desc id="cover-description">Augmented views, masked patches, self-distillation and latent prediction surround a shared visual representation manifold.</desc>
+<defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fcfafb"/><stop offset="1" stop-color="#f0ebf1"/></linearGradient><linearGradient id="field" x2="0" y2="1"><stop stop-color="#a28aaa" stop-opacity=".65"/><stop offset="1" stop-color="#a28aaa" stop-opacity=".02"/></linearGradient>
+<marker id="arrow-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#58445f" stroke-width="1.8" stroke-linejoin="round"/></marker>
+<marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#b68d5f" stroke-width="1.8" stroke-linejoin="round"/></marker>
+<pattern id="paper-grid" width="24" height="24" patternUnits="userSpaceOnUse" x="40" y="118"><circle cx="0" cy="0" r=".7" fill="#58445f" opacity=".085"/></pattern></defs>
+<rect x="0" y="0" width="720" height="440" rx="0" fill="url(#paper)" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="12" y="12" width="696" height="416" rx="13" fill="none" stroke="#58445f" stroke-width="1" opacity="0.12" />
+<rect x="32" y="112" width="656" height="272" rx="0" fill="url(#paper-grid)" stroke="none" stroke-width="1.5" opacity="1" />
+<ellipse cx="558" cy="237" rx="142" ry="116" fill="#e0d6e5" stroke="none" stroke-width="1.5" opacity="0.32" />
+<text x="32" y="38" fill="#58445f" font-family="Consolas,Menlo,monospace" font-size="12.5" text-anchor="start" opacity="1" letter-spacing="1.65">REPRESENTATION LEARNING</text>
+<text x="685" y="38" fill="#58445f" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="end" opacity="0.65">2025 / 12</text>
+<text x="32" y="85" fill="#58445f" font-family="Georgia,Times New Roman,serif" font-size="33" text-anchor="start" opacity="1">Learning what matters</text>
+<g stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="361" cy="246" rx="133" ry="94" fill="none" stroke="#a28aaa" stroke-width="1.2" opacity="1" transform="rotate(-20 361 246)"/>
+<ellipse cx="361" cy="246" rx="120" ry="72" fill="none" stroke="#a28aaa" stroke-width="1.2" opacity="1" transform="rotate(25 361 246)"/>
+<path d="M282 275C251 198 327 165 369 205S431 175 452 230S381 326 334 286S296 314 282 275Z" fill="url(#field)" stroke="#a28aaa" stroke-width="2" opacity="0.7"/>
+<circle cx="318.84" cy="214.923" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="324.275" cy="238.62" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="341.705" cy="230.25" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="319.37" cy="219.51" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="312.275" cy="210.039" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="296.119" cy="200.629" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="333.312" cy="221.977" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="332.715" cy="205.5" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="322.331" cy="222.488" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="328.181" cy="219.763" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="331.98" cy="234.76" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="337.583" cy="197.499" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="301.727" cy="239.948" r="3.5" fill="#58445f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="427.131" cy="272.067" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="386.272" cy="280.471" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="393.976" cy="268.53" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="409.934" cy="266.785" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="367.118" cy="257.728" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="399.721" cy="255.865" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="396.381" cy="259.423" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="398.792" cy="259.798" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="403.812" cy="261.632" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="375.778" cy="272.335" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="396.15" cy="267.713" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="369.723" cy="260.709" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="404.745" cy="269.403" r="3.5" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="364.297" cy="231.252" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="387.09" cy="215.686" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="374.679" cy="214.474" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="388.034" cy="187.987" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="376.009" cy="200.749" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="387.096" cy="217.36" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="381.375" cy="220.945" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="404.631" cy="238.624" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="363.394" cy="237.351" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="382.646" cy="195.309" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="399.495" cy="206.334" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="371.921" cy="227.05" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<circle cx="378.235" cy="217.959" r="3.5" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<rect x="61" y="145" width="77" height="62" rx="7" fill="#fcfafb" stroke="#a28aaa" stroke-width="1.5" opacity="1" />
+<circle cx="114.9" cy="162.36" r="8.06" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.88"/>
+<path d="M68 195.22Q82.56 161.12 99.5 187.16T131 179.1L131 200H68Z" fill="#e0d6e5" stroke="#a28aaa" stroke-width="1" opacity="1"/>
+<path d="M68 197.07999999999998Q81.02 179.1 99.5 195.22T131 189.64" fill="none" stroke="#58445f" stroke-width="2.5" opacity="1"/>
+<rect x="123" y="169" width="77" height="62" rx="7" fill="#fcfafb" stroke="#a28aaa" stroke-width="1.5" opacity="1" />
+<circle cx="176.9" cy="186.36" r="8.06" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="0.88"/>
+<path d="M130 219.22Q144.56 185.12 161.5 211.16T193 203.1L193 224H130Z" fill="#e0d6e5" stroke="#a28aaa" stroke-width="1" opacity="1"/>
+<path d="M130 221.07999999999998Q143.02 205.58 161.5 219.22T193 213.64" fill="none" stroke="#58445f" stroke-width="2.5" opacity="1"/>
+<path d="M173 227C220 234 229 201 277 219" fill="none" stroke="#58445f" stroke-width="1.8" opacity="1" marker-end="url(#arrow-ink)"/>
+<text x="65" y="132" fill="#58445f" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="start" opacity="1" letter-spacing="0.6">TWO VIEWS</text>
+<rect x="86" y="272" width="19" height="19" rx="2" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="109" y="272" width="19" height="19" rx="2" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="132" y="272" width="19" height="19" rx="2" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="155" y="272" width="19" height="19" rx="2" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="86" y="295" width="19" height="19" rx="2" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="109" y="295" width="19" height="19" rx="2" fill="#e0d6e5" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="132" y="295" width="19" height="19" rx="2" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="155" y="295" width="19" height="19" rx="2" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="86" y="318" width="19" height="19" rx="2" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="109" y="318" width="19" height="19" rx="2" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="132" y="318" width="19" height="19" rx="2" fill="#e0d6e5" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="155" y="318" width="19" height="19" rx="2" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="109" y="295" width="19" height="19" rx="2" fill="#f0ebf1" stroke="#a28aaa" stroke-width="1.5" opacity="1" stroke-dasharray="3 4"/>
+<path d="M187 303L253 283" fill="none" stroke="#a28aaa" stroke-width="1.7" opacity="1" marker-end="url(#arrow-ink)"/>
+<text x="83" y="365" fill="#58445f" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="start" opacity="1" letter-spacing="0.3">MASK &amp; PREDICT</text>
+<rect x="558" y="171" width="51" height="51" rx="7" fill="#58445f" stroke="none" stroke-width="1.5" opacity="1" />
+<circle cx="584" cy="196" r="9" fill="#fcfafb" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<rect x="596" y="205" width="51" height="51" rx="7" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="1" />
+<circle cx="622" cy="230" r="9" fill="#fcfafb" stroke="none" stroke-width="1.5" opacity="0.7"/>
+<path d="M544 213L472 227" fill="none" stroke="#b68d5f" stroke-width="2" opacity="1" marker-end="url(#arrow-accent)"/>
+<text x="535" y="144" fill="#58445f" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="start" opacity="1" letter-spacing="0.3">SELF-DISTILL</text>
+<path d="M483 288L547 308" fill="none" stroke="#a28aaa" stroke-width="1.5" opacity="1" stroke-dasharray="4 5"/>
+<rect x="554" y="279" width="18" height="18" rx="2" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="576" y="279" width="18" height="18" rx="2" fill="#fcfafb" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="598" y="279" width="18" height="18" rx="2" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="620" y="279" width="18" height="18" rx="2" fill="#e0d6e5" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="554" y="301" width="18" height="18" rx="2" fill="#fcfafb" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="576" y="301" width="18" height="18" rx="2" fill="#fcfafb" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="598" y="301" width="18" height="18" rx="2" fill="#e0d6e5" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="620" y="301" width="18" height="18" rx="2" fill="#fcfafb" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="554" y="323" width="18" height="18" rx="2" fill="#a28aaa" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="576" y="323" width="18" height="18" rx="2" fill="#e0d6e5" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="598" y="323" width="18" height="18" rx="2" fill="#fcfafb" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="620" y="323" width="18" height="18" rx="2" fill="#e0d6e5" stroke="none" stroke-width="1.5" opacity="1" />
+<text x="552" y="365" fill="#58445f" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="start" opacity="1" letter-spacing="0.3">LATENT TARGET</text>
+</g>
+<path d="M32 398L688 398" fill="none" stroke="#58445f" stroke-width="1" opacity="0.18"/>
+<text x="32" y="421" fill="#58445f" font-family="Consolas,Menlo,monospace" font-size="11.5" text-anchor="start" opacity="0.8" letter-spacing="1.05">CONTRAST · DISTILL · MASK · PREDICT</text>
+<circle cx="681" cy="416" r="4" fill="#b68d5f" stroke="none" stroke-width="1.5" opacity="1"/>
+</svg>

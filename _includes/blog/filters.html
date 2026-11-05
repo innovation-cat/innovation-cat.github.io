@@ -1,0 +1,21 @@
+{% capture years_string %}{% for post in include.posts %}{{ post.date | date: "%Y" }}|{% endfor %}{% endcapture %}
+{% assign archive_years = years_string | split: "|" | uniq %}
+<div class="blog-toolbar" data-blog-controls hidden>
+  <div class="blog-topics" role="group" aria-label="Filter articles by topic">
+    <button class="blog-topic" type="button" data-blog-topic="all" aria-pressed="true">All writing</button>
+    {% for topic in include.archive.topics %}
+    <button class="blog-topic" type="button" data-blog-topic="{{ topic.id | escape }}" aria-pressed="false">{{ topic.label | escape }}</button>
+    {% endfor %}
+  </div>
+  <div class="blog-inputs">
+    <label class="blog-sr" for="blog-search">Search articles</label>
+    <input class="blog-search" id="blog-search" type="search" placeholder="Search articles" maxlength="150" data-blog-search>
+    <label class="blog-sr" for="blog-year">Filter by year</label>
+    <select class="blog-year-select" id="blog-year" data-blog-year>
+      <option value="all">All years</option>
+      {% for year in archive_years %}{% if year != empty %}
+      <option value="{{ year | escape }}">{{ year }}</option>
+      {% endif %}{% endfor %}
+    </select>
+  </div>
+</div>

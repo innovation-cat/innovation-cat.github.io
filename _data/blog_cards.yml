@@ -1,0 +1,77 @@
+# Optional article-specific artwork and topics. This is not a publication list.
+# Every site.posts entry appears, even without presentation metadata here.
+/posts/2026/10/forcing-streaming-video/:
+  topic: video-generation
+  cover: forcing-streaming
+/posts/2026/09/OPD-revised/:
+  topic: alignment
+  cover: on-policy-distillation
+/posts/2026/07/controlled-video-generation/:
+  topic: video-generation
+  cover: controllable-video
+/posts/2026/05/controlled-generation/:
+  topic: multimodal
+  cover: generation-evolution
+/posts/2026/04/controlled-generation/:
+  topic: generative-models
+  cover: controllable-generation
+/posts/2026/02/pixel-diffusion/:
+  topic: generative-models
+  cover: pixel-space
+/posts/2026/02/embedding/:
+  topic: generative-models
+  cover: embedding-space
+/posts/2026/01/rl-diffusion/:
+  topic: alignment
+  cover: preference-alignment
+/posts/2026/01/dit/:
+  topic: generative-models
+  cover: diffusion-transformers
+/posts/2026/01/flow-map/:
+  topic: generative-models
+  cover: flow-map
+/posts/2025/12/tokenization/:
+  topic: multimodal
+  cover: visual-tokenizers
+/posts/2025/12/mllms/:
+  topic: multimodal
+  cover: multimodal-stages
+/posts/2025/12/VRL/:
+  topic: multimodal
+  cover: visual-representations
+/posts/2025/11/inverse-problems/:
+  topic: generative-models
+  cover: inverse-problems
+/posts/2025/10/diffusion-sampling/:
+  topic: generative-models
+  cover: diffusion-acceleration
+/posts/2025/09/fast-flow-matching/:
+  topic: generative-models
+  cover: fast-flow-matching
+/posts/2025/08/flow-matching/:
+  topic: generative-models
+  cover: flow-matching
+/posts/2025/07/controlled-generation/:
+  topic: generative-models
+  cover: controlled-diffusion
+/posts/2025/06/ODE-Solver/:
+  topic: generative-models
+  cover: pf-ode-solvers
+/posts/2025/06/consistency-model/:
+  topic: generative-models
+  cover: consistency-models
+/posts/2025/03/diffusion-architectures-efficiency/:
+  topic: generative-models
+  cover: efficient-architectures
+/posts/2025/03/diffusion-architectures-stability/:
+  topic: generative-models
+  cover: stable-architectures
+/posts/2025/01/RL-LLM/:
+  topic: alignment
+  cover: rl-language-models
+/posts/2024/12/diffusion-model-training/:
+  topic: generative-models
+  cover: diffusion-training
+/posts/2024/10/diffusion-model/:
+  topic: generative-models
+  cover: diffusion-foundations

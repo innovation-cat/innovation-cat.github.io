@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-labelledby="cover-title cover-description">
+<title id="cover-title">Accelerating Diffusion Sampling: From Multi-Step to Single-step Generation</title>
+<desc id="cover-description">A long denoising arc with many evaluation points is contrasted with a direct learned leap from noise to a clean endpoint.</desc>
+<defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbfcf7"/><stop offset="1" stop-color="#edf2e8"/></linearGradient><linearGradient id="field" x2="0" y2="1"><stop stop-color="#6e957c" stop-opacity=".65"/><stop offset="1" stop-color="#6e957c" stop-opacity=".02"/></linearGradient>
+<marker id="arrow-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#234b3b" stroke-width="1.8" stroke-linejoin="round"/></marker>
+<marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#bf815b" stroke-width="1.8" stroke-linejoin="round"/></marker>
+<pattern id="paper-grid" width="24" height="24" patternUnits="userSpaceOnUse" x="40" y="118"><circle cx="0" cy="0" r=".7" fill="#234b3b" opacity=".085"/></pattern></defs>
+<rect x="0" y="0" width="720" height="440" rx="0" fill="url(#paper)" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="12" y="12" width="696" height="416" rx="13" fill="none" stroke="#234b3b" stroke-width="1" opacity="0.12" />
+<rect x="32" y="112" width="656" height="272" rx="0" fill="url(#paper-grid)" stroke="none" stroke-width="1.5" opacity="1" />
+<ellipse cx="558" cy="237" rx="142" ry="116" fill="#dbe6d6" stroke="none" stroke-width="1.5" opacity="0.32" />
+<text x="32" y="38" fill="#234b3b" font-family="Consolas,Menlo,monospace" font-size="12.5" text-anchor="start" opacity="1" letter-spacing="1.65">FAST DIFFUSION SAMPLING</text>
+<text x="685" y="38" fill="#234b3b" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="end" opacity="0.65">2025 / 10</text>
+<text x="32" y="85" fill="#234b3b" font-family="Georgia,Times New Roman,serif" font-size="33" text-anchor="start" opacity="1">Many steps. One leap.</text>
+<g stroke-linecap="round" stroke-linejoin="round">
+<text x="545" y="319" fill="#dbe6d6" font-family="Georgia,Times New Roman,serif" font-size="158" text-anchor="middle" opacity="0.85">01</text>
+<path d="M87 306C121 85 587 85 632 306" fill="none" stroke="#6e957c" stroke-width="2" opacity="1"/>
+<circle cx="87" cy="306" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="96.5204" cy="271.213" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="113.163" cy="240.519" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="136.051" cy="213.917" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="164.306" cy="191.407" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="197.051" cy="172.991" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="233.407" cy="158.667" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="272.499" cy="148.435" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="313.447" cy="142.296" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="355.375" cy="140.25" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="397.405" cy="142.296" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="438.659" cy="148.435" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="478.259" cy="158.667" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="515.329" cy="172.991" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="548.99" cy="191.407" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="578.366" cy="213.917" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="602.578" cy="240.519" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="620.748" cy="271.213" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<circle cx="632" cy="306" r="4" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.6"/>
+<path d="M89 306C206 337 496 337 628 305" fill="none" stroke="#bf815b" stroke-width="5" opacity="1" marker-end="url(#arrow-accent)"/>
+<circle cx="59.5326" cy="301.672" r="3.32889" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.315576"/>
+<circle cx="90.7131" cy="276.779" r="2.79049" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.256353"/>
+<circle cx="107.551" cy="309.654" r="2.94351" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.303287"/>
+<circle cx="69.9717" cy="305.801" r="3.12339" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.531914"/>
+<circle cx="61.945" cy="326.273" r="1.71195" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.488161"/>
+<circle cx="96.8077" cy="296.405" r="2.87002" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.404434"/>
+<circle cx="102.087" cy="301.543" r="2.57193" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.511211"/>
+<circle cx="76.5524" cy="291.1" r="1.74735" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.530126"/>
+<circle cx="56.4809" cy="311.661" r="1.85489" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.488027"/>
+<circle cx="99.9019" cy="275.056" r="1.6321" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.342824"/>
+<circle cx="114.301" cy="315.681" r="2.23836" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.536637"/>
+<circle cx="68.1096" cy="327.802" r="3.16202" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.298852"/>
+<circle cx="58.6632" cy="294.032" r="2.54845" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.338704"/>
+<circle cx="84.939" cy="336.858" r="1.94695" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.419286"/>
+<circle cx="65.6284" cy="297.096" r="1.83307" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.437326"/>
+<circle cx="103.641" cy="296.103" r="2.19773" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.519983"/>
+<circle cx="73.2768" cy="297.364" r="1.61757" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.468579"/>
+<circle cx="75.3671" cy="325.528" r="2.09051" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.428924"/>
+<circle cx="85.655" cy="286.689" r="1.73505" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.545641"/>
+<circle cx="91.8843" cy="303.305" r="2.61553" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.446379"/>
+<circle cx="65.5554" cy="323.135" r="3.32767" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.414748"/>
+<circle cx="77.0053" cy="315.75" r="2.05255" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.269764"/>
+<circle cx="99.339" cy="316.313" r="3.11564" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.397203"/>
+<circle cx="98.3864" cy="274.406" r="3.05941" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.236316"/>
+<circle cx="96.7118" cy="301.217" r="2.98774" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.496851"/>
+<circle cx="76.8323" cy="287.417" r="1.73503" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.248101"/>
+<circle cx="77.7079" cy="292.986" r="2.55811" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.307525"/>
+<circle cx="97.0001" cy="322.272" r="2.90476" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.380649"/>
+<circle cx="70.5576" cy="321.231" r="2.59717" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.39017"/>
+<circle cx="58.3829" cy="317.649" r="2.95312" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.29559"/>
+<circle cx="82.2189" cy="319.831" r="2.25537" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.229365"/>
+<circle cx="87.1673" cy="279.64" r="2.36083" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.514834"/>
+<circle cx="76.4422" cy="329.43" r="3.27356" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.403434"/>
+<circle cx="73.2775" cy="292.164" r="3.39658" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.469078"/>
+<circle cx="81.7239" cy="325.707" r="2.66472" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.39115"/>
+<circle cx="74.1252" cy="303.762" r="2.63627" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.452303"/>
+<circle cx="90.0176" cy="282.641" r="2.402" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.386405"/>
+<circle cx="66.5169" cy="300.553" r="1.62178" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.306931"/>
+<circle cx="117.003" cy="303.565" r="2.44127" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.468153"/>
+<circle cx="91.9876" cy="323.557" r="2.53173" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.450767"/>
+<circle cx="109.649" cy="310.142" r="3.23095" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.422045"/>
+<circle cx="98.0432" cy="305.523" r="3.23548" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.496341"/>
+<circle cx="111.125" cy="310.195" r="2.9667" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.293277"/>
+<circle cx="70.5492" cy="279.97" r="3.0291" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.361276"/>
+<circle cx="109.936" cy="315.212" r="1.93854" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.397771"/>
+<circle cx="85.7028" cy="326.473" r="2.57872" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.490463"/>
+<circle cx="108.133" cy="302.557" r="1.61342" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.467552"/>
+<circle cx="73.1847" cy="331.798" r="3.09503" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.231063"/>
+<circle cx="85.9482" cy="287.456" r="2.17896" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.330302"/>
+<circle cx="72.6739" cy="301.877" r="2.49004" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.313492"/>
+<circle cx="99.3392" cy="318.345" r="2.82569" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.322471"/>
+<circle cx="93.9434" cy="326.139" r="1.98453" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.54488"/>
+<circle cx="90.8892" cy="292.741" r="2.12887" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.363845"/>
+<circle cx="68.3655" cy="302.172" r="2.54198" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.470843"/>
+<circle cx="101.556" cy="327.569" r="1.89604" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.396481"/>
+<circle cx="76.2643" cy="334.62" r="3.18582" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.535708"/>
+<circle cx="67.0268" cy="321.142" r="1.90354" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.454835"/>
+<circle cx="91.6628" cy="283.482" r="2.17904" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.470163"/>
+<circle cx="88.0628" cy="274.709" r="2.11962" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.300059"/>
+<circle cx="87.9434" cy="321.297" r="1.61262" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.2604"/>
+<circle cx="67.0249" cy="307.051" r="3.20143" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.344811"/>
+<circle cx="102.817" cy="335.626" r="1.73107" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.332124"/>
+<circle cx="89.55" cy="286.232" r="3.33512" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.465354"/>
+<circle cx="77.3487" cy="336.364" r="3.25919" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.389618"/>
+<circle cx="94.4018" cy="314.859" r="3.07227" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.513027"/>
+<circle cx="72.0126" cy="280.658" r="3.02859" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.298253"/>
+<circle cx="94.8251" cy="337.735" r="3.11064" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.363934"/>
+<circle cx="86.8612" cy="315.742" r="2.32798" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.519966"/>
+<circle cx="93.1932" cy="324.832" r="1.66333" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.407734"/>
+<circle cx="112.437" cy="316.599" r="2.48566" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="0.359646"/>
+<circle cx="634" cy="306" r="23" fill="#234b3b" stroke="none" stroke-width="1.5" opacity="1"/>
+<circle cx="634" cy="306" r="12" fill="#fbfcf7" stroke="none" stroke-width="1.5" opacity="1"/>
+<text x="360" y="125" fill="#234b3b" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1" letter-spacing="1">MANY EVALUATIONS</text>
+<text x="359" y="365" fill="#bf815b" font-family="Consolas,Menlo,monospace" font-size="14" text-anchor="middle" opacity="1" letter-spacing="1">ONE LEARNED LEAP</text>
+<path d="M124 293L598 293" fill="none" stroke="#6e957c" stroke-width="1" opacity="0.3" stroke-dasharray="2 8"/>
+</g>
+<path d="M32 398L688 398" fill="none" stroke="#234b3b" stroke-width="1" opacity="0.18"/>
+<text x="32" y="421" fill="#234b3b" font-family="Consolas,Menlo,monospace" font-size="11.5" text-anchor="start" opacity="0.8" letter-spacing="1.05">NUMERICAL SAMPLING · DISTILLED GENERATION</text>
+<circle cx="681" cy="416" r="4" fill="#bf815b" stroke="none" stroke-width="1.5" opacity="1"/>
+</svg>

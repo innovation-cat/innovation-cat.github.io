@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{% assign blog = site.data.blog_archive %}
+{% assign archive_posts = site.posts %}
+{% assign newest_year = archive_posts.first.date | date: "%Y" %}
+{% assign oldest_year = archive_posts.last.date | date: "%Y" %}
+
+<main id="main" role="main">
+  <div id="blog-archive" data-page-size="{{ blog.posts_per_page }}">
+    <header class="blog-intro">
+      <div>
+        <p class="blog-eyebrow">{{ blog.eyebrow | escape }}</p>
+        <h1>{{ page.title | escape }}</h1>
+        <p class="blog-intro-text">{{ blog.intro | escape }}</p>
+      </div>
+      {% if archive_posts.size > 0 %}
+      <p class="blog-archive-range">{{ oldest_year }}{% if oldest_year != newest_year %} — {{ newest_year }}{% endif %}</p>
+      {% endif %}
+    </header>
+
+    {% include blog/filters.html archive=blog posts=archive_posts %}
+
+    <div class="blog-section-head">
+      <h2 id="blog-period" tabindex="-1" data-blog-period>Writing archive</h2>
+      <p class="blog-result-count" data-blog-count aria-live="polite" aria-atomic="true">{{ archive_posts.size }} essays · Newest first</p>
+    </div>
+
+    <div class="blog-cards" data-blog-list>
+      {% for post in archive_posts %}
+        {% include blog/post-card.html post=post archive=blog %}
+      {% endfor %}
+    </div>
+
+    <p class="blog-empty" data-blog-empty role="status" hidden>No matching essays. Try another topic, year or search.</p>
+
+    {% include blog/pagination.html %}
+
+    <footer class="blog-footer">
+      <span>© {{ site.time | date: "%Y" }} {{ site.author.name | escape }}</span>
+      <span>RESEARCH · BUILD · SHARE</span>
+    </footer>
+  </div>
+</main>

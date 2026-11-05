@@ -1,0 +1,184 @@
+# Archive presentation settings. Posts come directly from Jekyll's site.posts.
+eyebrow: IDEAS, EXPLAINED
+intro: Notes on generative intelligence, visual systems and the ideas behind them.
+posts_per_page: 4
+default_cover: research-notes
+topics:
+- id: generative-models
+  label: Generative models
+- id: video-generation
+  label: Video generation
+- id: multimodal
+  label: Multimodal
+- id: alignment
+  label: Alignment
+covers:
+  forcing-streaming:
+    image: /assets/images/blog-covers/forcing-streaming.svg
+    alt: Persistent context frames feed a causal film strip, with progressively noisy future chunks and an open-ended timeline.
+    labels:
+    - CAUSAL HISTORY
+    - CONTINUOUS FRAMES
+  on-policy-distillation:
+    image: /assets/images/blog-covers/on-policy-distillation.svg
+    alt: Teacher distribution contours supervise points along a student-generated rollout, illustrating on-policy distillation
+      on the student’s own states.
+    labels:
+    - STUDENT STATES
+    - TEACHER GUIDANCE
+  controllable-video:
+    image: /assets/images/blog-covers/controllable-video.svg
+    alt: Three video frames carry joint-level pose controls, spatial boxes and an explicit motion path on a shared time axis.
+    labels:
+    - SPACE & TIME
+    - CONTROLLED MOTION
+  generation-evolution:
+    image: /assets/images/blog-covers/generation-evolution.svg
+    alt: A U-shaped network evolves into transformer blocks and then a joint backbone interleaving text and visual tokens.
+    labels:
+    - U-NET / DiT
+    - NATIVE MULTIMODAL
+  controllable-generation:
+    image: /assets/images/blog-covers/controllable-generation.svg
+    alt: A condition adds a guidance vector to a generative path, steering noise through an energy landscape toward a specified
+      target.
+    labels:
+    - DIRECTION FIELD
+    - HUMAN INTENT
+  pixel-space:
+    image: /assets/images/blog-covers/pixel-space.svg
+    alt: Separate RGB pixel planes feed a generative model and become a detailed pixel mosaic, emphasizing generation in pixel
+      space.
+    labels:
+    - RGB PIXELS
+    - DIRECT GENERATION
+  embedding-space:
+    image: /assets/images/blog-covers/embedding-space.svg
+    alt: A spatial coordinate lattice, a time waveform and rotary position geometry feed condition injection points in a generative
+      backbone.
+    labels:
+    - ENCODE CONDITIONS
+    - INJECT FEATURES
+  preference-alignment:
+    image: /assets/images/blog-covers/preference-alignment.svg
+    alt: Denoising trajectories branch into ranked image outcomes; a preferred route receives the strongest emphasis and a
+      selection mark.
+    labels:
+    - TRAJECTORY POLICY
+    - PREFERRED OUTCOME
+  diffusion-transformers:
+    image: /assets/images/blog-covers/diffusion-transformers.svg
+    alt: Image patches enter a stack of modulated transformer blocks and branch into U-ViT, DiT and PixArt architecture families.
+    labels:
+    - PATCH TOKENS
+    - TRANSFORMER FAMILIES
+  flow-map:
+    image: /assets/images/blog-covers/flow-map.svg
+    alt: Three time planes connect through two composed flow-map arcs and a single direct operator arc between the same endpoints.
+    labels:
+    - TWO-TIME OPERATORS
+    - COMPOSED JUMPS
+  visual-tokenizers:
+    image: /assets/images/blog-covers/visual-tokenizers.svg
+    alt: A continuous image is divided into patches, quantized through a highlighted codebook entry, and translated into discrete
+      visual token IDs.
+    labels:
+    - CONTINUOUS IMAGE
+    - DISCRETE TOKENS
+  multimodal-stages:
+    image: /assets/images/blog-covers/multimodal-stages.svg
+    alt: Ten ascending architectural steps connect visual perception, cross-modal reasoning and agentic action.
+    labels:
+    - SINGLE-MODAL
+    - ANY-TO-ANY
+  visual-representations:
+    image: /assets/images/blog-covers/visual-representations.svg
+    alt: Augmented views, masked patches, self-distillation and latent prediction surround a shared visual representation
+      manifold.
+    labels:
+    - VISUAL EXPERIENCE
+    - USEFUL REPRESENTATIONS
+  inverse-problems:
+    image: /assets/images/blog-covers/inverse-problems.svg
+    alt: A partially observed image is reconstructed by intersecting measurement evidence with a generative prior manifold.
+    labels:
+    - OBSERVATIONS + PRIOR
+    - RECONSTRUCTION
+  diffusion-acceleration:
+    image: /assets/images/blog-covers/diffusion-acceleration.svg
+    alt: A long denoising arc with many evaluation points is contrasted with a direct learned leap from noise to a clean endpoint.
+    labels:
+    - MANY EVALUATIONS
+    - ONE LEARNED LEAP
+  fast-flow-matching:
+    image: /assets/images/blog-covers/fast-flow-matching.svg
+    alt: Three distinct path families straighten from reflow to shortcut jumps and mean-velocity transport for fewer-step
+      generation.
+    labels:
+    - RECTIFY THE PATH
+    - REDUCE THE STEPS
+  flow-matching:
+    image: /assets/images/blog-covers/flow-matching.svg
+    alt: A source point cloud is transported through a learned vector field into a structured two-branch target distribution.
+    labels:
+    - PROBABILITY PATHS
+    - VELOCITY FIELDS
+  controlled-diffusion:
+    image: /assets/images/blog-covers/controlled-diffusion.svg
+    alt: Prompt, sketch, depth and identity inputs are fused to control an illustrated output canvas, with a local editing
+      stroke.
+    labels:
+    - COMPOSE CONDITIONS
+    - CONTROL THE CANVAS
+  pf-ode-solvers:
+    image: /assets/images/blog-covers/pf-ode-solvers.svg
+    alt: A smooth probability-flow trajectory, coarse numerical approximations and a magnified local-error region illustrate
+      high-order diffusion solvers.
+    labels:
+    - NUMERICAL STRUCTURE
+    - ACCURATE UPDATES
+  consistency-models:
+    image: /assets/images/blog-covers/consistency-models.svg
+    alt: Several noisy states along one trajectory map to the same clean target, illustrating the consistency condition across
+      time.
+    labels:
+    - DIFFERENT NOISE STATES
+    - ONE CLEAN TARGET
+  efficient-architectures:
+    image: /assets/images/blog-covers/efficient-architectures.svg
+    alt: A dense attention matrix becomes blockwise reusable tiles and a compact memory system, representing architectural
+      efficiency.
+    labels:
+    - COMPUTATION
+    - MEMORY EFFICIENCY
+  stable-architectures:
+    image: /assets/images/blog-covers/stable-architectures.svg
+    alt: A U-Net with gated skip bridges and a transformer with scaled residual routes illustrate stable gradient propagation.
+    labels:
+    - GATED SKIPS
+    - STABLE GRADIENTS
+  rl-language-models:
+    image: /assets/images/blog-covers/rl-language-models.svg
+    alt: A language-model response branches into token-action sequences, receives a reward and feeds a policy-update loop.
+    labels:
+    - TOKEN TRAJECTORIES
+    - REWARD FEEDBACK
+  diffusion-training:
+    image: /assets/images/blog-covers/diffusion-training.svg
+    alt: Conceptual signal, noise and velocity information curves share an SNR axis above sampling, weighting, prediction-target
+      and scale controls; no measured data is plotted.
+    labels:
+    - SNR & OBJECTIVES
+    - BALANCED TRAINING
+  diffusion-foundations:
+    image: /assets/images/blog-covers/diffusion-foundations.svg
+    alt: A discrete forward-noising chain is linked to a continuous reverse-time flow as the step size tends to zero.
+    labels:
+    - DISCRETE TIME
+    - CONTINUOUS DYNAMICS
+  research-notes:
+    image: /assets/images/blog-covers/research-notes.svg
+    alt: An open set of research notes with a continuous discovery path.
+    labels:
+    - RESEARCH
+    - DISCOVERY

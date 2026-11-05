@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-labelledby="cover-title cover-description">
+<title id="cover-title">A Stage Map for Multimodal LLMs: From Single-Modal Models to Any-to-Any Agents</title>
+<desc id="cover-description">Ten ascending architectural steps connect visual perception, cross-modal reasoning and agentic action.</desc>
+<defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fdfcf7"/><stop offset="1" stop-color="#f4f0e2"/></linearGradient><linearGradient id="field" x2="0" y2="1"><stop stop-color="#b3a16c" stop-opacity=".65"/><stop offset="1" stop-color="#b3a16c" stop-opacity=".02"/></linearGradient>
+<marker id="arrow-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#645737" stroke-width="1.8" stroke-linejoin="round"/></marker>
+<marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L8 5L1 9" fill="none" stroke="#507c75" stroke-width="1.8" stroke-linejoin="round"/></marker>
+<pattern id="paper-grid" width="24" height="24" patternUnits="userSpaceOnUse" x="40" y="118"><circle cx="0" cy="0" r=".7" fill="#645737" opacity=".085"/></pattern></defs>
+<rect x="0" y="0" width="720" height="440" rx="0" fill="url(#paper)" stroke="none" stroke-width="1.5" opacity="1" />
+<rect x="12" y="12" width="696" height="416" rx="13" fill="none" stroke="#645737" stroke-width="1" opacity="0.12" />
+<rect x="32" y="112" width="656" height="272" rx="0" fill="url(#paper-grid)" stroke="none" stroke-width="1.5" opacity="1" />
+<ellipse cx="558" cy="237" rx="142" ry="116" fill="#e9dfc0" stroke="none" stroke-width="1.5" opacity="0.32" />
+<text x="32" y="38" fill="#645737" font-family="Consolas,Menlo,monospace" font-size="12.5" text-anchor="start" opacity="1" letter-spacing="1.65">MULTIMODAL CAPABILITIES</text>
+<text x="685" y="38" fill="#645737" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="end" opacity="0.65">2025 / 12</text>
+<text x="32" y="85" fill="#645737" font-family="Georgia,Times New Roman,serif" font-size="33" text-anchor="start" opacity="1">From seeing to acting</text>
+<g stroke-linecap="round" stroke-linejoin="round">
+<path d="M60 326L73 317H119L106 326Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="60" y="326" width="46" height="35" rx="2" fill="#b3a16c" stroke="none" stroke-width="1.5" opacity="0.45" />
+<path d="M106 326L119 317V352L106 361Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.3"/>
+<text x="83" y="349" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">01</text>
+<path d="M119 309L132 300H178L165 309Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="119" y="309" width="46" height="37" rx="2" fill="#b3a16c" stroke="none" stroke-width="1.5" opacity="0.505" />
+<path d="M165 309L178 300V337L165 346Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.35"/>
+<text x="142" y="332" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">02</text>
+<path d="M178 292L191 283H237L224 292Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="178" y="292" width="46" height="39" rx="2" fill="#b3a16c" stroke="none" stroke-width="1.5" opacity="0.56" />
+<path d="M224 292L237 283V322L224 331Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.4"/>
+<text x="201" y="315" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">03</text>
+<path d="M237 275L250 266H296L283 275Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="237" y="275" width="46" height="41" rx="2" fill="#b3a16c" stroke="none" stroke-width="1.5" opacity="0.615" />
+<path d="M283 275L296 266V307L283 316Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.45"/>
+<text x="260" y="298" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">04</text>
+<path d="M296 258L309 249H355L342 258Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="296" y="258" width="46" height="43" rx="2" fill="#b3a16c" stroke="none" stroke-width="1.5" opacity="0.67" />
+<path d="M342 258L355 249V292L342 301Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.5"/>
+<text x="319" y="281" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">05</text>
+<path d="M355 241L368 232H414L401 241Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="355" y="241" width="46" height="45" rx="2" fill="#b3a16c" stroke="none" stroke-width="1.5" opacity="0.725" />
+<path d="M401 241L414 232V277L401 286Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.55"/>
+<text x="378" y="264" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">06</text>
+<path d="M414 224L427 215H473L460 224Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="414" y="224" width="46" height="47" rx="2" fill="#b3a16c" stroke="none" stroke-width="1.5" opacity="0.78" />
+<path d="M460 224L473 215V262L460 271Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.6"/>
+<text x="437" y="247" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">07</text>
+<path d="M473 207L486 198H532L519 207Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="473" y="207" width="46" height="49" rx="2" fill="#645737" stroke="none" stroke-width="1.5" opacity="0.835" />
+<path d="M519 207L532 198V247L519 256Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.65"/>
+<text x="496" y="230" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">08</text>
+<path d="M532 190L545 181H591L578 190Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="532" y="190" width="46" height="51" rx="2" fill="#645737" stroke="none" stroke-width="1.5" opacity="0.89" />
+<path d="M578 190L591 181V232L578 241Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.7"/>
+<text x="555" y="213" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">09</text>
+<path d="M591 173L604 164H650L637 173Z" fill="#fdfcf7" stroke="#fdfcf7" stroke-width="1" opacity="0.9"/>
+<rect x="591" y="173" width="46" height="53" rx="2" fill="#645737" stroke="none" stroke-width="1.5" opacity="0.945" />
+<path d="M637 173L650 164V217L637 226Z" fill="#645737" stroke="#645737" stroke-width="1" opacity="0.75"/>
+<text x="614" y="196" fill="#fdfcf7" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="middle" opacity="1">10</text>
+<path d="M74 303L133 286L192 269L251 252L310 235L369 218L428 201L487 184L546 167L605 150" fill="none" stroke="#507c75" stroke-width="2" opacity="1" stroke-dasharray="3 6"/>
+<circle cx="124" cy="227" r="28" fill="#fdfcf7" stroke="#b3a16c" stroke-width="1" opacity="1"/>
+<circle cx="303" cy="174" r="28" fill="#fdfcf7" stroke="#b3a16c" stroke-width="1" opacity="1"/>
+<circle cx="484" cy="121" r="28" fill="#fdfcf7" stroke="#b3a16c" stroke-width="1" opacity="1"/>
+<rect x="107" y="215" width="34" height="24" rx="7" fill="#fdfcf7" stroke="#b3a16c" stroke-width="1.5" opacity="1" />
+<circle cx="130.8" cy="221.72" r="3.12" fill="#507c75" stroke="none" stroke-width="1.5" opacity="0.88"/>
+<path d="M114 234.44Q116.52 221.24 124.0 231.32T134 228.2L134 232H114Z" fill="#e9dfc0" stroke="#b3a16c" stroke-width="1" opacity="1"/>
+<path d="M114 235.16Q115.84 228.2 124.0 234.44T134 232.28" fill="none" stroke="#645737" stroke-width="2.5" opacity="1"/>
+<path d="M292 174H313M303 163V185" fill="none" stroke="#645737" stroke-width="2" opacity="1"/>
+<circle cx="303" cy="174" r="16" fill="none" stroke="#507c75" stroke-width="1.5" opacity="1"/>
+<path d="M471 127L481 117L489 125L500 111" fill="none" stroke="#645737" stroke-width="3" opacity="1" marker-end="url(#arrow-ink)"/>
+<text x="110" y="184" fill="#645737" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="start" opacity="1" letter-spacing="1">SEE</text>
+<text x="275" y="133" fill="#645737" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="start" opacity="1" letter-spacing="1">REASON</text>
+<text x="543" y="122" fill="#645737" font-family="Consolas,Menlo,monospace" font-size="13" text-anchor="start" opacity="1" letter-spacing="1">ACT</text>
+<text x="77" y="383" fill="#645737" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="start" opacity="1" letter-spacing="0.8">SPECIALISTS</text>
+<text x="530" y="383" fill="#645737" font-family="Consolas,Menlo,monospace" font-size="12" text-anchor="start" opacity="1" letter-spacing="0.8">ANY-TO-ANY</text>
+</g>
+<path d="M32 398L688 398" fill="none" stroke="#645737" stroke-width="1" opacity="0.18"/>
+<text x="32" y="421" fill="#645737" font-family="Consolas,Menlo,monospace" font-size="11.5" text-anchor="start" opacity="0.8" letter-spacing="1.05">ALIGNMENT · FUSION · ANY-TO-ANY AGENTS</text>
+<circle cx="681" cy="416" r="4" fill="#507c75" stroke="none" stroke-width="1.5" opacity="1"/>
+</svg>

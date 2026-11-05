@@ -1,0 +1,26 @@
+{% assign post = include.post %}
+{% assign visual = site.data.blog_cards[post.url] %}
+{% assign topic = include.archive.topics | where: "id", visual.topic | first %}
+{% assign cover_key = visual.cover | default: include.archive.default_cover %}
+{% assign cover = include.archive.covers[cover_key] %}
+{% unless cover %}{% assign cover = include.archive.covers[include.archive.default_cover] %}{% endunless %}
+{% assign card_excerpt = post.excerpt | markdownify | strip_html | normalize_whitespace | strip %}
+{% assign card_id = post.url | slugify %}
+<article class="blog-card" data-blog-card data-topic="{{ visual.topic | escape }}" data-year="{{ post.date | date: '%Y' }}" aria-labelledby="blog-title-{{ card_id }}">
+  <div class="blog-card-copy">
+    <div class="blog-card-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" | upcase }}</time>
+      <span class="blog-meta-divider" aria-hidden="true">·</span>
+      <span class="blog-card-topic">{{ topic.label | default: "Research notes" | escape }}</span>
+    </div>
+    <h2 class="blog-card-title" id="blog-title-{{ card_id }}"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+    {% if card_excerpt != empty %}<p class="blog-card-description" data-blog-description>{{ card_excerpt | escape }}</p>{% endif %}
+    <div class="blog-card-bottom">
+      <a class="blog-card-read" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">Read essay <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <figure class="blog-card-art">
+    <div class="blog-cover-canvas"><img src="{{ cover.image | relative_url }}" width="720" height="440" alt="{{ cover.alt | escape }}" loading="lazy" decoding="async"></div>
+    {% if cover.labels %}<figcaption class="blog-cover-labels">{% for label in cover.labels %}{% unless forloop.first %}<span aria-hidden="true">→</span>{% endunless %}<span>{{ label | escape }}</span>{% endfor %}</figcaption>{% endif %}
+  </figure>
+</article>
