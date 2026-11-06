@@ -12,6 +12,10 @@ topics:
   label: Multimodal
 - id: alignment
   label: Alignment
+- id: mathematics
+  label: Mathematics
+- id: architecture
+  label: Architecture
 covers:
   forcing-streaming:
     image: /assets/images/blog-covers/forcing-streaming.svg

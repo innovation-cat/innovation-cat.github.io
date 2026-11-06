@@ -25,13 +25,14 @@
 
   // Search and pagination use the posts rendered by Jekyll's site.posts.
   var records = Array.from(root.querySelectorAll("[data-blog-card]")).map(function (card) {
+    var recordTopics = (card.dataset.topics || card.dataset.topic || "").split(/\s+/).filter(Boolean);
     return {
       element: card,
-      topic: card.dataset.topic,
+      topics: recordTopics,
       year: card.dataset.year,
       searchText: normalize(card.querySelector(".blog-card-title").textContent + " " +
         (card.querySelector("[data-blog-description]") || { textContent: "" }).textContent + " " +
-        card.querySelector(".blog-card-topic").textContent)
+        card.querySelector(".blog-card-topic").textContent + " " + recordTopics.join(" "))
     };
   });
 
@@ -75,7 +76,7 @@
   function render() {
     var terms = normalize(state.query).split(" ").filter(Boolean);
     var matches = records.filter(function (record) {
-      return (state.topic === "all" || record.topic === state.topic) &&
+      return (state.topic === "all" || record.topics.indexOf(state.topic) !== -1) &&
         (state.year === "all" || record.year === state.year) &&
         terms.every(function (term) { return record.searchText.indexOf(term) !== -1; });
     });

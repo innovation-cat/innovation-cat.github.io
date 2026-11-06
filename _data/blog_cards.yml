@@ -1,5 +1,6 @@
 # Optional article-specific artwork and topics. This is not a publication list.
 # Every site.posts entry appears, even without presentation metadata here.
+# topic supplies the primary label; additional_topics accepts any number of extra topic IDs.
 /posts/2026/10/forcing-streaming-video/:
   topic: video-generation
   cover: forcing-streaming
@@ -56,6 +57,7 @@
   cover: controlled-diffusion
 /posts/2025/06/ODE-Solver/:
   topic: generative-models
+  additional_topics: [mathematics]
   cover: pf-ode-solvers
 /posts/2025/06/consistency-model/:
   topic: generative-models
@@ -65,6 +67,7 @@
   cover: efficient-architectures
 /posts/2025/03/diffusion-architectures-stability/:
   topic: generative-models
+  additional_topics: [architecture]
   cover: stable-architectures
 /posts/2025/01/RL-LLM/:
   topic: alignment
@@ -74,4 +77,5 @@
   cover: diffusion-training
 /posts/2024/10/diffusion-model/:
   topic: generative-models
+  additional_topics: [mathematics]
   cover: diffusion-foundations
