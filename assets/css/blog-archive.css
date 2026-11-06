@@ -51,8 +51,8 @@ body:has(#blog-archive) .page__footer { display: none; }
 
 #blog-archive .blog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; padding: 17px 0; border-top: 1px solid var(--blog-line); border-bottom: 1px solid var(--blog-line); }
 #blog-archive .blog-topics { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: 6px 2px; min-width: 0; }
-#blog-archive .blog-topic { min-height: 46px; padding: 9px; border: 1px solid transparent; border-radius: 999px; background: transparent; color: #4b6051; font-size: 16px; font-weight: 500; line-height: 1.6; white-space: nowrap; }
-#blog-archive .blog-topic[aria-pressed="true"] { border-color: var(--blog-green); background: var(--blog-green); color: #fff; font-weight: 600; }
+#blog-archive .blog-topic { min-height: 40px; padding: 7px 11px; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--blog-muted); font-size: 14px; font-weight: 400; line-height: 1.6; white-space: nowrap; }
+#blog-archive .blog-topic[aria-pressed="true"] { border-color: var(--blog-green); background: var(--blog-green); color: #fff; font-weight: 400; }
 #blog-archive .blog-topic:hover:not([aria-pressed="true"]) { background: var(--blog-soft); color: var(--blog-ink); }
 #blog-archive .blog-inputs { display: flex; flex: 0 0 auto; justify-content: flex-end; gap: 8px; min-width: 0; }
 #blog-archive .blog-search { width: 164px; min-width: 0; padding: 8px 10px; border: 1px solid var(--blog-line); border-radius: 6px; background: #fff; color: var(--blog-body); font-size: 13px; line-height: 1.6; }
@@ -114,7 +114,7 @@ body:has(#blog-archive) .page__footer { display: none; }
   #blog-archive .blog-archive-range { margin-top: 10px; padding-bottom: 0; font-size: 11px; }
   #blog-archive .blog-toolbar { flex-direction: column; align-items: stretch; gap: 14px; padding: 16px 0; }
   #blog-archive .blog-topics { gap: 6px 4px; }
-  #blog-archive .blog-topic { min-height: 44px; padding: 9px 12px; font-size: 14px; }
+  #blog-archive .blog-topic { min-height: 40px; padding: 8px 11px; font-size: 13px; }
   #blog-archive .blog-search { flex: 1; width: 120px; font-size: 16px; }
   #blog-archive .blog-year-select { max-width: 125px; font-size: 12px; }
   #blog-archive .blog-section-head { padding-top: 18px; }
