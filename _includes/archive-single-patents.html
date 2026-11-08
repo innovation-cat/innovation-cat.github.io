@@ -1,388 +1,67 @@
-{% include base_path %}
+{% assign patents = site.data.patents.items %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
-
-
-
-
-
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>United States Patent:</b></p>
-    <p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/36/bb/93/fe602c978e0c81/US10706363.pdf"  target="_blank">Data recommendation method and device, and storage medium  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;US10706363B2</p>
-	
-
-	
-	
-  </article>
+<div class="pt-offices" role="group" aria-label="Filter by filing office or route" data-pt-controls hidden>
+  <button class="pt-office-filter" type="button" data-pt-office="all" aria-pressed="true" aria-controls="patent-results"><span>All records</span><span class="pt-filter-count">{{ patents.size }}</span></button>
+  {% for office in site.data.patents.offices %}
+  {% assign office_records = patents | where: 'office', office.id %}
+  <button class="pt-office-filter" type="button" data-pt-office="{{ office.id }}" aria-pressed="false" aria-controls="patent-results"><span>{{ office.label | escape }}</span><span class="pt-filter-count">{{ office_records.size }}</span></button>
+  {% endfor %}
 </div>
 
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>WIPO (PCT):</b></p>
-    <p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/a4/99/0b/0294c07dc944f2/WO2017193897A1.pdf" target="_blank">Data recommendation method and device therefor, and storage medium  </a>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;WO2017193897A1</p>
-	
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/da/f4/12/e5d63c69a71a96/WO2020259717A1.pdf" target="_blank">Method, apparatus, and terminal device for controlling federated learning system, and storage medium  </a>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;WO2020259717A1</p>
-	
-	
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/93/13/08/4ad5a94caed5b5/WO2021092758A1.pdf" target="_blank">Federated learning method and apparatus, and computer-readable storage medium  </a>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;WO2021092758A1</p>	
-	
-  </article>
+<div class="pt-toolbar">
+  <p class="pt-result-count" role="status" aria-live="polite" aria-atomic="true" data-pt-count>{{ patents.size }} records</p>
+  <div class="pt-fields" data-pt-controls hidden>
+    <label class="pt-search">
+      <span class="pt-sr-only">Search patent titles or document numbers</span>
+      {% include patents/icon.html name='search' %}
+      <input type="search" placeholder="Title or number" maxlength="150" autocomplete="off" spellcheck="false" data-pt-search aria-controls="patent-results">
+    </label>
+    <label class="pt-status-select">
+      <span class="pt-sr-only">Filter by archive status</span>
+      <select data-pt-status aria-controls="patent-results">
+        <option value="all">All statuses</option>
+        {% for status in site.data.patents.statuses %}<option value="{{ status.id }}">{{ status.label | escape }}</option>{% endfor %}
+      </select>
+      {% include patents/icon.html name='chevron-down' %}
+    </label>
+  </div>
 </div>
 
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-	<p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>China National Intellectual Property Administration:</b></p>
-	
-	
-	
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/92/bd/08/f8914f85423ec5/CN109635153B.pdf" target="_blank">Migration path generation method, device and storage medium
-  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN109635153B</p>	
-	
-	
-			<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/8d/fd/14/687a8fe29769ec/CN106021314B.pdf" target="_blank">Multimedia data processing method and equipment thereof
-  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN106021314B
-</p>
-
-	
-    <p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/ce/f1/fb/a15a14521b89de/CN105959374B.pdf" target="_blank">A kind of data recommendation method and its equipment  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN105959374B</p>
-	
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/ad/11/b5/2b9769342af7e9/CN108197327B.pdf" target="_blank">Song recommendation method, device and storage medium  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN108197327B</p>
-	
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/9b/68/0e/a8ce9dfd9e727d/CN110263921B.pdf" target="_blank">Method and device for training federated learning model  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110263921B
-</p>
-	
-
-	
-	
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/1f/b9/24/4e01b8e2cb189a/CN110942154B.pdf" target="_blank">Data processing method, device, equipment and storage medium based on federal learning  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110942154B
-</p>
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/43/2e/ea/b2d049101ab705/CN110380917B.pdf" target="_blank">Control method and device of federal learning system, terminal equipment and storage medium  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110380917B
-</p>
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/9d/05/ef/b7b643c3c748a4/CN105893515B.pdf" target="_blank">Information processing method and server  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN105893515B
-</p>
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/39/43/2f/33e8aa94e762d6/CN107886112B.pdf" target="_blank">Object clustering method and device and storage equipment
-  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN107886112B
-</p>
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/b1/52/3c/56af27f727d880/CN105740210B.pdf" target="_blank">Information similarity determination method and device  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN105740210B
-</p>
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/5a/60/27/c5075b6e8a8d63/CN108334601B.pdf" target="_blank">Song recommendation method and device based on tag topic model and storage medium
-  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN108334601B
-</p>
-	
-	
-	
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/94/a2/db/d5730ee0e6bf6d/CN110309847B.pdf" target="_blank">Model compression method and device
-  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110309847B
-</p>
-	
-	
-			<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/2d/ad/b1/47a3e32e69c17d/CN110287420B.pdf" target="_blank">Training method and device of information recommendation system
-  </a><b>(Granted)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110287420B
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/1c/8e/58/af32fc49bcb34d/CN109871702A.pdf" target="_blank">Federal model training method, system, equipment and computer readable storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN109871702A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/ef/b5/22/ffc4e825f5f8e1/CN110297848A.pdf" target="_blank">Recommended models training method, terminal and storage medium based on federation's study
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110297848A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/76/06/b3/2bf35fa863534e/CN110929880A.pdf" target="_blank">Method and device for federated learning and computer readable storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110929880A
-</p>
-
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/66/87/22/968119d0ea77fd/CN112580821A.pdf" target="_blank">Method, device and equipment for federated learning and storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112580821A
-</p>
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/4f/9e/30/45ba5656e52036/CN111382706A.pdf" target="_blank">Prediction method and device based on federal learning, storage medium and remote sensing equipment
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN111382706A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/7e/3d/b6/72679e371148fc/CN112257873A.pdf" target="_blank">Training method, device, system, equipment and storage medium of machine learning model
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112257873A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/0b/aa/1b/72113866668086/CN111355739A.pdf" target="_blank">Data transmission method, device, terminal equipment and medium for horizontal federal learning
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN111355739A
-</p>
-	
-	
-	
-
-	
-	
-	
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/8c/01/20/e27801c3b675cc/CN110378488A.pdf" target="_blank">Federal training method, device, training terminal and the storage medium of client variation
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110378488A
-</p>
-	
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/95/81/46/e3ba10dcc9b6d1/CN112163675A.pdf" target="_blank">Joint training method and device for model and storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112163675A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/ca/0d/90/593bfa42607e7a/CN110728376A.pdf" target="_blank">Federated learning method and device based on tree topology structure
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110728376A
-</p>
-
-
-
-	
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/70/33/7b/8ae51b744c6493/CN110334544A.pdf" target="_blank">Federal model degeneration processing method, device, federal training system and storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110334544A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/e4/06/27/fa8c29af34fc2f/CN112365007A.pdf" target="_blank">Model parameter determination method, device, equipment and storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112365007A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/94/6c/96/d16ea1b2437708/CN111401621A.pdf" target="_blank">Prediction method, device, equipment and storage medium based on federal learning
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN111401621A
-</p>
-
-
-
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/12/8e/09/94044c6e586f86/CN110705627A.pdf" target="_blank">Target detection method, target detection system, target detection device and readable storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN110705627A
-</p>
-
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/83/95/bc/75fb7ac135298b/CN111368196A.pdf" target="_blank">Model parameter updating method, device, equipment and readable storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN111368196A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/43/d1/17/174e3518fd01af/CN113095512A.pdf" target="_blank">Federal learning modeling optimization method, apparatus, medium, and computer program product
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN113095512A
-</p>
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/68/2a/cb/b50581495b3bf6/CN112200389A.pdf" target="_blank">Data prediction method, device, equipment and storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112200389A
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/25/36/03/a1ecb1395b7fe7/CN106227881A.pdf" target="_blank">A kind of information processing method and server
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN106227881A
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/8d/a6/fe/b511f505340c72/CN114996741A.pdf" target="_blank">Data interaction method, device, equipment and storage medium based on federal learning
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN114996741A
-
-</p>
-
-
-
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/a0/15/2a/05485f61091cfe/CN112906524A.pdf" target="_blank">Method, apparatus, medium, and computer program product for predicting area transition situation
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112906524A
-</p>
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/f0/13/49/bc0b5b37cca6bf/CN112308238A.pdf" target="_blank">Analytical model training method and device, electronic equipment and storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112308238A</p>
-
-
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/46/e7/af/445b61f1b473ca/CN114021473A.pdf" target="_blank">Training method and device of machine learning model, electronic equipment and storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN114021473A</p>
-	
-	
-	
-
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/5f/86/ab/784bb498ab6c1f/CN113239395A.pdf" target="_blank">Data query method, device, equipment, storage medium and program product
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN113239395A</p>
-	
-	
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/49/13/8e/99fb63a0e4fd04/CN114091689A.pdf" target="_blank">Training method, device, equipment and storage medium of machine learning model
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN114091689A</p>
-	
-	
-
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/c2/70/ad/7e6d52f88ee89c/CN112364919A.pdf" target="_blank">Data processing method, device, equipment and storage medium
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112364919A</p>
-	
-	
-
-	
-	
-		<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9642;&nbsp;&nbsp;&nbsp;<a href="https://patentimages.storage.googleapis.com/d0/67/03/ef516ce5ca4a4f/CN112486180A.pdf" target="_blank">Vehicle control method, device, equipment, storage medium and program product
-  </a><b>(Published)</b>
- <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;Patent No.:&nbsp;&nbsp;CN112486180A</p>		
-	
-  </article>
+<div id="patent-results" class="pt-results" aria-label="Patent documents">
+  {% for office in site.data.patents.offices %}
+  {% assign office_records = patents | where: 'office', office.id %}
+  <section class="pt-office-group" aria-labelledby="patent-office-{{ office.id }}" data-pt-group="{{ office.id }}">
+    <header class="pt-office-heading">
+      <h2 id="patent-office-{{ office.id }}"><span class="pt-office-code">{{ office.code }}</span><span class="pt-office-name">{{ office.label | escape }}</span></h2>
+      <p class="pt-office-total" data-pt-group-count>{{ office_records.size }} {% if office_records.size == 1 %}record{% else %}records{% endif %}</p>
+    </header>
+    <div class="pt-entries">
+      {% for patent in office_records %}
+      {% assign status = site.data.patents.statuses | where: 'id', patent.status | first %}
+      <article class="pt-entry" data-pt-entry data-office="{{ patent.office }}" data-status="{{ patent.status }}" data-number="{{ patent.number }}" aria-labelledby="patent-title-{{ patent.number }}">
+        <div class="pt-entry-heading">
+          <h3 class="pt-title" id="patent-title-{{ patent.number }}"><a href="{{ patent.url | escape }}" target="_blank" rel="noopener noreferrer">{{ patent.title | escape }}</a></h3>
+          <span class="pt-status pt-status--{{ patent.status }}"><span class="pt-sr-only">Archive status: </span>{{ status.label | escape }}</span>
+        </div>
+        <div class="pt-entry-details">
+          <dl class="pt-document"><dt>Document no.</dt><dd>{{ patent.number }}</dd></dl>
+          <a class="pt-resource" href="{{ patent.url | escape }}" target="_blank" rel="noopener noreferrer" aria-label="View PDF for {{ patent.title | escape }} (opens in a new tab)">{% include patents/icon.html name='paper' %}<span>View PDF</span>{% include patents/icon.html name='external' %}</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
 </div>
 
+<div class="pt-empty" data-pt-empty hidden>
+  <h2>No matching patents</h2>
+  <p>Try another office, status, title or document number.</p>
+  <button class="pt-resource" type="button" data-pt-reset>Clear filters</button>
+</div>
+
+<div class="pt-pagination" data-pt-pagination hidden>
+  <p data-pt-summary></p>
+  <button class="pt-resource pt-more" type="button" data-pt-more aria-controls="patent-results"><span>Show more</span>{% include patents/icon.html name='chevron-down' %}</button>
+</div>
+<p class="pt-archive-note">Counts refer to listed documents; related filings may belong to the same patent family.</p>

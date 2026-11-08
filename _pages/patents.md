@@ -1,14 +1,9 @@
 ---
-layout: archive
+layout: patents
 title: "Patents"
 permalink: /patents/
-author_profile: true
+author_profile: false
+excerpt: "Inventions in federated learning, intelligent systems and recommendation."
 ---
-
-
-
-{% include base_path %}
-
-
 {% include archive-single-patents.html %}
 

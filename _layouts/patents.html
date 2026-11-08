@@ -1,0 +1,41 @@
+---
+layout: compress
+---
+{% include base_path %}
+{% assign catalogue = site.data.patents %}
+{% assign patents_asset_version = site.time | date: '%s' %}
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/patents.css' | relative_url }}?v={{ patents_asset_version }}">
+    <script src="{{ '/assets/js/patents.js' | relative_url }}?v={{ patents_asset_version }}" defer></script>
+  </head>
+  <body>
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <main id="main" role="main">
+      <div id="patents-page" data-page-size="{{ catalogue.page_size }}">
+        <header class="pt-intro">
+          <div>
+            <p class="pt-eyebrow">{{ catalogue.eyebrow | escape }}</p>
+            <h1>{{ page.title | escape }}</h1>
+            <p class="pt-intro-text">{{ page.excerpt | escape }}</p>
+          </div>
+          <p class="pt-catalogue-note"><strong>{{ catalogue.items.size }} records</strong><span>US <span aria-hidden="true">·</span> PCT <span aria-hidden="true">·</span> CN</span></p>
+        </header>
+
+        {{ content }}
+
+        <footer class="pt-footer">
+          <span>© {{ site.time | date: '%Y' }} {{ site.author.name | escape }}</span>
+          <span>RESEARCH · BUILD · SHARE</span>
+        </footer>
+      </div>
+    </main>
+
+    {% include scripts.html %}
+  </body>
+</html>
