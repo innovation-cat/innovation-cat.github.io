@@ -30,4 +30,8 @@
 {% endif %}
 {% if page.books_page %}
 {% assign books_asset_version = site.time | date: '%s' %}<link rel="stylesheet" href="{{ '/assets/css/books.css' | relative_url }}?v={{ books_asset_version }}">
+{% endif %}
+{% if page.publications_page %}
+{% assign publications_asset_version = site.time | date: '%s' %}<link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}?v={{ publications_asset_version }}">
+<script src="{{ '/assets/js/publications.js' | relative_url }}?v={{ publications_asset_version }}" defer></script>
 {% endif %}<!-- end custom head snippets -->

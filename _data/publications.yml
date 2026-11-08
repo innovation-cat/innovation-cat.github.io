@@ -1,0 +1,257 @@
+# Publications catalogue. Topic counts and resource buttons are rendered from this data.
+- title: Navigating the Manifold — A Geometric Perspective on Diffusion-Based Inverse Problems
+  authors:
+  - Anbu Huang
+  year: 2026
+  topic: Generative Model
+  venue: ICLR 2026 BlogPost Track
+  venue_url: https://iclr-blogposts.github.io/2026/blog/2026/diffusion-inverse-problems/
+  resources:
+  - label: Read post
+    icon: article
+    url: https://iclr-blogposts.github.io/2026/blog/2026/diffusion-inverse-problems/
+- title: From Trajectories to Operators — A Unified Flow Map Perspective on Generative Modeling
+  authors:
+  - Anbu Huang
+  year: 2026
+  topic: Generative Model
+  venue: ICLR 2026 BlogPost Track
+  venue_url: https://iclr-blogposts.github.io/2026/blog/2026/flow-map-learning/
+  resources:
+  - label: Read post
+    icon: article
+    url: https://iclr-blogposts.github.io/2026/blog/2026/flow-map-learning/
+- title: Probably Approximately Correct Federated Learning
+  authors:
+  - Xiaojin Zhang
+  - Anbu Huang
+  - Lixin Fan
+  - Kai Chen
+  - Qiang Yang
+  year: 2023
+  topic: Theory
+  venue: arXiv preprint
+  venue_url: https://arxiv.org/abs/2304.04641
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://arxiv.org/pdf/2304.04641.pdf
+- title: Federated Learning with Privacy-preserving and Model IP-right-Protection
+  authors:
+  - Qiang Yang
+  - Anbu Huang
+  - Lixin Fan
+  - Chee Seng Chan
+  - Jian Han Lim
+  - Kam Woh Ng
+  - Ding Sheng Ong
+  - Bowen Li
+  year: 2022
+  topic: Privacy Preserving
+  venue: Machine Intelligence Research
+  venue_url: https://link.springer.com/article/10.1007/s11633-022-1343-2
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://link.springer.com/content/pdf/10.1007/s11633-022-1343-2.pdf
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&citation_for_view=Luv9JqgAAAAJ:W7OEmFMy1HYC
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/fl-ipr.html
+- title: 'StarFL: Hybrid Federated Learning Architecture for Smart Urban Computing'
+  authors:
+  - Anbu Huang
+  - Yang Liu
+  - Tianjian Chen
+  - Yongkai Zhou
+  - Quan Sun
+  - Hongfeng Chai
+  - Qiang Yang
+  year: 2021
+  topic: Privacy Preserving
+  venue: ACM Transactions on Intelligent Systems and Technology (ACM TIST)
+  venue_url: https://dl.acm.org/doi/10.1145/3467956
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://dl.acm.org/doi/10.1145/3467956
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&citation_for_view=Luv9JqgAAAAJ:UeHWp8X0CEIC
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/starfl_bib.html
+- title: Federated Learning-Powered Visual Object Detection for Safety Monitoring
+  authors:
+  - Yang Liu
+  - Anbu Huang
+  - Yun Luo
+  - He Huang
+  - Youzhi Liu
+  - Yuanyuan Chen
+  - Lican Feng
+  - Tianjian Chen
+  - Han Yu
+  - Qiang Yang
+  year: 2021
+  topic: Privacy Preserving
+  venue: AI Magazine
+  venue_url: https://ojs.aaai.org/index.php/aimagazine/article/view/15095
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://ojs.aaai.org/index.php/aimagazine/article/download/15095/18864
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:IjCSPb-OGe4C
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/flpower_bib.html
+- title: Dynamic backdoor attacks against federated learning
+  authors:
+  - Anbu Huang
+  year: 2021
+  topic: Privacy Preserving
+  venue: arXiv preprint
+  venue_url: https://arxiv.org/abs/2011.07429
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://arxiv.org/pdf/2011.07429.pdf
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:qjMakFHDy7sC
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/dynamic_bib.html
+- title: 'Fedvision: An online visual object detection platform powered by federated learning'
+  authors:
+  - Yang Liu
+  - Anbu Huang
+  - Yun Luo
+  - He Huang
+  - Youzhi Liu
+  - Yuanyuan Chen
+  - Lican Feng
+  - Tianjian Chen
+  - Han Yu
+  - Qiang Yang
+  year: 2020
+  topic: Computer Vision
+  venue: Proceedings of the AAAI Conference on Artificial Intelligence
+  venue_url: https://ojs.aaai.org//index.php/AAAI/article/view/7021
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://arxiv.org/pdf/2001.06202.pdf
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:d1gkVwhDpl0C
+  - label: Code
+    icon: code
+    url: https://github.com/FederatedAI/FedVision
+  - label: Slides
+    icon: slides
+    url: https://innovation-cat.github.io/files/IAAI2020.pdf
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/fedvision_bib.html
+- title: 'RPN: A residual pooling network for efficient federated learning'
+  authors:
+  - Anbu Huang
+  - Yuanyuan Chen
+  - Yang Liu
+  - Tianjian Chen
+  - Qiang Yang
+  year: 2020
+  topic: Privacy Preserving
+  venue: European Conference on Artificial Intelligence (ECAI)
+  venue_url: http://ecai2020.eu/
+  resources:
+  - label: Paper
+    icon: paper
+    url: http://ecai2020.eu/papers/551_paper.pdf
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:9yKSN-GCB0IC
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/rpn_bib.html
+- title: 'SolarNet: A Deep Learning Framework to Map Solar Plants In China From Satellite Imagery'
+  authors:
+  - Xin Hou
+  - Biao Wang
+  - Wanqi Hu
+  - Lei Yin
+  - Anbu Huang
+  - Haishan Wu
+  year: 2020
+  topic: Computer Vision
+  venue: ICLR 2020 Workshop on Tackling Climate Change with Machine Learning
+  venue_url: https://www.climatechange.ai/papers/iclr2020/6
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/iclr2020/6/paper.pdf
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:2osOgNQ5qMEC
+  - label: Slides
+    icon: slides
+    url: https://innovation-cat.github.io/files/solarnet.pdf
+  - label: Video
+    icon: video
+    url: https://slideslive.com/38926233/solarnet-a-deep-learning-framework-to-map-solar-plants-in-china-from-satellite-imagery
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/solarnet_bib.html
+- title: Privacy-preserving heterogeneous federated transfer learning
+  authors:
+  - Dashan Gao
+  - Yang Liu
+  - Anbu Huang
+  - Ce Ju
+  - Han Yu
+  - Qiang Yang
+  year: 2019
+  topic: Privacy Preserving
+  venue: IEEE International Conference on Big Data (Big Data)
+  venue_url: https://www.computer.org/csdl/proceedings-article/big-data/2019/09005992/1hJrNyyOxyM
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://www.computer.org/csdl/proceedings-article/big-data/2019/09005992/1hJrNyyOxyM
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:u5HHmVD_uO8C
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/pphtfl_bib.html
+- title: Real-world image datasets for federated learning
+  authors:
+  - Jiahuan Luo
+  - Xueyang Wu
+  - Yun Luo
+  - Anbu Huang
+  - Yunfeng Huang
+  - Yang Liu
+  - Qiang Yang
+  year: 2019
+  topic: Privacy Preserving
+  venue: NeurIPS Workshop on Federated Learning for Data Privacy and Confidentiality
+  venue_url: https://federated-learning.org/fl-neurips-2019/
+  resources:
+  - label: Paper
+    icon: paper
+    url: https://arxiv.org/pdf/1910.11089.pdf
+  - label: Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:u-x6o8ySG0sC
+  - label: Code
+    icon: code
+    url: https://github.com/jiahuanluo/Federated-Benchmark
+  - label: Cite
+    icon: cite
+    url: https://innovation-cat.github.io/files/bib/dataset_bib.html

@@ -1,119 +1,63 @@
-{% include base_path %}
+{% assign publications = site.data.publications %}
+{% assign topics = 'Generative Model,Computer Vision,Privacy Preserving,Theory' | split: ',' %}
+{% assign publication_groups = publications | group_by: 'year' | sort: 'name' | reverse %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
-
-
-
-
-<div>
-	<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" color="red" size="2">
+<div class="pub-topics" role="group" aria-label="Research topic" data-pub-controls hidden>
+  <button class="pub-topic" type="button" data-pub-topic="all" aria-pressed="true" aria-controls="pub-results"><span>All</span><span class="pub-topic-count">{{ publications.size }}</span></button>
+  {% for topic in topics %}
+  {% assign topic_publications = publications | where: 'topic', topic %}
+  <button class="pub-topic" type="button" data-pub-topic="{{ topic | slugify }}" aria-pressed="false" aria-controls="pub-results"><span>{{ topic | escape }}</span><span class="pub-topic-count">{{ topic_publications.size }}</span></button>
+  {% endfor %}
 </div>
 
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Navigating the Manifold —  A Geometric Perspective on Diffusion-Based Inverse Problems</b></p>
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: <i><b>Anbu Huang</b></i><br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://iclr-blogposts.github.io/2026/blog/2026/diffusion-inverse-problems/"  target="_blank">ICLR 2026 BlogPost Track</a>, 2026<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://iclr-blogposts.github.io/2026/blog/2026/diffusion-inverse-problems/"  target="_blank"><i class="fas fa-file-pdf"  style="font-size: 0.8em;"></i> Paper</a>]</p>
-  </article>
+<div class="pub-toolbar">
+  <p class="pub-result-count" role="status" aria-live="polite" aria-atomic="true" data-pub-count>{{ publications.size }} publications</p>
+  <div class="pub-fields" data-pub-controls hidden>
+    <label class="pub-search">
+      <span class="pub-sr-only">Search publications</span>
+      {% include publications/icon.html name='search' %}
+      <input type="search" placeholder="Search publications" maxlength="150" autocomplete="off" spellcheck="false" data-pub-search aria-controls="pub-results">
+    </label>
+    <label class="pub-year-select">
+      <span class="pub-sr-only">Filter by publication year</span>
+      <select data-pub-year aria-controls="pub-results">
+        <option value="all">All years</option>
+        {% for group in publication_groups %}<option value="{{ group.name }}">{{ group.name }}</option>{% endfor %}
+      </select>
+      {% include publications/icon.html name='chevron-down' %}
+    </label>
+  </div>
 </div>
 
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;From Trajectories to Operators — A Unified Flow Map Perspective on Generative Modeling</b></p>
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: <i><b>Anbu Huang</b></i><br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://iclr-blogposts.github.io/2026/blog/2026/flow-map-learning/"  target="_blank">ICLR 2026 BlogPost Track</a>, 2026<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://iclr-blogposts.github.io/2026/blog/2026/flow-map-learning/"  target="_blank"><i class="fas fa-file-pdf"  style="font-size: 0.8em;"></i> Paper</a>]</p>
-  </article>
+<div id="pub-results" class="pub-results">
+  {% for group in publication_groups %}
+  <section class="pub-year-group" aria-labelledby="pub-year-{{ group.name }}" data-pub-group>
+    <h2 class="pub-year" id="pub-year-{{ group.name }}">{{ group.name }}</h2>
+    <div class="pub-year-entries">
+      {% for publication in group.items %}
+      <article class="pub-entry" data-pub-entry data-topic="{{ publication.topic | slugify }}" data-year="{{ publication.year }}" aria-labelledby="pub-title-{{ publication.title | slugify }}">
+        <h3 class="pub-title" id="pub-title-{{ publication.title | slugify }}"><a href="{{ publication.resources.first.url | escape }}" target="_blank" rel="noopener noreferrer">{{ publication.title | escape }}</a></h3>
+        <p class="pub-authors">{% for author in publication.authors %}{% if author == site.author.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+        <p class="pub-venue"><a href="{{ publication.venue_url | escape }}" target="_blank" rel="noopener noreferrer">{{ publication.venue | escape }}</a><span aria-hidden="true"> · </span><span>{{ publication.year }}</span></p>
+        <div class="pub-resources" role="group" aria-label="Resources for {{ publication.title | escape }}">
+          {% for resource in publication.resources %}
+          <a class="pub-resource{% if forloop.first %} pub-resource--primary{% endif %}" href="{{ resource.url | escape }}" target="_blank" rel="noopener noreferrer" aria-label="{{ resource.label | escape }} for {{ publication.title | escape }}">{% include publications/icon.html name=resource.icon %}<span>{{ resource.label | escape }}</span></a>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
 </div>
 
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Probably Approximately Correct Federated Learning</b></p>
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: Xiaojin Zhang, <i><b>Anbu Huang</b></i>, Lixin Fan, Kai Chen, Qiang Yang<br>&nbsp;&nbsp;&nbsp;&nbsp;ArXiv Preprint; under review in <a href="https://www.jmlr.org/"  target="_blank">Journal of Machine Learning Research (JMLR)</a>, 2023<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://arxiv.org/pdf/2304.04641.pdf"  target="_blank"><i class="fas fa-file-pdf"  style="font-size: 0.8em;"></i> Paper</a>]</p>
-  </article>
+<div class="pub-empty" data-pub-empty hidden>
+  <h2>No matching publications</h2>
+  <p>Try another topic, year or search term.</p>
+  <button class="pub-resource" type="button" data-pub-reset>Clear filters</button>
 </div>
 
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Federated Learning with Privacy-preserving and Model IP-right-Protection</b></p>
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: Qiang Yang, <i><b>Anbu Huang</b></i>, Lixin Fan, Chee Seng Chan, Jian Han Lim, Kam Woh Ng, Ding Sheng Ong, Bowen Li<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://link.springer.com/article/10.1007/s11633-022-1343-2"  target="_blank">Machine Intelligence Research</a>, 2022<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://link.springer.com/content/pdf/10.1007/s11633-022-1343-2.pdf"  target="_blank"><i class="fas fa-file-pdf"  style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&citation_for_view=Luv9JqgAAAAJ:W7OEmFMy1HYC" target="_blank"><i class="fas fa-fw fa-graduation-cap"   style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/fl-ipr.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]</p>
-  </article>
-</div>
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;StarFL: Hybrid Federated Learning Architecture for Smart Urban Computing</b></p>
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: <i><b>Anbu Huang</b></i>, Yang Liu, Tianjian Chen, Yongkai Zhou, Quan Sun, Hongfeng Chai, Qiang Yang<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://dl.acm.org/doi/10.1145/3467956"  target="_blank">ACM Transactions on Intelligent Systems and Technology (ACM TIST)</a>, 2021<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://dl.acm.org/doi/10.1145/3467956"  target="_blank"><i class="fas fa-file-pdf"   style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&citation_for_view=Luv9JqgAAAAJ:UeHWp8X0CEIC"   target="_blank"><i class="fas fa-fw fa-graduation-cap"   style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/starfl_bib.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]</p>
-  </article>
-</div>
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Federated Learning-Powered Visual Object Detection for Safety Monitoring</b></p>
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: Yang Liu, <i><b>Anbu Huang</b></i>, Yun Luo, He Huang, Youzhi Liu, Yuanyuan Chen, Lican Feng, Tianjian Chen, Han Yu, Qiang Yang<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://ojs.aaai.org/index.php/aimagazine/article/view/15095"  target="_blank">AI Magazine</a>, 2021<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://ojs.aaai.org/index.php/aimagazine/article/download/15095/18864" target="_blank"><i class="fas fa-file-pdf"    style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:IjCSPb-OGe4C"  target="_blank"><i class="fas fa-fw fa-graduation-cap"  style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/flpower_bib.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]</p>
-  </article>
-</div>
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Dynamic backdoor attacks against federated learning</b></p>
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: <i><b>Anbu Huang</b></i><br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://arxiv.org/abs/2011.07429"  target="_blank">ArXiv Preprint</a>, 2021<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://arxiv.org/pdf/2011.07429.pdf"  target="_blank"><i class="fas fa-file-pdf"   style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:qjMakFHDy7sC" target="_blank"><i class="fas fa-fw fa-graduation-cap"  style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/dynamic_bib.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]</p>
-  </article>
-</div>
-
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Fedvision: An online visual object detection platform powered by federated learning</b></p>
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: Yang Liu, <i><b>Anbu Huang</b></i>, Yun Luo, He Huang, Youzhi Liu, Yuanyuan Chen, Lican Feng, Tianjian Chen, Han Yu, Qiang Yang<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://ojs.aaai.org//index.php/AAAI/article/view/7021" target="_blank">Proceedings of the AAAI Conference on Artificial Intelligence</a>, 2020<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://arxiv.org/pdf/2001.06202.pdf"  target="_blank"><i class="fas fa-file-pdf"   style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:d1gkVwhDpl0C" target="_blank"><i class="fas fa-fw fa-graduation-cap"  style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://innovation-cat.github.io/files/IAAI2020.pdf" target="_blank"><i class="fas fa-file-powerpoint"   style="font-size: 0.8em;"></i> Slide</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/fedvision_bib.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://github.com/FederatedAI/FedVision" target="_blank"><i class="fas fa-code" style="font-size: 0.8em;"></i> Code</a>]</p>
-  </article>
-</div>
-
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;RPN: A residual pooling network for efficient federated learning</b></p>
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: <i><b>Anbu Huang</b></i>, Yuanyuan Chen, Yang Liu, Tianjian Chen, Qiang Yang<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="http://ecai2020.eu/"  target="_blank">European Conference on Artificial Intelligence (ECAI)</a>, 2020<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="http://ecai2020.eu/papers/551_paper.pdf"  target="_blank"><i class="fas fa-file-pdf"  style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:9yKSN-GCB0IC" target="_blank"><i class="fas fa-fw fa-graduation-cap"  style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/rpn_bib.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]</p>
-  </article>
-</div>
-
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;SolarNet: A Deep Learning Framework to Map Solar Plants In China From Satellite Imagery</b></p>
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: Xin Hou, Biao Wang, Wanqi Hu, Lei Yin, <i><b>Anbu Huang</b></i>, Haishan Wu<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://www.climatechange.ai/papers/iclr2020/6" target="_blank">ICLR 2020 Workshop on Tackling Climate Change with Machine Learning</a>, 2020<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/iclr2020/6/paper.pdf"  target="_blank"><i class="fas fa-file-pdf"  style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:2osOgNQ5qMEC"  target="_blank"><i class="fas fa-fw fa-graduation-cap"  style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://innovation-cat.github.io/files/solarnet.pdf"  target="_blank"><i class="fas fa-file-powerpoint" style="font-size: 0.8em;"></i> Slide</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://slideslive.com/38926233/solarnet-a-deep-learning-framework-to-map-solar-plants-in-china-from-satellite-imagery" target="_blank"><i class="fas fa-video"  style="font-size: 0.8em;"></i> Video</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/solarnet_bib.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]</p>
-  </article>
-</div>
-
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Privacy-preserving heterogeneous federated transfer learning</b></p>
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: Dashan Gao, Yang Liu, <i><b>Anbu Huang</b></i>, Ce Ju, Han Yu, Qiang Yang<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://www.computer.org/csdl/proceedings-article/big-data/2019/09005992/1hJrNyyOxyM" target="_blank">IEEE International Conference on Big Data (Big Data)</a>, 2019<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://www.computer.org/csdl/proceedings-article/big-data/2019/09005992/1hJrNyyOxyM"  target="_blank"><i class="fas fa-file-pdf" style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:u5HHmVD_uO8C" target="_blank"><i class="fas fa-fw fa-graduation-cap"  style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/pphtfl_bib.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]</p>
-  </article>
-</div>
-
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="font-family:Times New Roman;font-size:110%;margin-bottom:1px;"><b>&bull;&nbsp;&nbsp;&nbsp;Real-world image datasets for federated learning</b></p>
-
-	<p style="font-family:Times New Roman;margin-top:1px;">&nbsp;&nbsp;&nbsp;&nbsp;Authors: Jiahuan Luo, Xueyang Wu, Yun Luo, <i><b>Anbu Huang</b></i>, Yunfeng Huang, Yang Liu, Qiang Yang<br>&nbsp;&nbsp;&nbsp;&nbsp;Published in <a href="https://federated-learning.org/fl-neurips-2019/"  target="_blank">NeurIPS Workshop on Federated Learning for Data Privacy and Confidentiality</a>, 2019<br>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://arxiv.org/pdf/1910.11089.pdf"  target="_blank"><i class="fas fa-file-pdf"  style="font-size: 0.8em;"></i> Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Luv9JqgAAAAJ&sortby=pubdate&citation_for_view=Luv9JqgAAAAJ:u-x6o8ySG0sC" target="_blank"><i class="fas fa-fw fa-graduation-cap"  style="font-size: 0.8em;"></i> Scholar</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a rel="noreferrer noopener" href="https://innovation-cat.github.io/files/bib/dataset_bib.html" target="_blank"><i class="fas fa-quote-right" style="font-size: 0.6em;"></i> Cite</a>]&nbsp;&nbsp;&nbsp;&nbsp;[<a href="https://github.com/jiahuanluo/Federated-Benchmark" target="_blank"><i class="fas fa-code" style="font-size: 0.8em;"></i> Code</a>]</p>
-  </article>
+<div class="pub-pagination" data-pub-pagination hidden>
+  <p data-pub-summary></p>
+  <button class="pub-resource pub-more" type="button" data-pub-more aria-controls="pub-results"><span>Show more</span>{% include publications/icon.html name='chevron-down' %}</button>
 </div>

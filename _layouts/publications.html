@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign publication_years = site.data.publications | group_by: 'year' | sort: 'name' | reverse %}
+<main id="main" role="main">
+  <div id="publications-page" data-page-size="4">
+    <header class="pub-intro">
+      <div>
+        <p class="pub-eyebrow">RESEARCH &amp; PERSPECTIVES</p>
+        <h1>{{ page.title | escape }}</h1>
+        <p class="pub-intro-text">{{ page.excerpt | escape }}</p>
+      </div>
+      <p class="pub-archive-note">{{ site.data.publications.size }} entries <span aria-hidden="true">·</span> {{ publication_years.last.name }}–{{ publication_years.first.name }}</p>
+    </header>
+
+    {{ content }}
+
+    <footer class="pub-footer">
+      <span>© {{ site.time | date: '%Y' }} {{ site.author.name | escape }}</span>
+      <span>RESEARCH · BUILD · SHARE</span>
+    </footer>
+  </div>
+</main>

@@ -1,16 +1,11 @@
 ---
-layout: archive
+layout: publications
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
+publications_page: true
+excerpt: "Papers and perspectives, from federated learning to generative modeling."
 ---
-
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
-
-{% include base_path %}
-
 
 {% include archive-single-publications.html %}
 
