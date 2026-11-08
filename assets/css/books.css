@@ -1,0 +1,107 @@
+/* Books: the approved academic editorial layout, scoped to this page. */
+body:has(#books-page) {
+  --books-paper: #f8f9f5;
+  --books-ink: #203e33;
+  --books-body: #40574a;
+  --books-muted: #607263;
+  --books-green: #365f49;
+  --books-line: #dce5d9;
+  --books-soft: #edf2e8;
+  padding-bottom: 0;
+  background: var(--books-paper);
+  color: var(--books-ink);
+}
+
+body:has(#books-page) .masthead { background: var(--books-paper); border-bottom: 1px solid var(--books-line); animation: none; }
+body:has(#books-page) .masthead__inner-wrap { max-width: 1200px; padding: 19px 26px; }
+body:has(#books-page) .greedy-nav { background: transparent; }
+body:has(#books-page) .greedy-nav a { color: #4b6051; font-size: 15px; }
+body:has(#books-page) .greedy-nav .visible-links li:first-child a { color: var(--books-ink); font-size: 17px; letter-spacing: -.4px; }
+body:has(#books-page) .masthead__menu-item--lg { padding-right: 24px; }
+body:has(#books-page) .greedy-nav button { background: var(--books-green); }
+body:has(#books-page) .greedy-nav a[aria-current="page"] { color: var(--books-ink); }
+body:has(#books-page) .greedy-nav .visible-links a[aria-current="page"]::before { height: 2px; background: var(--books-green); transform: scaleX(1); }
+body:has(#books-page) .greedy-nav button:focus-visible { outline: 2px solid #64825c; outline-offset: 4px; }
+body:has(#books-page) .page__footer { display: none; }
+
+#main:has(#books-page) { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 26px; animation: none; }
+#books-page { min-width: 0; color: var(--books-ink); color-scheme: light; font: 400 14px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; text-align: left; }
+#books-page *, #books-page *::before, #books-page *::after { box-sizing: border-box; }
+#books-page :where(h1, h2, p, figure, dl, dt, dd, ul, li) { margin: 0; padding: 0; border: 0; }
+#books-page a { color: var(--books-green); text-decoration: none; }
+#books-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+#books-page a:focus-visible { outline: 2px solid #64825c; outline-offset: 5px; }
+
+#books-page .books-intro { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; padding: 40px 0 30px; }
+#books-page .books-eyebrow { color: var(--books-muted); font: 500 11px/1.5 ui-monospace, Consolas, monospace; letter-spacing: 1.45px; text-transform: uppercase; }
+#books-page h1 { margin: 9px 0 12px; color: var(--books-ink); font: 400 54px/1.12 Georgia, "Times New Roman", serif; letter-spacing: -1.7px; }
+#books-page .books-intro-text { max-width: 570px; color: var(--books-body); font-size: 15px; line-height: 1.65; }
+#books-page .books-catalogue-note { flex: 0 0 auto; padding-bottom: 4px; color: var(--books-muted); font-size: 12px; text-align: right; }
+#books-page .books-catalogue-note strong { display: block; margin-bottom: 4px; color: var(--books-ink); font: 400 27px/1.3 Georgia, "Times New Roman", serif; }
+#books-page .books-catalogue-note span { display: block; }
+
+#books-page .books-book { display: grid; grid-template-columns: minmax(170px, .7fr) minmax(0, 1.45fr); gap: 36px; align-items: center; padding: 25px 0 31px; border-top: 1px solid var(--books-line); }
+#books-page .books-art { display: flex; align-self: stretch; align-items: center; justify-content: center; min-width: 0; min-height: 290px; padding: 20px 14px; border-radius: 12px; background: #eaf0e4; }
+#books-page .books-art--stone { background: #eeece5; }
+#books-page .books-cutout { --books-cover-height: 245px; display: block; flex: 0 1 auto; width: min(100%, calc(var(--books-cover-height) * var(--books-cover-ratio))); filter: drop-shadow(5px 8px 6px #203e331c); }
+#books-page .books-cutout img { display: block; width: 100%; max-width: 100%; height: auto; -webkit-mask-image: var(--books-cover-mask, none); mask-image: var(--books-cover-mask, none); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; mask-mode: alpha; }
+#books-page .books-copy { min-width: 0; }
+#books-page .books-copy h2 { margin-top: 8px; color: var(--books-ink); font: 400 30px/1.2 Georgia, "Times New Roman", "SimSun", serif; letter-spacing: -.6px; overflow-wrap: anywhere; }
+#books-page .books-subtitle { margin-top: 6px; color: var(--books-muted); font: 400 15px/1.5 "Microsoft YaHei", -apple-system, sans-serif; }
+#books-page .books-authors { margin-top: 9px; color: var(--books-muted); font-size: 12px; line-height: 1.65; }
+#books-page .books-authors strong { color: var(--books-body); font-weight: 650; }
+#books-page .books-description { margin-top: 12px; color: var(--books-body); font-size: 13px; line-height: 1.65; }
+#books-page .books-metadata { display: grid; grid-template-columns: .8fr 1.2fr; gap: 13px 20px; margin-top: 16px; }
+#books-page .books-metadata > div { min-width: 0; }
+#books-page .books-metadata dt { color: var(--books-muted); font-size: 11px; line-height: 1.65; letter-spacing: .8px; text-transform: uppercase; }
+#books-page .books-metadata dd { margin-top: 2px; color: var(--books-body); font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+#books-page .books-publisher { grid-column: 1 / -1; }
+#books-page .books-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 18px; }
+#books-page .books-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 37px; padding: 8px 14px; border: 1px solid #bbcdb6; border-radius: 7px; background: #fff; color: var(--books-green); font: 500 12px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; white-space: nowrap; text-decoration: none; }
+#books-page .books-button:hover { background: var(--books-soft); text-decoration: none; }
+#books-page .books-button--primary { border-color: var(--books-green); background: var(--books-green); color: #fff; }
+#books-page .books-button--primary:hover { background: #284d39; color: #fff; }
+#books-page .books-icon { display: block; flex: 0 0 auto; width: 16px; height: 16px; }
+#books-page .books-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; list-style: none; }
+#books-page .books-topics li { color: var(--books-muted); font-size: 11px; line-height: 1.65; }
+#books-page .books-topics li + li::before { content: "/"; margin-right: 6px; color: #91a48b; }
+#books-page .books-footer { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 14px; margin-top: 40px; padding: 19px 0 23px; border-top: 1px solid var(--books-line); color: var(--books-muted); font-size: 11px; }
+#books-page .books-footer span:last-child { font: 400 11px/1.7 ui-monospace, Consolas, monospace; letter-spacing: .8px; }
+
+@media (max-width: 800px) {
+  #books-page .books-intro { padding-top: 32px; }
+  #books-page h1 { font-size: 49px; }
+  #books-page .books-catalogue-note { max-width: 111px; }
+  #books-page .books-book { grid-template-columns: minmax(150px, .7fr) minmax(0, 1.35fr); gap: 25px; }
+  #books-page .books-cutout { --books-cover-height: 220px; }
+  #books-page .books-copy h2 { font-size: 27px; }
+}
+
+@media (max-width: 620px) {
+  body:has(#books-page) .masthead__inner-wrap { padding: 14px 20px; }
+  body:has(#books-page) .greedy-nav { min-height: 44px; }
+  body:has(#books-page) .greedy-nav .visible-links li:first-child a { max-width: calc(100vw - 144px); margin-right: 0; font-size: 14px; line-height: 1.35; white-space: normal; }
+  body:has(#books-page) .masthead__menu-item--lg { padding-right: 0; }
+  #main:has(#books-page) { padding: 0 20px; }
+  #books-page .books-intro { display: block; padding: 30px 0 25px; }
+  #books-page h1 { margin-top: 11px; font-size: 43px; }
+  #books-page .books-intro-text { font-size: 14px; }
+  #books-page .books-catalogue-note { display: flex; align-items: center; gap: 7px; max-width: none; margin-top: 14px; padding: 0; font-size: 11px; text-align: left; }
+  #books-page .books-catalogue-note strong { display: inline; margin: 0; font: inherit; }
+  #books-page .books-catalogue-note strong::after { content: " ·"; }
+  #books-page .books-catalogue-note span { display: inline; }
+  #books-page .books-book { grid-template-columns: minmax(0, 1fr); gap: 22px; padding-top: 23px; }
+  #books-page .books-art { min-height: 265px; }
+  #books-page .books-cutout { --books-cover-height: 235px; }
+  #books-page .books-copy h2 { font-size: 29px; }
+  #books-page .books-button { min-height: 44px; }
+}
+
+@media (max-width: 370px) {
+  #books-page h1 { font-size: 39px; }
+  #books-page .books-intro-text { font-size: 13px; }
+}
+
+@media (pointer: coarse) {
+  #books-page .books-button { min-height: 44px; }
+}

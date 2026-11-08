@@ -27,4 +27,7 @@
 
 {% if page.blog_archive %}{% assign blog_asset_version = site.time | date: '%s' %}<link rel="stylesheet" href="{{ '/assets/css/blog-archive.css' | relative_url }}?v={{ blog_asset_version }}">
 <script src="{{ '/assets/js/blog-archive.js' | relative_url }}?v={{ blog_asset_version }}" defer></script>
+{% endif %}
+{% if page.books_page %}
+{% assign books_asset_version = site.time | date: '%s' %}<link rel="stylesheet" href="{{ '/assets/css/books.css' | relative_url }}?v={{ books_asset_version }}">
 {% endif %}<!-- end custom head snippets -->

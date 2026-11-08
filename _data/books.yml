@@ -1,0 +1,88 @@
+eyebrow: KNOWLEDGE, IN DEPTH
+intro: Bringing research into practice, one chapter at a time.
+publisher_label: Published by PHEI
+
+# Newest first. Artwork and links follow the approved academic editorial concept.
+items:
+  - id: trustworthy-federated-learning
+    title: Trustworthy Federated Learning
+    subtitle: 可信联邦学习
+    role: CO-AUTHOR
+    year: 2026
+    published: April 2026
+    language: Chinese
+    authors:
+      - Qiang Yang
+      - Anbu Huang
+      - Lixin Fan
+      - Yang Liu
+      - Xiaojin Zhang
+    isbn: "9787121524776"
+    publisher: Publishing House of Electronics Industry
+    description: A systematic guide to trustworthy federated learning, covering privacy, security, utility and efficiency, alongside fairness, incentives and model intellectual property protection.
+    topics:
+      - Trustworthy AI
+      - Privacy & security
+      - Federated learning
+    cover: /assets/images/books/trustworthy-federated-learning.webp
+    cover_width: 440
+    cover_height: 440
+    cover_ratio: 1
+    art_tone: sage
+    purchase_url: https://item.jd.com/15367092.html
+    resources_url: https://xiaojinzhang-hust.github.io/
+    source_url: https://phei.com.cn/module/goods/wssd_content.jsp?bookid=69652
+    cover_source: https://XiaoJinZhang-HUST.github.io/assets/52477fm%E7%AB%8B%E4%BD%93%E5%9B%BE.png
+
+  - id: practicing-federated-learning
+    title: Practicing Federated Learning
+    subtitle: 联邦学习实战
+    role: CO-AUTHOR
+    year: 2021
+    published: May 2021
+    language: Chinese
+    authors:
+      - Qiang Yang
+      - Anbu Huang
+      - Yang Liu
+      - Tianjian Chen
+    isbn: "9787121407925"
+    publisher: Publishing House of Electronics Industry
+    description: A practical introduction to federated learning and privacy-preserving computation, connecting core concepts with case studies and implementation.
+    topics:
+      - Federated learning
+      - Privacy
+      - Case studies
+    cover: /assets/images/books/practicing-federated-learning.webp
+    cover_mask: /assets/images/books/practicing-federated-learning-mask.webp
+    cover_width: 400
+    cover_height: 487
+    cover_ratio: 0.821
+    art_tone: sage
+    purchase_url: https://item.jd.com/13206070.html
+    code_url: https://github.com/FederatedAI/Practicing-Federated-Learning
+
+  - id: deep-learning
+    title: Dive into Deep Learning
+    subtitle: 深入浅出深度学习：原理剖析与 Python 实践
+    role: AUTHOR
+    year: 2017
+    published: June 2017
+    language: Chinese
+    authors:
+      - Anbu Huang
+    isbn: "9787121312700"
+    publisher: Publishing House of Electronics Industry
+    description: An introduction to deep learning for practitioners, bringing together fundamental ideas, neural network architectures and hands-on Python implementation.
+    topics:
+      - Deep learning
+      - Neural networks
+      - Python
+    cover: /assets/images/books/deep-learning.webp
+    cover_mask: /assets/images/books/deep-learning-mask.webp
+    cover_width: 384
+    cover_height: 520
+    cover_ratio: 0.738
+    art_tone: stone
+    purchase_url: https://e.jd.com/30458027.html?ebook=1
+    code_url: https://github.com/innovation-cat/DeepLearningBook

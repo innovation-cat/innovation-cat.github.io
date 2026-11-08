@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign catalogue = site.data.books %}
+<main id="main" role="main">
+  <div id="books-page">
+    <header class="books-intro">
+      <div>
+        <p class="books-eyebrow">{{ catalogue.eyebrow | escape }}</p>
+        <h1>{{ page.title | escape }}</h1>
+        <p class="books-intro-text">{{ catalogue.intro | escape }}</p>
+      </div>
+      <p class="books-catalogue-note"><strong>{{ catalogue.items.size }} titles</strong><span>{{ catalogue.publisher_label | escape }}</span></p>
+    </header>
+
+    {{ content }}
+
+    <footer class="books-footer">
+      <span>© {{ site.time | date: "%Y" }} {{ site.author.name | escape }}</span>
+      <span>RESEARCH · BUILD · SHARE</span>
+    </footer>
+  </div>
+</main>

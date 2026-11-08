@@ -1,12 +1,11 @@
 ---
-layout: archive
+layout: books
 title: "Books"
 permalink: /books/
-author_profile: true
+author_profile: false
+books_page: true
+excerpt: "Books by Anbu Huang on trustworthy federated learning, practical federated learning, and deep learning."
 ---
 
 
-{% include base_path %}
-
-
-{% include archive-single-books.html %}
+{% include books/catalogue.html %}

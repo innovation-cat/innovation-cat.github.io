@@ -1,0 +1,36 @@
+<section class="books-list" aria-label="Published books, newest first">
+  {% for book in site.data.books.items %}
+  <article class="books-book" aria-labelledby="book-{{ book.id }}">
+    <figure class="books-art books-art--{{ book.art_tone }}">
+      <span class="books-cutout" style="--books-cover-ratio: {{ book.cover_ratio }};{% if book.cover_mask %} --books-cover-mask: url('{{ book.cover_mask | relative_url }}');{% endif %}">
+        <img src="{{ book.cover | relative_url }}" width="{{ book.cover_width }}" height="{{ book.cover_height }}" alt="Cover of {{ book.title | escape }} ({{ book.language | escape }} edition)" decoding="async" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+      </span>
+    </figure>
+
+    <div class="books-copy">
+      <p class="books-eyebrow">{{ book.year }} · {{ book.role | escape }}</p>
+      <h2 id="book-{{ book.id }}">{{ book.title | escape }}</h2>
+      <p class="books-subtitle" lang="zh-CN">{{ book.subtitle | escape }}</p>
+      <p class="books-authors">{% for author in book.authors %}{% if author == 'Anbu Huang' %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+      <p class="books-description">{{ book.description | escape }}</p>
+
+      <dl class="books-metadata">
+        <div><dt>Published</dt><dd>{{ book.published | escape }} · {{ book.language | escape }}</dd></div>
+        <div><dt>ISBN</dt><dd>{{ book.isbn | escape }}</dd></div>
+        <div class="books-publisher"><dt>Publisher</dt><dd>{{ book.publisher | escape }}</dd></div>
+      </dl>
+
+      <div class="books-actions">
+        <a class="books-button books-button--primary" href="{{ book.purchase_url | escape }}" target="_blank" rel="noopener noreferrer">{% include books/icon.html name="shopping-cart" %}<span>Get the book</span></a>
+        {% if book.code_url %}
+        <a class="books-button" href="{{ book.code_url | escape }}" target="_blank" rel="noopener noreferrer">{% include books/icon.html name="code" %}<span>View code</span></a>
+        {% elsif book.resources_url %}
+        <a class="books-button" href="{{ book.resources_url | escape }}" target="_blank" rel="noopener noreferrer">{% include books/icon.html name="book-open" %}<span>Resources</span></a>
+        {% endif %}
+      </div>
+
+      <ul class="books-topics" aria-label="Topics">{% for topic in book.topics %}<li>{{ topic | escape }}</li>{% endfor %}</ul>
+    </div>
+  </article>
+  {% endfor %}
+</section>
