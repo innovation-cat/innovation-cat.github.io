@@ -18,6 +18,20 @@
   var topics = topicButtons.map(function (button) { return button.dataset.blogTopic; });
   var years = Array.from(year.options).map(function (option) { return option.value; });
   var state = { topic: "all", year: "all", query: "", page: 1 };
+  var topicArea = root.querySelector("[data-blog-topics]");
+  var primaryTopics = root.querySelector("[data-blog-topic-primary]");
+  var extraTopics = root.querySelector("[data-blog-topic-extra]");
+  var topicAction = root.querySelector("[data-blog-topics-action]");
+  var topicToggle = root.querySelector("[data-blog-topics-toggle]");
+  var topicToggleLabel = root.querySelector("[data-blog-topics-toggle-label]");
+  var topicToggleCount = root.querySelector("[data-blog-topics-toggle-count]");
+  var allTopicsButton = topicButtons.find(function (button) { return button.dataset.blogTopic === "all"; });
+  var topicEntries = topicButtons.filter(function (button) { return button !== allTopicsButton; }).map(function (button, index) {
+    var priority = parseFloat(button.dataset.topicPriority);
+    return { button: button, priority: isNaN(priority) ? 100 : priority, index: index };
+  });
+  var topicsExpanded = false;
+  var lastTopicWidth = -1;
 
   function normalize(text) {
     return String(text || "").toLowerCase().replace(/\s+/g, " ").trim();
@@ -59,6 +73,61 @@
       else url.searchParams.delete(key);
     });
     window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+  }
+
+  // Move the existing buttons only when needed, retaining their listeners and focus.
+  function placeTopicButtons(container, buttons, anchor) {
+    for (var index = buttons.length - 1; index >= 0; index -= 1) {
+      var button = buttons[index];
+      if (button.parentElement !== container || button.nextElementSibling !== anchor) container.insertBefore(button, anchor);
+      anchor = button;
+    }
+  }
+
+  function layoutTopics() {
+    if (!primaryTopics.clientWidth) return;
+    var focused = document.activeElement;
+    var keepFocus = topicButtons.indexOf(focused) !== -1 || focused === topicToggle;
+    var style = window.getComputedStyle(primaryTopics);
+    var maxRows = Math.max(1, parseInt(style.getPropertyValue("--blog-topic-rows"), 10) || 1);
+    var gap = parseFloat(style.rowGap) || 0;
+    var limit = topicEntries.length;
+    var ordered = topicEntries.slice().sort(function (a, b) {
+      if (a.button.dataset.blogTopic === state.topic) return -1;
+      if (b.button.dataset.blogTopic === state.topic) return 1;
+      return a.priority - b.priority || a.index - b.index;
+    });
+
+    // Fill the available rows, reserving room for the More control and divider.
+    while (true) {
+      var primary = new Set(ordered.slice(0, limit).map(function (entry) { return entry.button; }));
+      var visible = topicButtons.filter(function (button) { return button === allTopicsButton || primary.has(button); });
+      var overflow = topicButtons.filter(function (button) { return button !== allTopicsButton && !primary.has(button); });
+      placeTopicButtons(extraTopics, overflow, null);
+      placeTopicButtons(primaryTopics, visible, topicAction);
+      var expanded = topicsExpanded && overflow.length > 0;
+      extraTopics.hidden = !expanded;
+      topicAction.hidden = overflow.length === 0;
+      topicToggle.setAttribute("aria-expanded", String(expanded));
+      topicToggle.setAttribute("aria-label", expanded ? "Collapse extra topics" : "Show " + overflow.length + " more topics");
+      topicToggleLabel.textContent = expanded ? "Collapse" : (maxRows > 1 ? "More" : "More topics");
+      topicToggleCount.textContent = String(overflow.length);
+      topicToggleCount.hidden = expanded;
+      var rowHeight = Math.max(allTopicsButton.getBoundingClientRect().height, topicAction.hidden ? 0 : topicAction.getBoundingClientRect().height);
+      var allowedHeight = rowHeight * maxRows + gap * (maxRows - 1) + 1;
+      if (primaryTopics.getBoundingClientRect().height <= allowedHeight || limit <= 1) break;
+      limit -= 1;
+    }
+
+    if (!overflow.length) topicsExpanded = false;
+    lastTopicWidth = primaryTopics.clientWidth;
+    if (keepFocus) {
+      var hiddenFocus = (extraTopics.hidden && extraTopics.contains(focused)) || (focused === topicToggle && topicAction.hidden);
+      if (hiddenFocus || document.activeElement !== focused) {
+        var focusTarget = hiddenFocus ? (topicAction.hidden ? allTopicsButton : topicToggle) : focused;
+        focusTarget.focus({ preventScroll: true });
+      }
+    }
   }
 
   function makePageButton(number, label, direction, totalPages) {
@@ -111,7 +180,22 @@
     } else {
       pageSummary.textContent = "0 essays";
     }
+    layoutTopics();
   }
+
+  topicToggle.addEventListener("click", function () {
+    topicsExpanded = !topicsExpanded;
+    layoutTopics();
+  });
+
+  topicArea.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && topicsExpanded) {
+      event.preventDefault();
+      topicsExpanded = false;
+      layoutTopics();
+      topicToggle.focus({ preventScroll: true });
+    }
+  });
 
   topicButtons.forEach(function (button) {
     button.addEventListener("click", function () {
@@ -196,7 +280,15 @@
   }
 
   readLocation();
-  render();
   controls.hidden = false;
+  render();
   root.dataset.enhanced = "true";
+  if (window.ResizeObserver) {
+    new ResizeObserver(function () {
+      if (primaryTopics.clientWidth !== lastTopicWidth) layoutTopics();
+    }).observe(primaryTopics);
+  } else {
+    window.addEventListener("resize", layoutTopics);
+  }
+  if (document.fonts) document.fonts.ready.then(layoutTopics);
 })();

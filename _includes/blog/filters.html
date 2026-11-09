@@ -1,11 +1,21 @@
 {% capture years_string %}{% for post in include.posts %}{{ post.date | date: "%Y" }}|{% endfor %}{% endcapture %}
 {% assign archive_years = years_string | split: "|" | uniq %}
 <div class="blog-controls" data-blog-controls hidden>
-  <div class="blog-topics" role="group" aria-label="Filter articles by topic">
-    <button class="blog-topic" type="button" data-blog-topic="all" aria-pressed="true">All writing</button>
-    {% for topic in include.archive.topics %}
-    <button class="blog-topic" type="button" data-blog-topic="{{ topic.id | escape }}" aria-pressed="false">{{ topic.label | escape }}</button>
-    {% endfor %}
+  <div class="blog-topics" data-blog-topics>
+    <div class="blog-topic-primary" role="group" aria-label="Filter articles by topic" data-blog-topic-primary>
+      <button class="blog-topic" type="button" data-blog-topic="all" aria-pressed="true">All writing</button>
+      {% for topic in include.archive.topics %}
+      <button class="blog-topic" type="button" data-blog-topic="{{ topic.id | escape }}" data-topic-priority="{{ topic.priority | default: 100 | escape }}" aria-pressed="false">{{ topic.label | escape }}</button>
+      {% endfor %}
+      <div class="blog-topics-action" data-blog-topics-action hidden>
+        <button class="blog-topics-toggle" type="button" aria-expanded="false" aria-controls="blog-extra-topics" aria-label="Show more topics" data-blog-topics-toggle>
+          <span data-blog-topics-toggle-label>More topics</span>
+          <span class="blog-topics-toggle-count" data-blog-topics-toggle-count aria-hidden="true"></span>
+          <svg class="blog-topics-toggle-arrows" viewBox="0 0 16 24" width="16" height="24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 4 4 4 4-4" opacity=".4"/><path d="m4 10 4 4 4-4" opacity=".7"/><path d="m4 16 4 4 4-4"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="blog-topic-extra" id="blog-extra-topics" role="group" aria-label="More topics" data-blog-topic-extra hidden></div>
   </div>
   <div class="blog-toolbar">
     <p class="blog-result-count" data-blog-count aria-live="polite" aria-atomic="true">{{ include.posts.size }} {% if include.posts.size == 1 %}essay{% else %}essays{% endif %}</p>

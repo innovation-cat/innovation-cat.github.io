@@ -6,16 +6,28 @@ default_cover: research-notes
 topics:
 - id: generative-models
   label: Generative models
+  priority: 30
 - id: video-generation
   label: Video generation
+  priority: 40
+- id: training-stability
+  label: Training stability
+  priority: 10
+- id: inference-acceleration
+  label: Inference acceleration
+  priority: 20
 - id: multimodal
   label: Multimodal
+  priority: 50
 - id: alignment
   label: Alignment
+  priority: 60
 - id: mathematics
   label: Mathematics
+  priority: 70
 - id: architecture
   label: Architecture
+  priority: 80
 covers:
   forcing-streaming:
     image: /assets/images/blog-covers/forcing-streaming.svg

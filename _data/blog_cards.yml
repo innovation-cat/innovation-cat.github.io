@@ -30,6 +30,7 @@
   cover: diffusion-transformers
 /posts/2026/01/flow-map/:
   topic: generative-models
+  additional_topics: [inference-acceleration]
   cover: flow-map
 /posts/2025/12/tokenization/:
   topic: multimodal
@@ -45,9 +46,11 @@
   cover: inverse-problems
 /posts/2025/10/diffusion-sampling/:
   topic: generative-models
+  additional_topics: [inference-acceleration]
   cover: diffusion-acceleration
 /posts/2025/09/fast-flow-matching/:
   topic: generative-models
+  additional_topics: [inference-acceleration]
   cover: fast-flow-matching
 /posts/2025/08/flow-matching/:
   topic: generative-models
@@ -57,23 +60,25 @@
   cover: controlled-diffusion
 /posts/2025/06/ODE-Solver/:
   topic: generative-models
-  additional_topics: [mathematics]
+  additional_topics: [mathematics, inference-acceleration]
   cover: pf-ode-solvers
 /posts/2025/06/consistency-model/:
   topic: generative-models
+  additional_topics: [inference-acceleration]
   cover: consistency-models
 /posts/2025/03/diffusion-architectures-efficiency/:
   topic: generative-models
   cover: efficient-architectures
 /posts/2025/03/diffusion-architectures-stability/:
   topic: generative-models
-  additional_topics: [architecture]
+  additional_topics: [architecture, training-stability]
   cover: stable-architectures
 /posts/2025/01/RL-LLM/:
   topic: alignment
   cover: rl-language-models
 /posts/2024/12/diffusion-model-training/:
   topic: generative-models
+  additional_topics: [training-stability]
   cover: diffusion-training
 /posts/2024/10/diffusion-model/:
   topic: generative-models
