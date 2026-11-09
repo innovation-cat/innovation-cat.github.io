@@ -34,8 +34,8 @@ body:has(#books-page) .page__footer { display: none; }
 
 #books-page .books-intro { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; padding: 40px 0 30px; }
 #books-page .books-eyebrow { color: var(--books-muted); font: 500 11px/1.5 ui-monospace, Consolas, monospace; letter-spacing: 1.45px; text-transform: uppercase; }
-#books-page h1 { margin: 9px 0 12px; color: var(--books-ink); font: 400 54px/1.12 Georgia, "Times New Roman", serif; letter-spacing: -1.7px; }
-#books-page .books-intro-text { max-width: 570px; color: var(--books-body); font-size: 15px; line-height: 1.65; }
+#books-page h1 { margin: 12px 0 13px; color: var(--books-ink); font: 600 clamp(43px, 5.2vw, 64px)/1.1 Georgia, "Times New Roman", serif; letter-spacing: -1.7px; }
+#books-page .books-intro-text { max-width: 570px; color: var(--books-body); font: 400 19px/1.5 Georgia, "Times New Roman", serif; }
 #books-page .books-catalogue-note { flex: 0 0 auto; padding-bottom: 4px; color: var(--books-muted); font-size: 12px; text-align: right; }
 #books-page .books-catalogue-note strong { display: block; margin-bottom: 4px; color: var(--books-ink); font: 400 27px/1.3 Georgia, "Times New Roman", serif; }
 #books-page .books-catalogue-note span { display: block; }
@@ -70,7 +70,6 @@ body:has(#books-page) .page__footer { display: none; }
 
 @media (max-width: 800px) {
   #books-page .books-intro { padding-top: 32px; }
-  #books-page h1 { font-size: 49px; }
   #books-page .books-catalogue-note { max-width: 111px; }
   #books-page .books-book { grid-template-columns: minmax(150px, .7fr) minmax(0, 1.35fr); gap: 25px; }
   #books-page .books-cutout { --books-cover-height: 220px; }
@@ -84,8 +83,7 @@ body:has(#books-page) .page__footer { display: none; }
   body:has(#books-page) .masthead__menu-item--lg { padding-right: 0; }
   #main:has(#books-page) { padding: 0 20px; }
   #books-page .books-intro { display: block; padding: 30px 0 25px; }
-  #books-page h1 { margin-top: 11px; font-size: 43px; }
-  #books-page .books-intro-text { font-size: 14px; }
+  #books-page .books-intro-text { font-size: 17px; }
   #books-page .books-catalogue-note { display: flex; align-items: center; gap: 7px; max-width: none; margin-top: 14px; padding: 0; font-size: 11px; text-align: left; }
   #books-page .books-catalogue-note strong { display: inline; margin: 0; font: inherit; }
   #books-page .books-catalogue-note strong::after { content: " ·"; }
@@ -95,11 +93,6 @@ body:has(#books-page) .page__footer { display: none; }
   #books-page .books-cutout { --books-cover-height: 235px; }
   #books-page .books-copy h2 { font-size: 29px; }
   #books-page .books-button { min-height: 44px; }
-}
-
-@media (max-width: 370px) {
-  #books-page h1 { font-size: 39px; }
-  #books-page .books-intro-text { font-size: 13px; }
 }
 
 @media (pointer: coarse) {
