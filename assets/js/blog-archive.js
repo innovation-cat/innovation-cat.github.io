@@ -88,7 +88,7 @@
 
     records.forEach(function (record) { record.element.hidden = !visibleElements.has(record.element); });
     empty.hidden = matches.length !== 0;
-    count.textContent = matches.length + (matches.length === 1 ? " essay" : " essays") + " · Newest first";
+    count.textContent = matches.length + (matches.length === 1 ? " essay" : " essays");
     period.textContent = visible.length ? Array.from(new Set(visible.map(function (record) { return record.year; }))).join(" / ") : "Archive";
 
     topicButtons.forEach(function (button) {

@@ -1,21 +1,30 @@
 {% capture years_string %}{% for post in include.posts %}{{ post.date | date: "%Y" }}|{% endfor %}{% endcapture %}
 {% assign archive_years = years_string | split: "|" | uniq %}
-<div class="blog-toolbar" data-blog-controls hidden>
+<div class="blog-controls" data-blog-controls hidden>
   <div class="blog-topics" role="group" aria-label="Filter articles by topic">
     <button class="blog-topic" type="button" data-blog-topic="all" aria-pressed="true">All writing</button>
     {% for topic in include.archive.topics %}
     <button class="blog-topic" type="button" data-blog-topic="{{ topic.id | escape }}" aria-pressed="false">{{ topic.label | escape }}</button>
     {% endfor %}
   </div>
-  <div class="blog-inputs">
-    <label class="blog-sr" for="blog-search">Search articles</label>
-    <input class="blog-search" id="blog-search" type="search" placeholder="Search articles" maxlength="150" data-blog-search>
-    <label class="blog-sr" for="blog-year">Filter by year</label>
-    <select class="blog-year-select" id="blog-year" data-blog-year>
-      <option value="all">All years</option>
-      {% for year in archive_years %}{% if year != empty %}
-      <option value="{{ year | escape }}">{{ year }}</option>
-      {% endif %}{% endfor %}
-    </select>
+  <div class="blog-toolbar">
+    <p class="blog-result-count" data-blog-count aria-live="polite" aria-atomic="true">{{ include.posts.size }} {% if include.posts.size == 1 %}essay{% else %}essays{% endif %}</p>
+    <div class="blog-inputs">
+      <label class="blog-search-field" for="blog-search">
+        <span class="blog-sr">Search articles</span>
+        <svg class="blog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="7.2"/><path d="m16 16 5 5"/></svg>
+        <input class="blog-search" id="blog-search" type="search" placeholder="Search articles" maxlength="150" data-blog-search>
+      </label>
+      <label class="blog-year-field" for="blog-year">
+        <span class="blog-sr">Filter by year</span>
+        <select class="blog-year-select" id="blog-year" data-blog-year>
+          <option value="all">All years</option>
+          {% for year in archive_years %}{% if year != empty %}
+          <option value="{{ year | escape }}">{{ year }}</option>
+          {% endif %}{% endfor %}
+        </select>
+        <svg class="blog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+      </label>
+    </div>
   </div>
 </div>
