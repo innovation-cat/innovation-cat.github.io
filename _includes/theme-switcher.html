@@ -1,0 +1,53 @@
+<div class="appearance" data-appearance>
+  <button class="appearance__trigger" type="button" data-theme-toggle aria-label="Appearance" aria-haspopup="dialog" aria-expanded="false" aria-controls="appearance-panel" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18h1.2a2.4 2.4 0 0 0 1.7-4.1 1.3 1.3 0 0 1 .9-2.2H18a3 3 0 0 0 3-3A9 9 0 0 0 12 3Z"/><circle cx="7.5" cy="10" r=".8"/><circle cx="11" cy="7" r=".8"/><circle cx="15.5" cy="8" r=".8"/><circle cx="7.5" cy="14" r=".8"/></svg>
+    <span class="appearance__trigger-label">Appearance</span>
+    <span class="appearance__dot" aria-hidden="true"></span>
+  </button>
+
+  <section class="appearance__panel" id="appearance-panel" role="dialog" aria-labelledby="appearance-title" aria-describedby="appearance-description" tabindex="-1" hidden>
+    <div class="appearance__heading">
+      <h2 id="appearance-title">Appearance</h2>
+      <button class="appearance__close" type="button" data-theme-close aria-label="Close appearance settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    </div>
+    <p class="appearance__description" id="appearance-description">Choose your reading atmosphere.</p>
+
+    <div class="appearance__modes" role="group" aria-label="Color mode">
+      <button type="button" data-theme-mode="light" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>Light</button>
+      <button type="button" data-theme-mode="dark" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.6 14A9 9 0 0 1 10 3.4 9 9 0 1 0 20.6 14Z"/></svg>Dark</button>
+      <button type="button" data-theme-mode="system" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>System</button>
+    </div>
+
+    <div class="appearance__section-heading"><h3>Color theme</h3><span>Active: <span data-theme-active>Forest</span></span></div>
+    <div class="appearance__themes" role="group" aria-label="Choose a color theme">
+      {% assign appearance_themes = "forest|parchment|ocean|lavender|midnight|white" | split: "|" %}
+      {% for theme_id in appearance_themes %}
+        {% case theme_id %}
+          {% when "forest" %}{% assign theme_name = "Forest" %}{% assign theme_caption = "Natural · Default" %}
+          {% when "parchment" %}{% assign theme_name = "Parchment" %}{% assign theme_caption = "Warm · Editorial" %}
+          {% when "ocean" %}{% assign theme_name = "Ocean Mist" %}{% assign theme_caption = "Cool · Focused" %}
+          {% when "lavender" %}{% assign theme_name = "Dusk Lavender" %}{% assign theme_caption = "Soft · Creative" %}
+          {% when "midnight" %}{% assign theme_name = "Midnight" %}{% assign theme_caption = "Dim · Night reading" %}
+          {% when "white" %}{% assign theme_name = "Pure White" %}{% assign theme_caption = "Clean · Minimal" %}
+        {% endcase %}
+        <button class="theme-swatch" type="button" data-theme-choice="{{ theme_id }}" aria-label="{{ theme_name }} theme" aria-pressed="{% if theme_id == 'forest' %}true{% else %}false{% endif %}">
+          <span class="theme-swatch__preview" aria-hidden="true">
+            <span class="theme-swatch__masthead"><b>Innovation-Cat</b><i></i><i></i><i></i></span>
+            <span class="theme-swatch__type">Aa</span>
+            <span class="theme-swatch__line"></span><span class="theme-swatch__line theme-swatch__line--short"></span>
+            <span class="theme-swatch__article"><span><i></i><i></i><i></i></span><span class="theme-swatch__art"></span></span>
+          </span>
+          <span class="theme-swatch__check" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3.5 8 3 3 6-6"/></svg></span>
+          <span class="theme-swatch__name">{{ theme_name }}</span>
+          <span class="theme-swatch__caption">{{ theme_caption }}</span>
+        </button>
+      {% endfor %}
+    </div>
+    <p class="appearance__note"><span aria-hidden="true">Aa</span>Colors and typography adapt together.</p>
+    <div class="appearance__footer">
+      <span class="appearance__saved"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="m4.5 8 2.2 2.2 4.8-4.8"/></svg><span data-theme-save-status>Your preference is saved</span></span>
+      <button class="appearance__reset" type="button" data-theme-reset>Reset to default</button>
+    </div>
+    <p class="appearance__sr" role="status" aria-live="polite" aria-atomic="true" data-theme-announcement></p>
+  </section>
+</div>

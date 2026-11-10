@@ -40,6 +40,37 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+/* Runtime appearance tokens are shared by the archive pages and article layout. */
+body { background: var(--theme-page, #f8f9f5); color: var(--theme-body, #40574a); }
+a { color: var(--theme-accent, #365f49); }
+a:hover { color: var(--theme-accent-hover, #284d39); }
+h1, h2, h3, h4, h5, h6 { color: var(--theme-ink, #203e33); }
+.page__title, .page__content h2, .page__content h3 { font-family: var(--theme-font-heading, Georgia, serif); }
+.page__meta, .page__date, .page__footer, figcaption { color: var(--theme-muted, #607263); }
+hr, .page__content h2, .page__share, .page__comments, .page__content + .pagination { border-color: var(--theme-line, #dce5d9); }
+blockquote { color: var(--theme-body, #40574a); border-color: var(--theme-accent, #365f49); }
+.page__footer { background: var(--theme-soft, #edf2e8); border-color: var(--theme-line, #dce5d9); }
+table th { background: var(--theme-soft, #edf2e8); color: var(--theme-ink, #203e33); }
+table td, table th { border-color: var(--theme-line, #dce5d9); }
+input, textarea, select { background-color: var(--theme-surface, #fff); color: var(--theme-body, #40574a); border-color: var(--theme-control, #acbda3); }
+
+/* Rouge syntax colors follow the active palette, including Midnight. */
+div.highlighter-rouge, figure.highlight, .highlight, pre, code, kbd, samp {
+  background: var(--theme-code, #edf2e8);
+  color: var(--theme-ink, #203e33);
+  border-color: var(--theme-line, #dce5d9);
+  font-family: var(--theme-font-code, Consolas, monospace);
+}
+div.highlighter-rouge::before, figure.highlight::before { background: var(--theme-soft, #edf2e8); color: var(--theme-muted, #607263); }
+p > code, a > code, li > code, figcaption > code, td > code { background: var(--theme-code, #edf2e8); color: var(--theme-ink, #203e33); border-color: var(--theme-line, #dce5d9); box-shadow: none; }
+.highlight span { color: inherit; }
+.highlight :is(.c, .cm, .c1, .cs, .cp) { color: var(--theme-muted, #607263); }
+.highlight :is(.k, .kc, .kd, .kn, .kp, .kr, .kt, .o, .ow) { color: var(--theme-code-keyword, #755199); }
+.highlight :is(.s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss, .gi) { color: var(--theme-code-string, #377052); }
+.highlight :is(.m, .mf, .mh, .mi, .mo, .il, .no, .nb) { color: var(--theme-code-number, #965222); }
+.highlight :is(.na, .nc, .nd, .nf, .nt, .nv, .vc, .vg, .vi) { color: var(--theme-accent, #365f49); }
+.highlight :is(.err, .gr, .gd) { color: var(--theme-danger, #a43e49); }
+
 
 
 /* ====== your overrides ====== */
